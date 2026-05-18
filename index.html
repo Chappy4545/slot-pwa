@@ -1478,13 +1478,13 @@ function App() {
   const tabs = [
     { id: "kishu", label: "機種", icon: "🎯", count: (data.kishu_top10 || []).length },
     { id: "machine", label: "台", icon: "🎰", count: (data.machine_top10 || []).length },
+    { id: "history", label: "履歴", icon: "📊" },
     { id: "target", label: "監視機種", icon: "👁", count: (data.target_machines || []).length },
     { id: "warning", label: "注意", icon: "⚠️", count: (data.kishu_warning || []).length },
     { id: "bonus", label: "穴場", icon: "💎", count: (data.kishu_bonus || []).length },
     { id: "favorites", label: "★", icon: "", count: favorites.length },
     { id: "hyena", label: "ハイエナ", icon: "🦁" },
     { id: "backtest", label: "検証", icon: "🔬" },
-    { id: "history", label: "履歴", icon: "📊" },
     { id: "info", label: "info", icon: "ℹ️" },
   ];
 
