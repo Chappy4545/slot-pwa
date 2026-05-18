@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#1a8f3a" />
+  <link rel="manifest" href="./manifest.json" />
+  <title>じゃらん五反田 狙い目</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif; }
+    * { -webkit-tap-highlight-color: transparent; }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div id="root"></div>
+  <script type="text/babel" data-presets="react">
+const { useState, useEffect, useMemo, useRef } = React;
+
+const CATEGORY_COLORS = {
+  "強化イベント日": { bg: "bg-red-600", text: "text-red-600", light: "bg-red-50", border: "border-red-300", emoji: "🔥" },
+  "旧イベント日":   { bg: "bg-amber-500", text: "text-amber-600", light: "bg-amber-50", border: "border-amber-300", emoji: "⭐" },
+  "通常日":         { bg: "bg-slate-500", text: "text-slate-600", light: "bg-slate-50", border: "border-slate-300", emoji: "📅" },
+  "周年":           { bg: "bg-blue-600", text: "text-blue-600", light: "bg-blue-50", border: "border-blue-300", emoji: "🎂" },
+};
+
+const FAVKEY = "jaran_favorites";
+function loadFavorites() {
+  try { return JSON.parse(localStorage.getItem(FAVKEY)) || []; }
+  catch { return []; }
+}
+function saveFavorites(list) {
+  localStorage.setItem(FAVKEY, JSON.stringify(list));
+}
+function favKey(kishu, daiban) { return `${kishu}__${daiban}`; }
+
+// ===== Tooltip System =====
+const TooltipCtx = React.createContext(null);
+const useTooltip = () => React.useContext(TooltipCtx);
+
+function TooltipProvider({ children }) {
+  const [info, setInfo] = React.useState(null);
+  return (
+    <TooltipCtx.Provider value={setInfo}>
+      {children}
+      {info && (
+        <div className="fixed inset-0 z-50 flex items-end bg-black/40" onClick={() => setInfo(null)}>
+          <div className="w-full bg-white rounded-t-2xl shadow-2xl p-5 space-y-3 max-h-[70vh] overflow-y-auto"
+               onClick={e => e.stopPropagation()}>
+            <div className="flex items-center justify-between">
+              <div className="font-bold text-slate-800 text-base">{info.title}</div>
+              <button onClick={() => setInfo(null)} className="text-slate-400 text-2xl leading-none w-8 h-8 flex items-center justify-center">×</button>
+            </div>
+            <div className="text-sm text-slate-600 leading-relaxed whitespace-pre-line">{info.body}</div>
+            <button onClick={() => setInfo(null)}
+              className="w-full py-3 bg-slate-100 rounded-xl text-slate-600 text-sm font-medium">
+              閉じる
+            </button>
+          </div>
+        </div>
+      )}
+    </TooltipCtx.Provider>
+  );
+}
+
+const CLS_INFO = {
+  "本命": { title: "本命とは", body: "通常日: score≥60 かつ 信頼度A/B/C かつ リスクタグ1個以下。\n旧イベント日: score≥70（65-69帯はADV -2.89%のため除外）。\n\nバックテストADV: +1.6%（通常日 +1.45% / 旧イベント日 +3.22%）\n\n注意: リスクタグが2個以上あるとスコアが高くても「見送り」になります。" },
+  "対抗": { title: "対抗とは", body: "score≥50 かつ 信頼度A〜C かつ リスクタグ1個以下のとき。\n\nバックテストADV: +0.4%（通常日 +1.08%）\n\n旧イベント日の対抗は ADV -1.29% と信頼度が低いため、旧イベント日は本命のみ重視を推奨。" },
+  "穴":   { title: "穴とは",   body: "score≥40 かつ リスクタグ1個以下のとき。\n\nバックテストADV: +1.0%（通常日 +1.40% / 旧イベント日 +0.62%）\nスコアは低めですが一発の根拠がある台です。低投資で試す価値あり。" },
+  "見送り": { title: "見送りとは", body: "以下のいずれかに該当:\n• 信頼度D（データ5日未満）\n• 深刻リスクあり（サンプル極少・直近出過ぎ）\n• リスクタグが2個以上\n\nスコアが高くてもリスクタグ2個で見送りになります。" },
+};
+
+const RANK_INFO = {
+  A: { title: "信頼度A", body: "全期間で30日以上のデータがある台/機種。\n\nサンプルが十分あり、スコアの信頼性が高い状態です（ベイズ補正なし）。" },
+  B: { title: "信頼度B", body: "全期間で15〜29日のデータ。\n\n一定の傾向は見えますが確実性はやや低め。スコアは85%の重みでベイズ補正されています。" },
+  C: { title: "信頼度C", body: "全期間で5〜14日のデータ。\n\n参考レベルとして扱ってください。スコアは70%の重みでベイズ補正されています。" },
+  D: { title: "信頼度D", body: "全期間で5日未満のデータ。\n\nデータ不足のためスコアの信頼性が低く、自動的に「見送り」に分類されます（50%補正）。" },
+};
+
+const TAG_EXACT = {
+  "連日P率高め":    "直近14日間でプラス出率(100%以上)だった日の割合が50%以上。\n継続的に設定が入りやすい機種です。",
+  "前回弱から反発": "前回イベント日の出率が平均以下だった → 今回のイベント日に反発を期待するシグナル（K7シグナル）。",
+  "前回やや弱":     "前回イベント日がやや弱め。軽い反発の根拠として使用しています。",
+  "イベント実績あり":"同カテゴリのイベント日に実際に出ていた実績がある機種です（K5シグナル）。",
+  "Top3良好":       "機種内の上位3台の加重平均出率が103%以上。設定が入ったときの期待値が高い機種（K4シグナル）。",
+  "少台数周期狙い": "設置台数が3台以下。少数台に設定を集中させやすいホール特性を活用するシグナル。",
+  "大型機種単品狙い":"設置台数が10台以上。全体的に設定が入る日を機種単位で狙うシグナル。",
+  "タグヒント有":    "みんレポのタグページで★や◯がついている台/機種。ホールからの間接的なヒント（K8シグナル）。",
+  "機種内ローテ候補":"機種内で他台と比べてプラス日が遠い台。ローテーション理論で今日来やすいとする根拠（S7シグナル）。",
+  "直近凹み大":     "直近の加重平均出率が95%未満。\n大きく凹んでいる分、次に設定が入る可能性の根拠として使用。",
+  "直近凹み":       "直近の加重平均出率が98%未満。やや凹みが続いている状態。",
+  "機種内好調":     "機種内の他台と比べたZスコアが+0.5以上。相対的に好調な台です（S3シグナル）。",
+  "P率良好":        "直近14日間でプラス出率(100%以上)だった日の割合が50%以上の台（S2シグナル）。",
+  "サンプル極少":   "全期間で5日未満のデータしかなく、スコアの信頼性が非常に低いです。\n深刻リスクとして自動的に「見送り」になります。",
+  "サンプル少":     "全期間で15日未満のデータです。傾向はあるが確実性は低め。",
+  "P率低め":        "直近のプラス出率(100%以上)の日が25%未満。\nあまり出ていない台/機種です。",
+  "直近出過ぎ":     "直近の加重平均出率が108%以上。\n出し過ぎた後は締められやすい可能性があります。深刻リスクとして「見送り」を強制します。",
+  "旧イベ弱傾向":   "旧イベント日（3か9の付く日）に弱い傾向がある機種。\n今日が旧イベント日なら特に注意してください。",
+  "Z値マイナス":    "機種内の他台と比べたZスコアがマイナス。\nこの機種の中では相対的に不調な台です（S3シグナル）。",
+  "稼働不足":       "直近14日間の稼働日数が5日未満。\nデータが少なくスコアの信頼性が低い台です。",
+  "連敗長め":       "8日以上連続でプラス出率を出せていない。\n長期連敗は期待値があるが、逆に台自体が弱い可能性もあります。",
+  "店全体回収懸念": "直近7日の店全体出率が60日平均より-1.5%以上低く、締め期と判断。\n全体的に厳しい環境です。",
+};
+
+const TAG_PREFIXES = [
+  ["連敗", n => `直近${n}日連続でプラス出率(100%以上)を出せていない状態です。\n連敗数が多いほど反発設定の根拠として評価されます（S6シグナル）。`],
+  ["P経過", n => `直近でプラス出率だった日から${n}日が経過しています。\n経過日数が長い台ほど機種内ローテーション候補として評価されます（S7シグナル）。`],
+  ["末尾", n => `台番末尾${n}の台は、過去データで比較的出やすい傾向があります。\nイベント日限定で有効なシグナルです（通常日はweight=0）。`],
+  ["新台", n => `設置から${n}日目の台です。\n稼働初期は特別扱いされる可能性があり、データも少ないため信頼度にも注意。`],
+];
+
+function getTagInfo(tag) {
+  if (TAG_EXACT[tag]) return { title: tag, body: TAG_EXACT[tag] };
+  for (const [prefix, bodyFn] of TAG_PREFIXES) {
+    if (tag.startsWith(prefix)) {
+      const rest = tag.slice(prefix.length).replace(/[日目強め]/g, "").trim();
+      return { title: tag, body: bodyFn(rest) };
+    }
+  }
+  return null;
+}
+// ===== End Tooltip System =====
+
+function ScoreBadge({ score }) {
+  let cls = "bg-slate-100 text-slate-700";
+  if (score >= 70) cls = "bg-red-100 text-red-700 font-bold";
+  else if (score >= 60) cls = "bg-orange-100 text-orange-700 font-bold";
+  else if (score >= 50) cls = "bg-amber-100 text-amber-700";
+  const showTooltip = useTooltip();
+  const body = `0〜100点の総合スコアです。\n\n• 70点以上: 強い注目候補\n• 65点以上: 注目候補（本命条件）\n• 50点以上: 対抗条件\n• 40点以上: 穴条件\n\n複数シグナル（直近実績・連日P率・連敗反発・ローテーション等）の加重平均で算出。信頼度が低い台はベイズ補正でスコアが50点方向に引き寄せられます。`;
+  return (
+    <span className={`px-2 py-0.5 rounded text-sm cursor-pointer ${cls}`}
+          onClick={() => showTooltip && showTooltip({ title: `スコア ${score}`, body })}>
+      {score}
+    </span>
+  );
+}
+
+function ReliabilityBadge({ rank }) {
+  if (!rank) return null;
+  const styles = {
+    A: "bg-emerald-100 text-emerald-800",
+    B: "bg-blue-100 text-blue-800",
+    C: "bg-amber-100 text-amber-800",
+    D: "bg-slate-200 text-slate-500",
+  };
+  const showTooltip = useTooltip();
+  const info = RANK_INFO[rank];
+  return (
+    <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold cursor-pointer ${styles[rank] || styles.D}`}
+          onClick={() => showTooltip && info && showTooltip(info)}>
+      {rank}
+    </span>
+  );
+}
+
+function ClassificationBadge({ cls }) {
+  if (!cls) return null;
+  const styles = {
+    "本命": "bg-red-500 text-white",
+    "対抗": "bg-orange-400 text-white",
+    "穴":   "bg-purple-400 text-white",
+    "見送り": "bg-slate-200 text-slate-500",
+  };
+  const showTooltip = useTooltip();
+  const info = CLS_INFO[cls];
+  return (
+    <span className={`px-2 py-0.5 rounded-full text-[10px] font-bold cursor-pointer ${styles[cls] || "bg-slate-200 text-slate-500"}`}
+          onClick={() => showTooltip && info && showTooltip(info)}>
+      {cls}
+    </span>
+  );
+}
+
+function TagChips({ reasonTags, riskTags }) {
+  if ((!reasonTags || reasonTags.length === 0) && (!riskTags || riskTags.length === 0)) return null;
+  const showTooltip = useTooltip();
+  const handleTag = (tag) => {
+    const info = getTagInfo(tag);
+    if (info && showTooltip) showTooltip(info);
+  };
+  return (
+    <div className="flex flex-wrap gap-1 mt-1.5">
+      {(reasonTags || []).map((tag, i) => (
+        <span key={`r${i}`}
+              className="px-1.5 py-0.5 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded text-[10px] cursor-pointer active:bg-emerald-100"
+              onClick={() => handleTag(tag)}>
+          {tag}
+        </span>
+      ))}
+      {(riskTags || []).map((tag, i) => (
+        <span key={`k${i}`}
+              className="px-1.5 py-0.5 bg-red-50 text-red-600 border border-red-200 rounded text-[10px] cursor-pointer active:bg-red-100"
+              onClick={() => handleTag(tag)}>
+          {tag}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function StrategyCard({ card }) {
+  if (!card) return null;
+  const { stance, target_cat, headline, bullets, honmei_count, taikou_count } = card;
+  const STYLES = {
+    "攻め": { outer: "from-emerald-600 to-emerald-500", badge: "bg-emerald-800", body: "text-emerald-50" },
+    "守り": { outer: "from-blue-600 to-slate-500",      badge: "bg-blue-800",    body: "text-blue-50" },
+    "通常": { outer: "from-slate-600 to-slate-500",      badge: "bg-slate-700",   body: "text-slate-100" },
+  };
+  const s = STYLES[stance] || STYLES["通常"];
+  return (
+    <div className={`mt-2 rounded-xl px-4 pt-3 pb-4 text-white shadow bg-gradient-to-r ${s.outer}`}>
+      <div className="flex items-center justify-between mb-1.5">
+        <div className="text-[10px] font-semibold opacity-70 tracking-wide">今日の方針 • {target_cat}</div>
+        <div className="flex gap-1">
+          {honmei_count > 0 && <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${s.badge}`}>本命{honmei_count}</span>}
+          {taikou_count > 0 && <span className="px-1.5 py-0.5 rounded text-[10px] font-bold bg-white/20">対抗{taikou_count}</span>}
+        </div>
+      </div>
+      <div className="font-bold text-sm leading-snug mb-2">{headline}</div>
+      <div className={`space-y-0.5 text-xs ${s.body} opacity-90`}>
+        {(bullets || []).map((b, i) => <div key={i}>• {b}</div>)}
+      </div>
+    </div>
+  );
+}
+
+function MiniLineChart({ daily }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current || !daily || daily.length === 0) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+    const roll = (arr, key, n = 7) => arr.map((_, i) => {
+      const slice = arr.slice(Math.max(0, i - n + 1), i + 1);
+      const vals = slice.map(d => d[key]).filter(v => v != null);
+      return vals.length > 0 ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : null;
+    });
+    const labels = daily.map(d => (d.date || "").slice(5));
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          { label: "台ADV(7日MA)", data: roll(daily, "adv_machine"), borderColor: "#10b981", borderWidth: 2, pointRadius: 0, tension: 0.3, fill: false },
+          { label: "機種ADV(7日MA)", data: roll(daily, "adv_kishu"), borderColor: "#3b82f6", borderWidth: 1.5, pointRadius: 0, tension: 0.3, borderDash: [4, 2], fill: false },
+          { label: "ゼロ", data: daily.map(() => 0), borderColor: "#cbd5e1", borderWidth: 1, pointRadius: 0, borderDash: [2, 2], fill: false },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
+        scales: {
+          x: { ticks: { font: { size: 8 }, maxTicksLimit: 8, maxRotation: 0 } },
+          y: { ticks: { font: { size: 9 }, callback: v => (v > 0 ? "+" : "") + v + "%" } },
+        },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [daily]);
+  return <div style={{ height: "160px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function ScoreBandBarChart({ scoreBands }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current || !scoreBands || scoreBands.length === 0) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels: scoreBands.map(b => b.band),
+        datasets: [{
+          label: "ADV(%)", data: scoreBands.map(b => b.adv),
+          backgroundColor: scoreBands.map(b => b.adv > 0 ? "rgba(16,185,129,0.7)" : "rgba(239,68,68,0.6)"),
+          borderColor: scoreBands.map(b => b.adv > 0 ? "#10b981" : "#ef4444"),
+          borderWidth: 1,
+        }],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { font: { size: 10 } } },
+          y: { ticks: { font: { size: 9 }, callback: v => (v > 0 ? "+" : "") + v + "%" } },
+        },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [scoreBands]);
+  return <div style={{ height: "140px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function KishuTrendChart({ trend }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current || !trend || trend.length === 0) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+    const labels = trend.map(d => (d.date || "").slice(5));
+    const avgRates = trend.map(d => d.avg_rate != null ? +parseFloat(d.avg_rate).toFixed(1) : null);
+    const totalGames = trend.map(d => d.total_games != null ? +d.total_games : null);
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      data: {
+        labels,
+        datasets: [
+          { type: "bar", label: "合計G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.35)", borderColor: "rgba(148,163,184,0.6)", borderWidth: 1, yAxisID: "yG" },
+          { type: "line", label: "平均出率", data: avgRates, borderColor: "#10b981", backgroundColor: "rgba(16,185,129,0.08)", borderWidth: 2, pointRadius: 3, tension: 0.2, fill: true, yAxisID: "yR" },
+          { type: "line", label: "100%", data: trend.map(() => 100), borderColor: "#f59e0b", borderWidth: 1, pointRadius: 0, borderDash: [3, 3], yAxisID: "yR" },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
+        scales: {
+          yR: { type: "linear", position: "left", ticks: { font: { size: 9 }, callback: v => v + "%" } },
+          yG: { type: "linear", position: "right", grid: { drawOnChartArea: false }, ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v / 1000).toFixed(0) + "k" : v } },
+          x: { ticks: { font: { size: 8 }, maxRotation: 0 } },
+        },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [trend]);
+  return <div style={{ height: "180px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function MachineTrendChart({ trend }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current || !trend || trend.length === 0) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+    const labels = trend.map(d => (d.date || "").slice(5));
+    const rates = trend.map(d => d.rate != null ? +parseFloat(d.rate).toFixed(1) : null);
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          { label: "出率", data: rates, borderColor: "#6366f1", backgroundColor: "rgba(99,102,241,0.08)", borderWidth: 2, pointRadius: 3, tension: 0.2, fill: true },
+          { label: "100%", data: trend.map(() => 100), borderColor: "#f59e0b", borderWidth: 1, pointRadius: 0, borderDash: [3, 3] },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
+        scales: {
+          x: { ticks: { font: { size: 8 }, maxRotation: 0 } },
+          y: { ticks: { font: { size: 9 }, callback: v => v + "%" } },
+        },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [trend]);
+  return <div style={{ height: "140px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function BacktestTab() {
+  const [bt, setBt] = React.useState(null);
+  const [loading, setLoading] = React.useState(true);
+  const [err, setErr] = React.useState(null);
+
+  React.useEffect(() => {
+    fetch("backtest.json?_=" + Date.now())
+      .then(r => { if (!r.ok) throw new Error("not found"); return r.json(); })
+      .then(d => { setBt(d); setLoading(false); })
+      .catch(() => { setErr(true); setLoading(false); });
+  }, []);
+
+  if (loading) return <div className="text-center py-12 text-slate-400 text-sm">読み込み中...</div>;
+  if (err || !bt) return (
+    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 space-y-2">
+      <div className="font-semibold">backtest.json が見つかりません</div>
+      <div>以下を実行してください:</div>
+      <div className="font-mono bg-amber-100 px-3 py-2 rounded text-xs">python backtest.py</div>
+      <div className="text-xs text-amber-600">完了後にこのタブをリロード</div>
+    </div>
+  );
+
+  const ov = bt.overall || {};
+  const advColor = (v) => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
+
+  return (
+    <div className="space-y-4">
+      <div className="text-xs text-slate-500 px-1">
+        {bt.date_range} / {bt.n_days}日分 / 生成: {bt.generated_at ? new Date(bt.generated_at).toLocaleString("ja-JP") : "—"}
+      </div>
+
+      {/* グラフ */}
+      {bt.daily && bt.daily.length >= 7 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">日別ADV推移 (7日移動平均)</div>
+          <MiniLineChart daily={bt.daily} />
+        </div>
+      )}
+      {bt.score_bands && bt.score_bands.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">スコア帯別ADV</div>
+          <ScoreBandBarChart scoreBands={bt.score_bands} />
+        </div>
+      )}
+
+      {/* KPIカード */}
+      <div className="grid grid-cols-2 gap-2">
+        {[
+          ["ベース出率", `${ov["平均ベース出率"] ?? "—"}%`, ""],
+          ["TOP10台出率", `${ov["TOP10台出率"] ?? "—"}%`, ""],
+          ["台ADV", ov["台ADV"] != null ? `${ov["台ADV"] > 0 ? "+" : ""}${ov["台ADV"]}%` : "—", ov["台ADV"]],
+          ["TOP10台的中率", `${ov["TOP10台的中率"] ?? "—"}%`, null],
+          ["機種ADV", ov["機種ADV"] != null ? `${ov["機種ADV"] > 0 ? "+" : ""}${ov["機種ADV"]}%` : "—", ov["機種ADV"]],
+          ["ベース的中率", `${ov["ベース的中率"] ?? "—"}%`, null],
+        ].map(([label, val, adv]) => (
+          <div key={label} className="bg-white rounded-xl border border-slate-200 p-3">
+            <div className="text-[10px] text-slate-500">{label}</div>
+            <div className={`text-xl font-bold ${adv != null ? advColor(adv) : "text-slate-800"}`}>{val}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* TOP N 台 */}
+      {bt.top_n_stats && bt.top_n_stats.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">TOP N パフォーマンス</div>
+          <table className="w-full text-xs">
+            <thead><tr className="text-slate-500 border-b">
+              <th className="text-left pb-1">対象</th>
+              <th className="text-right pb-1">平均出率</th>
+              <th className="text-right pb-1">的中率</th>
+              <th className="text-right pb-1">ADV</th>
+            </tr></thead>
+            <tbody>
+              {bt.top_n_stats.map(row => (
+                <tr key={row.label} className="border-b border-slate-50">
+                  <td className="py-1 text-slate-700">{row.label}</td>
+                  <td className="py-1 text-right">{row.avg_rate ?? "—"}%</td>
+                  <td className="py-1 text-right">{row.plus_rate ?? "—"}%</td>
+                  <td className={`py-1 text-right font-semibold ${advColor(row.adv)}`}>
+                    {row.adv != null ? `${row.adv > 0 ? "+" : ""}${row.adv}%` : "—"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* スコア帯別 */}
+      {bt.score_bands && bt.score_bands.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">スコア帯別 実績</div>
+          <table className="w-full text-xs">
+            <thead><tr className="text-slate-500 border-b">
+              <th className="text-left pb-1">スコア帯</th>
+              <th className="text-right pb-1">件数</th>
+              <th className="text-right pb-1">平均出率</th>
+              <th className="text-right pb-1">的中率</th>
+              <th className="text-right pb-1">ADV</th>
+            </tr></thead>
+            <tbody>
+              {bt.score_bands.map(row => (
+                <tr key={row.band} className="border-b border-slate-50">
+                  <td className="py-1 font-mono text-slate-700">{row.band}</td>
+                  <td className="py-1 text-right text-slate-500">{row.n}</td>
+                  <td className="py-1 text-right">{row.avg_rate}%</td>
+                  <td className="py-1 text-right">{row.plus_rate}%</td>
+                  <td className={`py-1 text-right font-semibold ${advColor(row.adv)}`}>
+                    {row.adv > 0 ? "+" : ""}{row.adv}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* 分類別 */}
+      {bt.cls_stats && bt.cls_stats.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">分類別 実績</div>
+          <table className="w-full text-xs">
+            <thead><tr className="text-slate-500 border-b">
+              <th className="text-left pb-1">分類</th>
+              <th className="text-right pb-1">件数</th>
+              <th className="text-right pb-1">平均出率</th>
+              <th className="text-right pb-1">的中率</th>
+              <th className="text-right pb-1">ADV</th>
+            </tr></thead>
+            <tbody>
+              {bt.cls_stats.map(row => (
+                <tr key={row.cls} className="border-b border-slate-50">
+                  <td className="py-1 font-semibold text-slate-700">{row.cls}</td>
+                  <td className="py-1 text-right text-slate-500">{row.n}</td>
+                  <td className="py-1 text-right">{row.avg_rate}%</td>
+                  <td className="py-1 text-right">{row.plus_rate}%</td>
+                  <td className={`py-1 text-right font-semibold ${advColor(row.adv)}`}>
+                    {row.adv > 0 ? "+" : ""}{row.adv}%
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* カテゴリ別 */}
+      {bt.by_category && bt.by_category.length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">カテゴリ別 実績</div>
+          <table className="w-full text-xs">
+            <thead><tr className="text-slate-500 border-b">
+              <th className="text-left pb-1">カテゴリ</th>
+              <th className="text-right pb-1">日数</th>
+              <th className="text-right pb-1">機種ADV</th>
+              <th className="text-right pb-1">台ADV</th>
+              <th className="text-right pb-1">台的中率</th>
+            </tr></thead>
+            <tbody>
+              {bt.by_category.map(row => (
+                <tr key={row.category} className="border-b border-slate-50">
+                  <td className="py-1 text-slate-700">{row.category}</td>
+                  <td className="py-1 text-right text-slate-500">{row.n_days}</td>
+                  <td className={`py-1 text-right font-semibold ${advColor(row.adv_kishu)}`}>
+                    {row.adv_kishu > 0 ? "+" : ""}{row.adv_kishu?.toFixed(1)}%
+                  </td>
+                  <td className={`py-1 text-right font-semibold ${advColor(row.adv_machine)}`}>
+                    {row.adv_machine > 0 ? "+" : ""}{row.adv_machine?.toFixed(1)}%
+                  </td>
+                  <td className="py-1 text-right">{row.m10_plus != null ? `${(row.m10_plus * 100).toFixed(1)}%` : "—"}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
+      {/* モデル改善提案 */}
+      {bt.suggestions && bt.suggestions.length > 0 && (
+        <div className="space-y-2">
+          <div className="text-xs font-semibold text-slate-700 px-1">モデル改善提案</div>
+          {bt.suggestions.map((s, i) => {
+            const styles = {
+              warning: "bg-amber-50 border-amber-300 text-amber-900",
+              info:    "bg-blue-50 border-blue-200 text-blue-900",
+              positive:"bg-emerald-50 border-emerald-200 text-emerald-900",
+            };
+            const icons = { warning: "⚠", info: "ℹ", positive: "✓" };
+            const cls = styles[s.level] || styles.info;
+            return (
+              <div key={i} className={`rounded-xl border p-3 text-xs space-y-1 ${cls}`}>
+                <div className="font-semibold">{icons[s.level] || "•"} {s.title}</div>
+                <div className="opacity-90">{s.detail}</div>
+                <div className="font-mono opacity-75 text-[10px]">→ {s.action}</div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function StoreStageBar({ stageData }) {
+  if (!stageData || !stageData.stage) return null;
+  const { stage, recent_avg, hist_avg, diff, weekday, weekday_diff } = stageData;
+  const styles = {
+    "攻め期": "bg-emerald-50 border-emerald-300 text-emerald-800",
+    "平常期": "bg-slate-50 border-slate-300 text-slate-600",
+    "締め期": "bg-blue-50 border-blue-300 text-blue-800",
+  };
+  const icons = { "攻め期": "↑", "平常期": "→", "締め期": "↓" };
+  const diffStr = diff > 0 ? `+${diff}` : `${diff}`;
+  const wdStr = weekday_diff != null ? `${weekday_diff > 0 ? "+" : ""}${weekday_diff}%` : null;
+  const wdColor = weekday_diff > 0.3 ? "text-emerald-600" : weekday_diff < -0.3 ? "text-red-500" : "";
+  return (
+    <div className={`mt-2 px-3 py-1.5 rounded-lg border text-xs ${styles[stage] || styles["平常期"]}`}>
+      <div className="flex items-center justify-between">
+        <span className="font-bold">{icons[stage] || "→"} 営業ステージ: {stage}</span>
+        <span className="opacity-75">直近7日 {recent_avg}% / 60日平均 {hist_avg}% ({diffStr}%)</span>
+      </div>
+      {weekday && wdStr && (
+        <div className="mt-0.5 text-[10px] opacity-80">
+          {weekday}曜日の傾向: <span className={`font-semibold ${wdColor}`}>{wdStr}</span> vs 全曜日平均
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EventDayWarning({ category }) {
+  if (category === "旧イベント日") {
+    return (
+      <div className="mt-2 bg-amber-50 border border-amber-300 rounded-xl px-4 py-3 text-xs space-y-1.5">
+        <div className="font-bold text-amber-800">⚠ 旧イベント日 — 予測精度注意</div>
+        <div className="text-amber-700 leading-relaxed">
+          対抗・穴カテゴリの信頼度が低め（バックテスト対抗ADV: <span className="font-semibold text-red-600">-1.29%</span>）。<br />
+          <span className="font-semibold">score 70以上の本命のみ</span>を優先してください。対抗は参考程度に。
+        </div>
+      </div>
+    );
+  }
+  if (category === "強化イベント日") {
+    return (
+      <div className="mt-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-xs space-y-1.5">
+        <div className="font-bold text-red-700">🔥 強化イベント日 — サンプル少・参考値</div>
+        <div className="text-red-600 leading-relaxed">
+          強化イベント日はデータが6日分のみ。本命（ADV +3.65%）は良好ですが、穴・対抗は信頼度が低いです。
+        </div>
+      </div>
+    );
+  }
+  return null;
+}
+
+function RateLabel({ value }) {
+  if (value == null) return <span className="text-slate-400">—</span>;
+  let cls = "text-slate-700";
+  if (value >= 110) cls = "text-red-600 font-bold";
+  else if (value >= 100) cls = "text-emerald-600 font-semibold";
+  else if (value < 90) cls = "text-slate-400";
+  return <span className={cls}>{value}%</span>;
+}
+
+function ScoreBreakdown({ breakdown, total }) {
+  if (!breakdown || breakdown.length === 0) return null;
+  return (
+    <div className="bg-white rounded-lg border border-slate-200 px-3 py-2 text-xs">
+      <div className="flex justify-between items-baseline mb-1.5">
+        <span className="font-semibold text-slate-600">スコア内訳</span>
+        {total != null && (
+          <span className="text-slate-500">合計 <span className="font-bold text-slate-800">{total}</span></span>
+        )}
+      </div>
+      <div className="space-y-0.5">
+        {breakdown.map((item, i) => {
+          const pct = total > 0 ? (item.value / total) * 100 : 0;
+          const barWidth = Math.max(0, Math.min(100, Math.abs(pct)));
+          return (
+            <div key={i} className="flex items-center gap-2">
+              <span className="text-slate-600 w-20 flex-shrink-0 truncate">{item.label}</span>
+              <div className="flex-1 bg-slate-100 rounded-full h-1.5 overflow-hidden">
+                <div
+                  className={item.value >= 0 ? "bg-emerald-400 h-full" : "bg-red-400 h-full"}
+                  style={{ width: `${barWidth}%` }}
+                />
+              </div>
+              <span className="font-mono font-semibold text-slate-700 w-10 text-right">
+                {item.value > 0 ? "+" : ""}{item.value.toFixed(1)}
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, minRepoUrl, kishuTrend, machineTrend }) {
+  return (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+      <div onClick={onToggle} className="p-4 cursor-pointer hover:bg-slate-50">
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <div className="flex items-center gap-1.5 flex-wrap">
+              <span className="font-bold text-slate-800 text-sm leading-tight break-words">
+                {row["機種"]}
+              </span>
+              <ClassificationBadge cls={row["分類"]} />
+              {minRepoUrl && (
+                <a href={minRepoUrl} target="_blank" rel="noopener noreferrer"
+                   onClick={e => e.stopPropagation()}
+                   className="text-[9px] text-slate-400 hover:text-emerald-600 underline underline-offset-1">
+                  みんレポ↗
+                </a>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-2 mt-2 text-xs text-slate-600">
+              <span>直近 <RateLabel value={row["直近平均"]} /></span>
+              <span>Top3 <RateLabel value={row["Top3平均"]} /></span>
+              <span>P率 {row["連日P率"]}</span>
+              <span>+α <span className={row["+α"] > 0 ? "text-red-600 font-semibold" : (row["+α"] < 0 ? "text-blue-600" : "")}>{row["+α"] > 0 ? "+" : ""}{row["+α"]}%</span></span>
+              <span className="text-slate-500">{row["台数"]}台</span>
+            </div>
+            <TagChips reasonTags={row["reason_tags"]} riskTags={row["risk_tags"]} />
+          </div>
+          <div className="flex flex-col items-end gap-1">
+            <div className="flex items-center gap-1">
+              <ReliabilityBadge rank={row["信頼度"]} />
+              <ScoreBadge score={row.score} />
+            </div>
+            <span className="text-slate-300 text-xs">{expanded ? "▲" : "▼"}</span>
+          </div>
+        </div>
+      </div>
+      {expanded && (
+        <div className="bg-emerald-50 border-t border-emerald-100 px-3 py-2 space-y-2">
+          {kishuTrend && kishuTrend.length > 0 && (
+            <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
+              <div className="text-[10px] font-semibold text-slate-500 mb-1">機種別トレンド（直近14日）</div>
+              <KishuTrendChart trend={kishuTrend} />
+            </div>
+          )}
+          {row.breakdown && row.breakdown.length > 0 && (
+            <ScoreBreakdown breakdown={row.breakdown} total={row.score} />
+          )}
+          {machines && machines.length > 0 && (
+            <>
+              <div className="text-xs font-semibold text-emerald-800">この機種の狙い目台</div>
+              <div className="space-y-1">
+                {machines.map((m) => (
+                  <MachineRow key={favKey(m["機種"], m["台番"])}
+                    row={m} favorites={favorites} toggleFav={toggleFav} compact
+                    machineTrend={machineTrend ? machineTrend[favKey(m["機種"], m["台番"])] : null} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function MachineRow({ row, favorites, toggleFav, compact, machineTrend, isTop }) {
+  const [showBreakdown, setShowBreakdown] = useState(false);
+  const isFav = favorites.includes(favKey(row["機種"], row["台番"]));
+  const hasBreakdown = row.breakdown && row.breakdown.length > 0;
+  const hasTrend = machineTrend && machineTrend.length > 0;
+  return (
+    <div className={`bg-white rounded-lg overflow-hidden ${compact ? "border border-slate-200" : "shadow-sm border border-slate-200"} ${isTop ? "ring-2 ring-amber-400" : ""}`}>
+      <div className="flex items-center gap-2 px-3 py-2">
+        <button
+          onClick={(e) => { e.stopPropagation(); toggleFav(row["機種"], row["台番"]); }}
+          className={`flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center text-sm ${isFav ? "bg-yellow-100 text-yellow-600" : "bg-slate-100 text-slate-400"}`}
+          aria-label="お気に入り"
+        >
+          {isFav ? "★" : "☆"}
+        </button>
+        <div
+          className={`flex-1 min-w-0 ${(hasBreakdown || hasTrend) ? "cursor-pointer" : ""}`}
+          onClick={() => (hasBreakdown || hasTrend) && setShowBreakdown(v => !v)}
+        >
+          {!compact && (
+            <div className="text-xs text-slate-500 truncate">{row["機種"]}</div>
+          )}
+          <div className="flex items-center gap-1.5 flex-wrap">
+            {isTop && <span className="text-[9px] bg-amber-400 text-white px-1.5 py-0.5 rounded-full font-bold">No.1</span>}
+            <span className="text-base font-bold text-slate-800">#{row["台番"]}</span>
+            <ClassificationBadge cls={row["分類"]} />
+            <RateLabel value={row["直近平均"]} />
+            <span className="text-xs text-slate-500">P率{row["連日P率"]}</span>
+            <span className="text-xs text-slate-500">Z {row["Z"]}</span>
+          </div>
+          <div className="flex flex-wrap gap-2 text-[10px] text-slate-500 mt-0.5">
+            {row["連敗日数"] > 0 && (
+              <span className={row["連敗日数"] >= 3 && row["連敗日数"] <= 5 ? "text-orange-600 font-semibold" : ""}>
+                連敗{row["連敗日数"]}日
+              </span>
+            )}
+            <span>P経過{row["P経過日"]}日</span>
+            <span>全{row["total_n"] ?? row["n"]}日</span>
+          </div>
+          <TagChips reasonTags={row["reason_tags"]} riskTags={row["risk_tags"]} />
+        </div>
+        <div className="flex flex-col items-end gap-0.5 flex-shrink-0">
+          <div className="flex items-center gap-1">
+            <ReliabilityBadge rank={row["信頼度"]} />
+            <ScoreBadge score={row.score} />
+          </div>
+          {(hasBreakdown || hasTrend) && (
+            <span className="text-slate-300 text-[10px]">{showBreakdown ? "▲" : "▼"}</span>
+          )}
+        </div>
+      </div>
+      {showBreakdown && (hasBreakdown || hasTrend) && (
+        <div className="px-3 pb-2 pt-1 border-t border-slate-100 bg-slate-50 space-y-2">
+          {hasTrend && (
+            <div>
+              <div className="text-[10px] font-semibold text-slate-500 mb-1">台別出率トレンド（直近14日）</div>
+              <MachineTrendChart trend={machineTrend} />
+            </div>
+          )}
+          {hasBreakdown && <ScoreBreakdown breakdown={row.breakdown} total={row.score} />}
+        </div>
+      )}
+    </div>
+  );
+}
+
+function Tabs({ tabs, active, onChange }) {
+  return (
+    <div className="sticky top-0 z-10 bg-slate-50 pt-2 pb-1">
+      <div className="flex gap-1 overflow-x-auto scrollbar-hide px-1">
+        {tabs.map((t) => (
+          <button
+            key={t.id}
+            onClick={() => onChange(t.id)}
+            className={`flex-shrink-0 px-3 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition ${
+              active === t.id
+                ? "bg-emerald-600 text-white shadow"
+                : "bg-white text-slate-600 border border-slate-200"
+            }`}
+          >
+            {t.icon} {t.label}
+            {t.count != null && <span className="ml-1 opacity-70">{t.count}</span>}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Header({ data }) {
+  const cat = data.target_category;
+  const colors = CATEGORY_COLORS[cat] || CATEGORY_COLORS["通常日"];
+  const generated = data.generated_at ? new Date(data.generated_at).toLocaleString("ja-JP") : "—";
+  const minRepoUrl = data.min_repo_url;
+  return (
+    <div className={`${colors.bg} text-white px-4 py-4`}>
+      <div className="flex items-center justify-between">
+        <div className="text-xs opacity-90">じゃらん五反田 狙い目</div>
+        {minRepoUrl && (
+          <a href={minRepoUrl} target="_blank" rel="noopener noreferrer"
+             className="text-[10px] bg-white/20 hover:bg-white/30 px-2 py-1 rounded-full font-semibold tracking-wide">
+            みんレポ ↗
+          </a>
+        )}
+      </div>
+      <div className="flex items-baseline justify-between mt-1">
+        <div>
+          <div className="text-lg font-bold">{data.target_date}</div>
+          <div className="text-2xl font-extrabold mt-0.5">
+            {colors.emoji} {cat}
+          </div>
+        </div>
+        <div className="text-right text-[11px] opacity-90">
+          <div>{data.model_version || "v8.1"}</div>
+          <div className="opacity-75">{generated}</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PerformancePanel({ perf }) {
+  if (!perf) return null;
+  return (
+    <div className="bg-white rounded-xl shadow-sm border border-slate-200 p-4">
+      <div className="text-xs font-semibold text-slate-500 mb-2">モデル性能 (バックテスト)</div>
+      <div className="grid grid-cols-2 gap-2 text-sm">
+        {Object.entries(perf).map(([k, v]) => (
+          <div key={k} className="flex justify-between border-b border-slate-100 py-1">
+            <span className="text-slate-600">{k}</span>
+            <span className="font-bold text-slate-800">{v}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function FavoritesView({ favorites, allMachines, toggleFav, machineTrend }) {
+  const favData = useMemo(() => {
+    const set = new Set(favorites);
+    return allMachines.filter(m => set.has(favKey(m["機種"], m["台番"])));
+  }, [favorites, allMachines]);
+
+  if (favData.length === 0) {
+    return (
+      <div className="text-center text-slate-500 py-12 text-sm">
+        ★を押してお気に入り台を追加すると<br />ここに表示されます
+      </div>
+    );
+  }
+  return (
+    <div className="space-y-2">
+      {favData.map(m => (
+        <MachineRow key={favKey(m["機種"], m["台番"])}
+          row={m} favorites={favorites} toggleFav={toggleFav}
+          machineTrend={machineTrend ? machineTrend[favKey(m["機種"], m["台番"])] : null} />
+      ))}
+    </div>
+  );
+}
+
+function HyenaTab() {
+  const [config, setConfig] = React.useState(null);
+  const [selectedId, setSelectedId] = React.useState(null);
+  const [games, setGames] = React.useState("");
+  const [medals, setMedals] = React.useState("");
+
+  React.useEffect(() => {
+    fetch("hyena_config.json?_=" + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject())
+      .then(d => { setConfig(d); if (d.machines && d.machines.length) setSelectedId(d.machines[0].id); })
+      .catch(() => setConfig(null));
+  }, []);
+
+  if (!config) return (
+    <div className="text-center py-12 text-slate-400 text-sm">hyena_config.json を読み込み中...</div>
+  );
+
+  const machine = config.machines.find(m => m.id === selectedId);
+  const gamesNum = parseInt(games) || 0;
+  const medalsNum = parseInt(medals) || null;
+
+  const ZONE_COLORS = {
+    slate:  { bar: "bg-slate-300", badge: "bg-slate-100 text-slate-600 border-slate-300" },
+    blue:   { bar: "bg-blue-400",  badge: "bg-blue-50  text-blue-700  border-blue-300"  },
+    amber:  { bar: "bg-amber-400", badge: "bg-amber-50 text-amber-700 border-amber-300" },
+    orange: { bar: "bg-orange-400",badge: "bg-orange-50 text-orange-700 border-orange-300" },
+    red:    { bar: "bg-red-500",   badge: "bg-red-50   text-red-700   border-red-300"   },
+  };
+
+  let result = null;
+  if (machine && gamesNum > 0) {
+    const ceiling = machine.ceiling_games;
+    const remaining = Math.max(0, ceiling - gamesNum);
+    const costPerGame = config.cost_per_game || 3.0;
+    const futureCost = remaining * costPerGame;
+    const atEV = machine.at_expected_medals || 0;
+    const evNet = atEV - futureCost;
+
+    const currentZone = machine.zones.slice().reverse().find(z => gamesNum >= z.from) || machine.zones[0];
+    const isHyenaLine = gamesNum >= (machine.cut_line_games || 0);
+
+    const yuriWarn = machine.yuri_kuukan_limit && gamesNum > machine.yuri_kuukan_limit * 0.8;
+    const yuriOver = machine.yuri_kuukan_limit && gamesNum >= machine.yuri_kuukan_limit;
+
+    const zoneIdx = machine.zones.findIndex(z => z === currentZone);
+    const progress = Math.min(100, Math.round((gamesNum / ceiling) * 100));
+
+    result = { remaining, futureCost, atEV, evNet, currentZone, isHyenaLine, yuriWarn, yuriOver, progress, zoneIdx };
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="bg-amber-50 border border-amber-200 rounded-xl p-3 text-xs text-amber-800">
+        ⚠ 天井G数・期待枚数は参考値です。機種によって設定や状況で変わります。
+      </div>
+
+      {/* 機種選択 */}
+      <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
+        <div className="text-xs font-semibold text-slate-700">機種を選択</div>
+        <div className="flex flex-wrap gap-2">
+          {config.machines.map(m => (
+            <button key={m.id}
+              onClick={() => { setSelectedId(m.id); setGames(""); setMedals(""); }}
+              className={`px-3 py-1.5 rounded-full text-xs font-medium border transition ${selectedId === m.id ? "bg-emerald-600 text-white border-emerald-600" : "bg-white text-slate-600 border-slate-300 hover:border-emerald-400"}`}>
+              {m.short || m.name}
+            </button>
+          ))}
+        </div>
+        {machine && (
+          <div className="text-[10px] text-slate-500 leading-relaxed space-y-0.5">
+            <div>
+              <span className="text-slate-400">カウント:</span> <strong>{machine.count_type || "G数"}</strong>
+              {" / "}天井: <strong>{machine.ceiling_games}G</strong>
+              {machine.reset_ceiling && <> / リセット天井: <strong>{machine.reset_ceiling}G</strong></>}
+            </div>
+            <div>
+              {machine.yuri_kuukan_limit && <>有利区間上限: <strong>{machine.yuri_kuukan_limit}G</strong> / </>}
+              期待枚数: 約<strong>{machine.at_expected_medals}枚</strong>
+              {" / "}ハイエナ開始目安: <strong>{machine.cut_line_games}G〜</strong>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* 入力フォーム */}
+      {machine && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
+          <div className="text-xs font-semibold text-slate-700">現在の状況を入力</div>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-[10px] text-slate-500 block mb-1">現在ゲーム数 (AT後G数)</label>
+              <input type="number" min="0" max="2000" value={games}
+                onChange={e => setGames(e.target.value)}
+                placeholder="例: 750"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm" />
+            </div>
+            <div>
+              <label className="text-[10px] text-slate-500 block mb-1">差枚数 (任意)</label>
+              <input type="number" value={medals}
+                onChange={e => setMedals(e.target.value)}
+                placeholder="例: -300"
+                className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm" />
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 計算結果 */}
+      {result && machine && (
+        <div className="space-y-3">
+          {/* ゾーンバー */}
+          <div className="bg-white rounded-xl border border-slate-200 p-4">
+            <div className="flex items-center justify-between mb-2">
+              <div className="text-xs font-semibold text-slate-700">天井進捗</div>
+              <div className={`px-2 py-0.5 rounded-full text-[10px] font-bold border ${ZONE_COLORS[result.currentZone.color]?.badge || "bg-slate-100 text-slate-600 border-slate-200"}`}>
+                {result.currentZone.label}
+              </div>
+            </div>
+            <div className="bg-slate-100 rounded-full h-4 overflow-hidden mb-2 relative">
+              <div
+                className={`h-full transition-all ${ZONE_COLORS[result.currentZone.color]?.bar || "bg-slate-300"}`}
+                style={{ width: `${result.progress}%` }} />
+              {machine.cut_line_games && (
+                <div className="absolute top-0 h-full border-l-2 border-dashed border-emerald-600 opacity-70"
+                     style={{ left: `${Math.min(100, (machine.cut_line_games / machine.ceiling_games) * 100)}%` }} />
+              )}
+            </div>
+            <div className="flex justify-between text-[10px] text-slate-400">
+              <span>0G</span>
+              {machine.cut_line_games && (
+                <span className="text-emerald-600 font-semibold">{machine.cut_line_games}G〜</span>
+              )}
+              <span>{machine.ceiling_games}G</span>
+            </div>
+          </div>
+
+          {/* 有利区間警告 */}
+          {result.yuriOver && (
+            <div className="bg-red-50 border border-red-300 rounded-xl p-3 text-xs text-red-800 font-semibold">
+              ⚠ 有利区間上限超過。次のAT後またはリセット時に有利区間が終了します。
+            </div>
+          )}
+          {result.yuriWarn && !result.yuriOver && (
+            <div className="bg-amber-50 border border-amber-300 rounded-xl p-3 text-xs text-amber-800">
+              ⚡ 有利区間上限({machine.yuri_kuukan_limit}G)の80%に到達。天井前にリセットの可能性に注意。
+            </div>
+          )}
+
+          {/* KPI */}
+          <div className="grid grid-cols-2 gap-2">
+            {[
+              ["残り天井まで", `${result.remaining}G`, null],
+              ["今後の投資目安", `${Math.round(result.futureCost)}枚`, null],
+              ["AT期待枚数", `${result.atEV}枚`, null],
+              ["期待収支(枚)", `${result.evNet > 0 ? "+" : ""}${Math.round(result.evNet)}`, result.evNet],
+            ].map(([label, val, adv]) => (
+              <div key={label} className="bg-white rounded-xl border border-slate-200 p-3">
+                <div className="text-[10px] text-slate-500">{label}</div>
+                <div className={`text-xl font-bold ${adv != null ? (adv > 0 ? "text-emerald-600" : adv < 0 ? "text-red-500" : "text-slate-800") : "text-slate-800"}`}>{val}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* 判定 */}
+          <div className={`rounded-xl p-4 text-sm font-semibold ${result.isHyenaLine ? "bg-emerald-50 border border-emerald-300 text-emerald-800" : "bg-slate-50 border border-slate-200 text-slate-600"}`}>
+            {result.isHyenaLine
+              ? `✅ ハイエナ圏内 (${gamesNum}G) — 着席検討OK。残り${result.remaining}Gで天井。`
+              : `⏳ 待機 (${gamesNum}G) — ハイエナ開始目安は${machine.cut_line_games}G〜。あと${machine.cut_line_games - gamesNum}G待ち。`
+            }
+          </div>
+
+          {/* 差枚含む収支 */}
+          {medalsNum !== null && (
+            <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-1">
+              <div className="font-semibold text-slate-700">差枚込み収支試算</div>
+              <div className="text-slate-600">
+                現在の差枚: {medalsNum}枚 / 今後の投資目安: {Math.round(result.futureCost)}枚
+              </div>
+              <div className={`font-bold text-base ${(medalsNum + result.evNet) > 0 ? "text-emerald-600" : "text-red-500"}`}>
+                合計期待収支: {(medalsNum + result.evNet) > 0 ? "+" : ""}{Math.round(medalsNum + result.evNet)}枚
+              </div>
+              <div className="text-[10px] text-slate-400">※ 1枚≒20〜25円換算。AT期待枚数は参考値です。</div>
+            </div>
+          )}
+
+          {machine.notes && (
+            <div className="text-[10px] text-slate-400 px-1">{machine.notes}</div>
+          )}
+        </div>
+      )}
+
+      {/* 朝イチ恩恵 */}
+      {machine && machine.morning_bonus && (
+        <div className={`rounded-xl border p-4 space-y-2 ${machine.morning_bonus.has_bonus ? "bg-amber-50 border-amber-300" : "bg-slate-50 border-slate-200"}`}>
+          <div className="flex items-center gap-2">
+            <span className="text-sm">🌅</span>
+            <div className="font-bold text-sm text-slate-800">朝イチ恩恵</div>
+            {machine.morning_bonus.has_bonus && (
+              <span className="px-2 py-0.5 bg-amber-400 text-white text-[10px] rounded-full font-bold">
+                {machine.morning_bonus.label}
+              </span>
+            )}
+          </div>
+          <div className="text-xs text-slate-700 leading-relaxed">{machine.morning_bonus.summary}</div>
+          {machine.morning_bonus.details && machine.morning_bonus.details.length > 0 && (
+            <ul className="text-[11px] text-slate-600 space-y-0.5">
+              {machine.morning_bonus.details.map((d, i) => (
+                <li key={i} className="flex gap-1.5"><span className="text-amber-500 shrink-0">•</span><span>{d}</span></li>
+              ))}
+            </ul>
+          )}
+          {machine.morning_bonus.reset_line && (
+            <div className="bg-amber-100 rounded-lg px-3 py-1.5 text-xs font-semibold text-amber-800">
+              狙い目: {machine.morning_bonus.reset_line}
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* 高設定示唆情報 */}
+      {machine && machine.setting_tells && (() => {
+        const st = machine.setting_tells;
+        return (
+          <div className="rounded-xl border bg-indigo-50 border-indigo-200 p-4 space-y-3">
+            <div className="flex items-center gap-2">
+              <span className="text-sm">👑</span>
+              <div className="font-bold text-sm text-indigo-900">高設定示唆チェック</div>
+              {st.mechanical_rate_6 && (
+                <span className="ml-auto text-[10px] text-indigo-600 font-semibold bg-indigo-100 px-2 py-0.5 rounded-full">
+                  設定6={st.mechanical_rate_6}
+                </span>
+              )}
+            </div>
+
+            {/* 最重要ポイント */}
+            {st.top_tell && (
+              <div className="bg-indigo-100 rounded-lg px-3 py-2 text-xs font-semibold text-indigo-800 leading-relaxed">
+                ★ {st.top_tell}
+              </div>
+            )}
+
+            {/* 確定演出 */}
+            {st.confirmed_tells && st.confirmed_tells.length > 0 && (
+              <div className="space-y-1">
+                <div className="text-[10px] font-bold text-indigo-700 uppercase tracking-wide">確定・濃厚演出</div>
+                <ul className="space-y-0.5">
+                  {st.confirmed_tells.map((t, i) => (
+                    <li key={i} className="flex gap-1.5 text-[11px] text-indigo-900">
+                      <span className="text-yellow-500 shrink-0">✦</span><span>{t}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* カウント項目 */}
+            {st.key_counters && st.key_counters.length > 0 && (
+              <div className="space-y-1">
+                <div className="text-[10px] font-bold text-indigo-700 uppercase tracking-wide">カウント・チェック項目</div>
+                <ul className="space-y-0.5">
+                  {st.key_counters.map((k, i) => (
+                    <li key={i} className="flex gap-1.5 text-[11px] text-slate-700">
+                      <span className="text-indigo-400 shrink-0">→</span><span>{k}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {st.notes && (
+              <div className="text-[10px] text-indigo-600 leading-relaxed border-t border-indigo-200 pt-2">{st.notes}</div>
+            )}
+          </div>
+        );
+      })()}
+    </div>
+  );
+}
+
+const CAT_SHORT = { "通常日": "通", "旧イベント日": "旧", "強化イベント日": "強", "周年": "周" };
+const CAT_STYLE = {
+  "通常日":     "bg-slate-100 text-slate-600",
+  "旧イベント日": "bg-amber-100 text-amber-700",
+  "強化イベント日":"bg-red-100 text-red-700",
+  "周年":       "bg-blue-100 text-blue-700",
+};
+
+function HistoryADVChart({ allHistory }) {
+  const canvasRef = useRef(null);
+  const chartRef = useRef(null);
+  useEffect(() => {
+    if (!canvasRef.current || !allHistory || allHistory.length === 0) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+    const roll7 = (arr, key) => arr.map((_, i) => {
+      const slice = arr.slice(Math.max(0, i - 6), i + 1);
+      const vals = slice.map(d => d[key]).filter(v => v != null);
+      return vals.length > 0 ? +(vals.reduce((a, b) => a + b, 0) / vals.length).toFixed(2) : null;
+    });
+    const labels = allHistory.map(d => (d.date || "").slice(5));
+    const machAdv = allHistory.map(d => d.adv_machine ?? null);
+    const ctx = canvasRef.current.getContext("2d");
+    chartRef.current = new Chart(ctx, {
+      type: "bar",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: "台ADV",
+            data: machAdv,
+            backgroundColor: machAdv.map(v => v == null ? "transparent" : v >= 0 ? "rgba(16,185,129,0.5)" : "rgba(239,68,68,0.45)"),
+            borderColor: machAdv.map(v => v == null ? "transparent" : v >= 0 ? "#10b981" : "#ef4444"),
+            borderWidth: 1, borderRadius: 2,
+          },
+          {
+            type: "line", label: "7日MA",
+            data: roll7(allHistory, "adv_machine"),
+            borderColor: "#6366f1", borderWidth: 2, pointRadius: 0, tension: 0.3, fill: false,
+          },
+          {
+            type: "line", label: "0%",
+            data: allHistory.map(() => 0),
+            borderColor: "#94a3b8", borderWidth: 1, pointRadius: 0, borderDash: [3, 3], fill: false,
+          },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
+        scales: {
+          x: { ticks: { font: { size: 7 }, maxTicksLimit: 10, maxRotation: 0 } },
+          y: { ticks: { font: { size: 9 }, callback: v => (v > 0 ? "+" : "") + v + "%" } },
+        },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [allHistory]);
+  return <div style={{ height: "160px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function HistoryTab() {
+  const [hist, setHist] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [err, setErr] = useState(null);
+  const [expanded, setExpanded] = useState(null);
+  const [showAll, setShowAll] = useState(false);
+
+  useEffect(() => {
+    fetch("history.json?_=" + Date.now())
+      .then(r => { if (!r.ok) throw new Error("not found"); return r.json(); })
+      .then(d => { setHist(d); setLoading(false); })
+      .catch(() => { setErr(true); setLoading(false); });
+  }, []);
+
+  if (loading) return <div className="text-center py-12 text-slate-400 text-sm">読み込み中...</div>;
+  if (err || !hist) return (
+    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 space-y-2">
+      <div className="font-semibold">history.json が見つかりません</div>
+      <div>以下を実行してください:</div>
+      <div className="font-mono bg-amber-100 px-3 py-2 rounded text-xs">python evaluate_predictions.py</div>
+      <div className="text-xs text-amber-600">実績データが取れた翌日以降に実行できます</div>
+    </div>
+  );
+
+  const advColor = v => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
+  const advBg    = v => v > 0 ? "bg-emerald-50" : v < 0 ? "bg-red-50" : "";
+  const sum = hist.summary || {};
+  const r7 = sum.rolling_7d || {};
+  const r30 = sum.rolling_30d || {};
+  const all = sum.all_time || {};
+  const allHistory = hist.all_history || hist.history || [];
+  const detailMap = Object.fromEntries((hist.history || []).map(r => [r.date, r]));
+
+  // 日別リスト: showAll ? 全件 : 直近30件
+  const listSource = [...allHistory].reverse();
+  const listRows = showAll ? listSource : listSource.slice(0, 30);
+
+  return (
+    <div className="space-y-4">
+
+      {/* ① ADV推移チャート */}
+      <div className="bg-white rounded-xl border border-slate-200 p-4">
+        <div className="flex items-baseline justify-between mb-2">
+          <div className="text-xs font-semibold text-slate-700">台ADV推移（全期間）</div>
+          <div className="text-[10px] text-slate-400">{allHistory.length}日分</div>
+        </div>
+        <HistoryADVChart allHistory={allHistory} />
+        <div className="text-[10px] text-slate-400 mt-1.5">緑=プラス / 赤=マイナス / 紫線=7日移動平均</div>
+      </div>
+
+      {/* ② KPIカード (7日・30日・全期間) */}
+      <div className="grid grid-cols-3 gap-2">
+        {[
+          ["7日", r7.adv_machine, r7.n_days],
+          ["30日", r30.adv_machine, r30.n_days],
+          ["全期間", all.adv_machine, all.n_days],
+        ].map(([label, val, n]) => (
+          <div key={label} className="bg-white rounded-xl border border-slate-200 p-3 text-center">
+            <div className="text-[10px] text-slate-500">台ADV ({label})</div>
+            <div className={`text-lg font-bold ${typeof val === "number" ? advColor(val) : "text-slate-400"}`}>
+              {typeof val === "number" ? `${val > 0 ? "+" : ""}${val.toFixed(2)}%` : "—"}
+            </div>
+            {n != null && <div className="text-[9px] text-slate-400">{n}日</div>}
+          </div>
+        ))}
+      </div>
+
+      {/* ③ カテゴリ別実績 */}
+      {hist.by_category && Object.keys(hist.by_category).length > 0 && (
+        <div className="bg-white rounded-xl border border-slate-200 p-4">
+          <div className="text-xs font-semibold text-slate-700 mb-2">カテゴリ別実績（PDCA）</div>
+          <table className="w-full text-xs">
+            <thead>
+              <tr className="text-slate-500 border-b text-right">
+                <th className="text-left pb-1">カテゴリ</th>
+                <th className="pb-1">日数</th>
+                <th className="pb-1">機種ADV</th>
+                <th className="pb-1">台ADV</th>
+                <th className="pb-1">的中率</th>
+              </tr>
+            </thead>
+            <tbody>
+              {["通常日", "旧イベント日", "強化イベント日"].map(cat => {
+                const c = (hist.by_category || {})[cat];
+                if (!c) return null;
+                return (
+                  <tr key={cat} className="border-b border-slate-50">
+                    <td className="py-1.5">
+                      <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${CAT_STYLE[cat] || ""}`}>
+                        {CAT_SHORT[cat] || cat}
+                      </span>
+                      <span className="ml-1.5 text-slate-500">{cat}</span>
+                    </td>
+                    <td className="py-1.5 text-right text-slate-400">{c.n_days}</td>
+                    <td className={`py-1.5 text-right font-semibold ${advColor(c.avg_adv_kishu)}`}>
+                      {c.avg_adv_kishu != null ? `${c.avg_adv_kishu > 0 ? "+" : ""}${c.avg_adv_kishu.toFixed(2)}%` : "—"}
+                    </td>
+                    <td className={`py-1.5 text-right font-semibold ${advColor(c.avg_adv_machine)}`}>
+                      {c.avg_adv_machine != null ? `${c.avg_adv_machine > 0 ? "+" : ""}${c.avg_adv_machine.toFixed(2)}%` : "—"}
+                    </td>
+                    <td className="py-1.5 text-right text-slate-600">
+                      {c.avg_top10_plus_rate != null ? `${(c.avg_top10_plus_rate * 100).toFixed(1)}%` : "—"}
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+          <div className="text-[10px] text-slate-400 mt-2">旧イベント日の対抗は精度低め（v9.8で本命 score≥70に引き上げ済み）</div>
+        </div>
+      )}
+
+      {/* ④ 日別予測 vs 実績（全件 or 30件） */}
+      <div className="bg-white rounded-xl border border-slate-200 p-4">
+        <div className="flex items-center justify-between mb-2">
+          <div className="text-xs font-semibold text-slate-700">
+            予測 vs 実績 ({showAll ? `全${allHistory.length}日` : "直近30日"})
+          </div>
+          <button
+            onClick={() => setShowAll(v => !v)}
+            className="text-[10px] text-emerald-600 border border-emerald-200 px-2 py-0.5 rounded-full">
+            {showAll ? "30日に絞る" : `全${allHistory.length}日を表示`}
+          </button>
+        </div>
+        <div>
+          {listRows.map(row => {
+            const isExp = expanded === row.date;
+            const detail = detailMap[row.date];
+            const machines = detail ? (detail.matched_machines || []) : [];
+            const hitN = machines.filter(m => m.hit).length;
+            const adv = row.adv_machine;
+            return (
+              <div key={row.date} className={`border-b border-slate-50 last:border-0 ${adv != null && adv > 2 ? "bg-emerald-50/40" : adv != null && adv < -2 ? "bg-red-50/40" : ""}`}>
+                <div className="flex items-center gap-1.5 py-2 cursor-pointer hover:bg-slate-50/80 -mx-1 px-1 rounded"
+                     onClick={() => machines.length > 0 && setExpanded(isExp ? null : row.date)}>
+                  {/* 日付 */}
+                  <div className="text-xs text-slate-600 w-10 shrink-0 font-mono">{(row.date || "").slice(5)}</div>
+                  {/* カテゴリバッジ */}
+                  <span className={`text-[9px] font-bold px-1 py-0.5 rounded shrink-0 ${CAT_STYLE[row.category] || "bg-slate-100 text-slate-500"}`}>
+                    {CAT_SHORT[row.category] || "?"}
+                  </span>
+                  {/* ベース → 台ADV */}
+                  <div className="flex-1 text-[11px] text-slate-500 min-w-0">
+                    <span className="font-mono">{row.base_avg?.toFixed(1)}%</span>
+                    <span className="mx-1">→</span>
+                    <span className={`font-mono font-semibold ${advColor(adv)}`}>
+                      {adv != null ? `${adv > 0 ? "+" : ""}${adv.toFixed(1)}%` : "—"}
+                    </span>
+                  </div>
+                  {/* 的中数 */}
+                  {machines.length > 0 && (
+                    <div className="text-[10px] shrink-0">
+                      <span className={hitN > 0 ? "text-emerald-600 font-semibold" : "text-slate-400"}>
+                        {hitN}/{machines.length}hit
+                      </span>
+                    </div>
+                  )}
+                  {/* モデル */}
+                  <div className="text-[9px] text-slate-300 shrink-0 w-7 text-right">{(row.model_version || "").replace("v", "")}</div>
+                  {machines.length > 0 && (
+                    <span className="text-slate-300 text-[10px] shrink-0">{isExp ? "▲" : "▼"}</span>
+                  )}
+                </div>
+                {isExp && machines.length > 0 && (
+                  <div className="pb-2 space-y-0.5 bg-slate-50 rounded-lg mb-1 px-3 py-2">
+                    <div className="text-[9px] text-slate-400 mb-1 font-semibold">TOP{machines.length} 予測台の実績</div>
+                    {machines.map((m, i) => (
+                      <div key={i} className={`flex items-center gap-1.5 text-[10px] px-1 py-0.5 rounded ${m.hit ? "bg-emerald-50" : "bg-red-50/60"}`}>
+                        <span className="text-slate-400 w-3 shrink-0 text-center">{i + 1}</span>
+                        <span className="text-slate-600 flex-1 truncate">{m.機種}</span>
+                        <span className="text-slate-500 w-7 shrink-0 text-center">#{m.台番}</span>
+                        <span className="text-slate-400 font-mono w-8 shrink-0 text-right">
+                          {m.predicted_score != null ? m.predicted_score.toFixed(0) + "pt" : "—"}
+                        </span>
+                        <span className={`font-mono font-semibold w-13 shrink-0 text-right ${m.actual_rate >= 100 ? "text-emerald-600" : "text-red-500"}`}>
+                          {m.actual_rate?.toFixed(1)}%
+                        </span>
+                        <span className="w-4 text-center">{m.hit ? "○" : "×"}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+          {allHistory.length === 0 && (
+            <div className="text-center text-slate-400 py-4 text-sm">履歴データなし</div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function App() {
+  const [data, setData] = useState(null);
+  const [err, setErr] = useState(null);
+  const [tab, setTab] = useState("kishu");
+  const [expandedKishu, setExpandedKishu] = useState({});
+  const [favorites, setFavorites] = useState(loadFavorites());
+  const [search, setSearch] = useState("");
+  const [showMisokuri, setShowMisokuri] = useState(false);
+
+  useEffect(() => {
+    fetch("./score.json?t=" + Date.now())
+      .then(r => r.ok ? r.json() : Promise.reject(`HTTP ${r.status}`))
+      .then(setData)
+      .catch(e => setErr(String(e)));
+  }, []);
+
+  function toggleFav(kishu, daiban) {
+    const key = favKey(kishu, daiban);
+    const next = favorites.includes(key)
+      ? favorites.filter(k => k !== key)
+      : [...favorites, key];
+    setFavorites(next);
+    saveFavorites(next);
+  }
+
+  function toggleKishu(name) {
+    setExpandedKishu(p => ({ ...p, [name]: !p[name] }));
+  }
+
+  const allMachines = useMemo(() => {
+    if (!data) return [];
+    const map = new Map();
+    for (const m of [...(data.machine_top20 || []), ...(data.target_machines || [])]) {
+      map.set(favKey(m["機種"], m["台番"]), m);
+    }
+    return [...map.values()];
+  }, [data]);
+
+  const filteredMachines = useMemo(() => {
+    if (!data) return [];
+    const s = search.trim().toLowerCase();
+    let list = data.machine_top20 || [];
+    if (s) list = list.filter(m => (m["機種"] || "").toLowerCase().includes(s));
+    return list;
+  }, [data, search]);
+
+  if (err) return (
+    <div className="p-8 text-center">
+      <div className="text-red-600 font-bold mb-2">エラー</div>
+      <div className="text-sm text-slate-600">{err}</div>
+      <div className="text-xs text-slate-400 mt-4">score.json を読み込めません。<br />daily_target.py を実行して pwa/score.json を生成してください。</div>
+    </div>
+  );
+  if (!data) return (
+    <div className="p-12 text-center text-slate-400">読み込み中…</div>
+  );
+
+  const tabs = [
+    { id: "kishu", label: "機種", icon: "🎯", count: (data.kishu_top10 || []).length },
+    { id: "machine", label: "台", icon: "🎰", count: (data.machine_top10 || []).length },
+    { id: "target", label: "監視機種", icon: "👁", count: (data.target_machines || []).length },
+    { id: "warning", label: "注意", icon: "⚠️", count: (data.kishu_warning || []).length },
+    { id: "bonus", label: "穴場", icon: "💎", count: (data.kishu_bonus || []).length },
+    { id: "favorites", label: "★", icon: "", count: favorites.length },
+    { id: "hyena", label: "ハイエナ", icon: "🦁" },
+    { id: "backtest", label: "検証", icon: "🔬" },
+    { id: "history", label: "履歴", icon: "📊" },
+    { id: "info", label: "info", icon: "ℹ️" },
+  ];
+
+  return (
+    <div className="min-h-screen pb-12 max-w-2xl mx-auto bg-slate-50">
+      <Header data={data} />
+      <div className="px-3">
+        <StoreStageBar stageData={data.store_stage} />
+        <StrategyCard card={data.strategy_card} />
+        <EventDayWarning category={data.target_category} />
+        <Tabs tabs={tabs} active={tab} onChange={setTab} />
+
+        <div className="mt-3 space-y-2">
+          {tab === "kishu" && (() => {
+            const kishuAll = data.kishu_top10 || [];
+            const BLOCKS = [
+              { cls: "本命", hdr: "bg-red-50 border-red-200 text-red-700" },
+              { cls: "対抗", hdr: "bg-orange-50 border-orange-200 text-orange-600" },
+              { cls: "穴",   hdr: "bg-purple-50 border-purple-200 text-purple-600" },
+            ];
+            const misokuriKishu = kishuAll.filter(r => !["本命","対抗","穴"].includes(r["分類"]));
+            return (
+              <>
+                <div className="text-xs text-slate-500 px-1">
+                  明日狙うべき機種 TOP{kishuAll.length}。タップで台TOP5を展開。
+                </div>
+                {BLOCKS.map(({ cls, hdr }) => {
+                  const group = kishuAll.filter(r => r["分類"] === cls);
+                  if (group.length === 0) return null;
+                  return (
+                    <div key={cls} className="space-y-1.5">
+                      <div className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-xs font-bold ${hdr}`}>
+                        <ClassificationBadge cls={cls} />
+                        <span>{cls}機種</span>
+                        <span className="ml-auto opacity-60">{group.length}機種</span>
+                      </div>
+                      {group.map(row => (
+                        <KishuCard
+                          key={row["機種"]}
+                          row={row}
+                          expanded={!!expandedKishu[row["機種"]]}
+                          onToggle={() => toggleKishu(row["機種"])}
+                          machines={(data.machine_by_kishu || {})[row["機種"]] || []}
+                          favorites={favorites}
+                          toggleFav={toggleFav}
+                          minRepoUrl={data.min_repo_url}
+                          kishuTrend={(data.kishu_trend || {})[row["機種"]]}
+                          machineTrend={data.machine_trend || {}}
+                        />
+                      ))}
+                    </div>
+                  );
+                })}
+                {misokuriKishu.length > 0 && (
+                  <div className="space-y-1.5 opacity-50">
+                    <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-xs font-bold text-slate-500">
+                      <span>見送り機種</span>
+                      <span className="ml-auto">{misokuriKishu.length}機種</span>
+                    </div>
+                    {misokuriKishu.map(row => (
+                      <KishuCard
+                        key={row["機種"]}
+                        row={row}
+                        expanded={false}
+                        onToggle={() => {}}
+                        machines={[]}
+                        favorites={favorites}
+                        toggleFav={toggleFav}
+                        minRepoUrl={data.min_repo_url}
+                      />
+                    ))}
+                  </div>
+                )}
+              </>
+            );
+          })()}
+
+          {tab === "machine" && (() => {
+            const nonMisokuri = filteredMachines.filter(m => m["分類"] !== "見送り");
+            const misokuriMs = filteredMachines.filter(m => m["分類"] === "見送り");
+            return (
+              <>
+                <input
+                  type="text"
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                  placeholder="機種名で絞り込み..."
+                  className="w-full px-3 py-2 rounded-lg border border-slate-200 text-sm mb-2"
+                />
+                <div className="text-xs text-slate-500 px-1 mb-1">
+                  狙い目台 {nonMisokuri.length}台
+                  <span className="ml-2 text-slate-400">連敗3-5日 = 反発期待MAX</span>
+                </div>
+                {nonMisokuri.map((m, idx) => (
+                  <MachineRow key={favKey(m["機種"], m["台番"])}
+                    row={m} favorites={favorites} toggleFav={toggleFav}
+                    machineTrend={(data.machine_trend || {})[favKey(m["機種"], m["台番"])]}
+                    isTop={idx === 0 && !search} />
+                ))}
+                {misokuriMs.length > 0 && (
+                  <>
+                    <button
+                      onClick={() => setShowMisokuri(v => !v)}
+                      className="w-full mt-1 text-xs text-slate-400 py-2 border-t border-slate-200 flex items-center justify-center gap-1 hover:text-slate-600">
+                      見送り {misokuriMs.length}台 {showMisokuri ? "▲" : "▼"}
+                    </button>
+                    {showMisokuri && (
+                      <div className="opacity-50 space-y-1.5">
+                        {misokuriMs.map(m => (
+                          <MachineRow key={favKey(m["機種"], m["台番"])}
+                            row={m} favorites={favorites} toggleFav={toggleFav}
+                            machineTrend={(data.machine_trend || {})[favKey(m["機種"], m["台番"])]} />
+                        ))}
+                      </div>
+                    )}
+                  </>
+                )}
+              </>
+            );
+          })()}
+
+          {tab === "target" && (
+            <>
+              <div className="text-xs text-slate-500 px-1 mb-1">
+                監視機種(target_models.txt)に絞った狙い目台
+              </div>
+              {(data.target_machines || []).map((m) => (
+                <MachineRow key={favKey(m["機種"], m["台番"])}
+                  row={m} favorites={favorites} toggleFav={toggleFav}
+                  machineTrend={(data.machine_trend || {})[favKey(m["機種"], m["台番"])]} />
+              ))}
+            </>
+          )}
+
+          {tab === "warning" && (
+            <>
+              <div className="text-xs text-red-600 px-1 mb-1 font-semibold">
+                ⚠ 強化日に通常日より弱い機種。座らない方が無難。
+              </div>
+              {(data.kishu_warning || []).map((row) => (
+                <KishuCard key={row["機種"]} row={row}
+                  expanded={false} onToggle={() => {}}
+                  machines={[]} favorites={favorites} toggleFav={toggleFav}
+                  minRepoUrl={data.min_repo_url} />
+              ))}
+              {(data.kishu_warning || []).length === 0 && (
+                <div className="text-center text-slate-400 py-8 text-sm">注意機種なし</div>
+              )}
+            </>
+          )}
+
+          {tab === "bonus" && (
+            <>
+              <div className="text-xs text-amber-600 px-1 mb-1 font-semibold">
+                💎 1〜2台の希少機種 / 強化日プレミアム大。座れれば期待値MAX。
+              </div>
+              {(data.kishu_bonus || []).map((row) => (
+                <div key={row["機種"]} className="bg-white rounded-xl border border-amber-200 p-3">
+                  <div className="font-semibold text-sm text-slate-800 break-words">{row["機種"]}</div>
+                  <div className="flex gap-3 mt-1 text-xs text-slate-600">
+                    <span>+α <span className="text-red-600 font-bold">+{row["+α"]}%</span></span>
+                    <span>直近 <RateLabel value={row["直近平均"]} /></span>
+                    <span className="text-slate-500">{row["台数"]}台</span>
+                  </div>
+                </div>
+              ))}
+              {(data.kishu_bonus || []).length === 0 && (
+                <div className="text-center text-slate-400 py-8 text-sm">ボーナス枠なし</div>
+              )}
+            </>
+          )}
+
+          {tab === "favorites" && (
+            <FavoritesView favorites={favorites} allMachines={allMachines} toggleFav={toggleFav}
+              machineTrend={data.machine_trend || {}} />
+          )}
+
+          {tab === "hyena" && <HyenaTab />}
+
+          {tab === "backtest" && <BacktestTab />}
+
+          {tab === "history" && <HistoryTab />}
+
+          {tab === "info" && (
+            <div className="space-y-3">
+              <PerformancePanel perf={data.model_performance} />
+              <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-2">
+                <div className="font-semibold text-slate-700">スコアの読み方</div>
+                <div className="text-slate-600 space-y-1">
+                  <div><strong>score</strong>: 総合スコア(0-100)。60+で注目、70+で本命</div>
+                  <div><strong>分類</strong>: 本命(65+A/B)/ 対抗(50+A〜C)/ 穴(40+)/ 見送り</div>
+                  <div><strong>信頼度</strong>: A(30+日)/ B(15+)/ C(5+)/ D(5未満) — サンプル数</div>
+                  <div><strong>緑タグ</strong>: 推奨理由 / <strong>赤タグ</strong>: リスク要因</div>
+                  <div><strong>+α</strong>: 当日カテゴリの機種プレミアム</div>
+                  <div><strong>連敗日数</strong>: 3-5日連敗で反発期待MAX</div>
+                  <div><strong>P経過日</strong>: 最後にプラスだった日からの経過</div>
+                  <div><strong>Z</strong>: 機種内Zスコア(他の台と比べてσ単位)</div>
+                  <div><strong>末尾スコア</strong>: 台番末尾の直近出率傾向(イベント日のみ反映)</div>
+                  <div><strong>営業ステージ</strong>: 攻め期(直近7日+1.5%以上) / 締め期(-1.5%以下) / 平常期</div>
+                </div>
+              </div>
+              <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs">
+                <div className="font-semibold text-slate-700 mb-2">運用</div>
+                <ol className="list-decimal pl-5 text-slate-600 space-y-1">
+                  <li>毎朝 run_daily.bat を実行</li>
+                  <li>score.json が自動で更新される</li>
+                  <li>このページをリロード</li>
+                </ol>
+              </div>
+
+              <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-4">
+                <div className="font-semibold text-slate-700">算出ロジック</div>
+
+                <div>
+                  <div className="font-semibold text-emerald-700 mb-1.5">機種スコア — 通常日</div>
+                  <div className="space-y-1 text-slate-600">
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">K1×0.25</span><span>直近14日の加重平均出率（新しいほど重み2倍）</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">K2×0.35</span><span>連日P率 — 14日間で100%超えた日の割合</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">K4×0.15</span><span>機種内Top3台の加重平均出率</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">K7×0.20</span><span>前回イベント日の弱さ → 反発期待</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">K8×0.05</span><span>タグヒント（みんレポ★◯▲の重み付き合算）</span></div>
+                  </div>
+                  <div className="mt-1.5 text-slate-400">イベント日: K5(イベント実績)が0.25、K7が0.25、K1は0.15に変化</div>
+                </div>
+
+                <div>
+                  <div className="font-semibold text-emerald-700 mb-1.5">台番スコア — 通常日</div>
+                  <div className="space-y-1 text-slate-600">
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S6×0.30</span><span>連敗反発 — 3〜5連敗でMAX。長すぎると減衰</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S7×0.25</span><span>ローテーション — 機種内でP経過日が長い台を優遇</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S1×0.15</span><span>直近14日の加重平均出率</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S3×0.15</span><span>機種内Zスコア — 同機種の他台と比べた相対値</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S5×0.10</span><span>信頼度 — 稼働日数÷14日（データ量の多さ）</span></div>
+                    <div className="flex gap-2"><span className="font-mono bg-slate-100 px-1 rounded shrink-0">S4×0.05</span><span>イベント実績プレミアム（当日カテゴリでの上乗せ）</span></div>
+                  </div>
+                  <div className="mt-1.5 text-slate-400">イベント日: S9(末尾スコア)が+0.05、S4が0.20、S7は0.15に変化</div>
+                </div>
+
+                <div>
+                  <div className="font-semibold text-emerald-700 mb-1.5">末尾スコア (S9) — イベント日のみ</div>
+                  <div className="text-slate-600">matsubi_data.csv の直近21日分から末尾0〜9ごとの加重平均出率を算出。当日の台番末尾に対応したスコアを付加。</div>
+                </div>
+
+                <div>
+                  <div className="font-semibold text-emerald-700 mb-1.5">営業ステージ判定</div>
+                  <div className="text-slate-600">全台の直近7日平均出率 と 過去60日平均出率を比較。差が+1.5%以上→攻め期 / -1.5%以下→締め期 / それ以外→平常期</div>
+                </div>
+
+                <div>
+                  <div className="font-semibold text-emerald-700 mb-1.5">分類ロジック</div>
+                  <div className="space-y-0.5 text-slate-600">
+                    <div><span className="font-bold text-red-600">本命</span>: score≥65 かつ 信頼度A/B かつ リスク1個以下</div>
+                    <div><span className="font-bold text-orange-500">対抗</span>: score≥50 かつ 信頼度A〜C かつ リスク1個以下</div>
+                    <div><span className="font-bold text-purple-500">穴</span>: score≥40 かつ リスク1個以下</div>
+                    <div><span className="text-slate-500">見送り</span>: 信頼度D、深刻リスク有、またはそれ以外</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <TooltipProvider><App /></TooltipProvider>
+);
+  </script>
+</body>
+</html>

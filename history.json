@@ -1,0 +1,4009 @@
+{
+  "generated_at": "2026-05-18T12:26:27.225839",
+  "history": [
+    {
+      "date": "2026-04-18",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 97.11,
+      "base_plus_rate": 0.3777,
+      "top10_kishu_avg": 96.18,
+      "top10_machine_avg": 100.33,
+      "top10_machine_top3_avg": 110.77,
+      "adv_kishu": -0.93,
+      "adv_machine": 3.22,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.384964",
+      "matched_machines": [
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 632,
+          "predicted_score": 74.5,
+          "predicted_rate": 95.0,
+          "actual_rate": 95.8,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 512,
+          "predicted_score": 72.2,
+          "predicted_rate": 97.9,
+          "actual_rate": 99.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 784,
+          "predicted_score": 71.4,
+          "predicted_rate": 96.1,
+          "actual_rate": 95.1,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 610,
+          "predicted_score": 71.0,
+          "predicted_rate": 92.8,
+          "actual_rate": 104.2,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 631,
+          "predicted_score": 70.5,
+          "predicted_rate": 94.5,
+          "actual_rate": 92.5,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ鉄拳6",
+          "台番": 606,
+          "predicted_score": 70.0,
+          "predicted_rate": 101.3,
+          "actual_rate": 82.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 592,
+          "predicted_score": 69.3,
+          "predicted_rate": 96.0,
+          "actual_rate": 108.5,
+          "hit": true
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 467,
+          "predicted_score": 68.1,
+          "predicted_rate": 105.4,
+          "actual_rate": 103.8,
+          "hit": true
+        },
+        {
+          "機種": "吉宗",
+          "台番": 583,
+          "predicted_score": 67.0,
+          "predicted_rate": 98.1,
+          "actual_rate": 101.0,
+          "hit": true
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 457,
+          "predicted_score": 65.1,
+          "predicted_rate": 96.5,
+          "actual_rate": 119.6,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-19",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 99.47,
+      "base_plus_rate": 0.4396,
+      "top10_kishu_avg": 102.68,
+      "top10_machine_avg": 106.88,
+      "top10_machine_top3_avg": 130.43,
+      "adv_kishu": 3.21,
+      "adv_machine": 7.41,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.402418",
+      "matched_machines": [
+        {
+          "機種": "スマスロ鉄拳6",
+          "台番": 606,
+          "predicted_score": 79.7,
+          "predicted_rate": 100.3,
+          "actual_rate": 139.4,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 784,
+          "predicted_score": 79.0,
+          "predicted_rate": 96.2,
+          "actual_rate": 80.8,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ鉄拳6",
+          "台番": 506,
+          "predicted_score": 75.9,
+          "predicted_rate": 100.6,
+          "actual_rate": 123.0,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 713,
+          "predicted_score": 75.3,
+          "predicted_rate": 101.2,
+          "actual_rate": 104.3,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 780,
+          "predicted_score": 71.8,
+          "predicted_rate": 98.0,
+          "actual_rate": 105.7,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ鉄拳6",
+          "台番": 501,
+          "predicted_score": 71.1,
+          "predicted_rate": 91.6,
+          "actual_rate": 128.9,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 57.8,
+          "predicted_rate": 98.2,
+          "actual_rate": 89.4,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 57.3,
+          "predicted_rate": 106.0,
+          "actual_rate": 95.5,
+          "hit": false
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 54.3,
+          "predicted_rate": 94.7,
+          "actual_rate": 97.7,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 674,
+          "predicted_score": 54.2,
+          "predicted_rate": 97.1,
+          "actual_rate": 104.1,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-20",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 321,
+      "base_avg": 95.05,
+      "base_plus_rate": 0.324,
+      "top10_kishu_avg": 93.37,
+      "top10_machine_avg": 86.96,
+      "top10_machine_top3_avg": 99.63,
+      "adv_kishu": -1.68,
+      "adv_machine": -8.1,
+      "top10_machine_plus_rate": 0.1111,
+      "top10_machine_n_matched": 9,
+      "evaluated_at": "2026-05-18T09:55:26.419594",
+      "matched_machines": [
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 84.2,
+          "predicted_rate": 100.2,
+          "actual_rate": 89.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 71.3,
+          "predicted_rate": 97.8,
+          "actual_rate": 78.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 67.1,
+          "predicted_rate": 105.2,
+          "actual_rate": 117.9,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 63.4,
+          "predicted_rate": 94.6,
+          "actual_rate": 92.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 469,
+          "predicted_score": 62.4,
+          "predicted_rate": 94.1,
+          "actual_rate": 81.3,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 62.0,
+          "predicted_rate": 102.2,
+          "actual_rate": 72.3,
+          "hit": false
+        },
+        {
+          "機種": "吉宗",
+          "台番": 585,
+          "predicted_score": 58.1,
+          "predicted_rate": 111.4,
+          "actual_rate": 80.9,
+          "hit": false
+        },
+        {
+          "機種": "吉宗",
+          "台番": 586,
+          "predicted_score": 56.2,
+          "predicted_rate": 101.1,
+          "actual_rate": 82.8,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 沖ドキ!DUO アンコール",
+          "台番": 699,
+          "predicted_score": 54.8,
+          "predicted_rate": 111.7,
+          "actual_rate": 87.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 322,
+      "base_avg": 95.04,
+      "base_plus_rate": 0.354,
+      "top10_kishu_avg": 95.27,
+      "top10_machine_avg": 84.95,
+      "top10_machine_top3_avg": 97.9,
+      "adv_kishu": 0.23,
+      "adv_machine": -10.09,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.443290",
+      "matched_machines": [
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 70.3,
+          "predicted_rate": 99.0,
+          "actual_rate": 98.3,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 633,
+          "predicted_score": 66.9,
+          "predicted_rate": 96.0,
+          "actual_rate": 91.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 514,
+          "predicted_score": 65.0,
+          "predicted_rate": 96.4,
+          "actual_rate": 83.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 632,
+          "predicted_score": 63.4,
+          "predicted_rate": 94.2,
+          "actual_rate": 74.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 62.9,
+          "predicted_rate": 95.8,
+          "actual_rate": 70.1,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 61.3,
+          "predicted_rate": 96.4,
+          "actual_rate": 85.5,
+          "hit": false
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 60.0,
+          "predicted_rate": 94.3,
+          "actual_rate": 87.6,
+          "hit": false
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 469,
+          "predicted_score": 55.6,
+          "predicted_rate": 92.7,
+          "actual_rate": 71.2,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 54.5,
+          "predicted_rate": 108.2,
+          "actual_rate": 84.4,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 672,
+          "predicted_score": 52.6,
+          "predicted_rate": 99.7,
+          "actual_rate": 104.0,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 94.86,
+      "base_plus_rate": 0.3313,
+      "top10_kishu_avg": 96.38,
+      "top10_machine_avg": 99.29,
+      "top10_machine_top3_avg": 123.33,
+      "adv_kishu": 1.53,
+      "adv_machine": 4.43,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.464410",
+      "matched_machines": [
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 536,
+          "predicted_score": 77.2,
+          "predicted_rate": 106.5,
+          "actual_rate": 90.0,
+          "hit": false
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 67.5,
+          "predicted_rate": 99.1,
+          "actual_rate": 103.9,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 633,
+          "predicted_score": 66.6,
+          "predicted_rate": 95.3,
+          "actual_rate": 109.2,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 514,
+          "predicted_score": 63.8,
+          "predicted_rate": 95.0,
+          "actual_rate": 83.2,
+          "hit": false
+        },
+        {
+          "機種": "パチスロ　甲鉄城のカバネリ",
+          "台番": 797,
+          "predicted_score": 63.2,
+          "predicted_rate": 93.9,
+          "actual_rate": 102.8,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 62.2,
+          "predicted_rate": 93.2,
+          "actual_rate": 79.2,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 540,
+          "predicted_score": 61.8,
+          "predicted_rate": 97.2,
+          "actual_rate": 79.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 608,
+          "predicted_score": 60.4,
+          "predicted_rate": 94.5,
+          "actual_rate": 84.4,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 60.1,
+          "predicted_rate": 92.5,
+          "actual_rate": 114.3,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 59.0,
+          "predicted_rate": 93.6,
+          "actual_rate": 146.5,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 97.54,
+      "base_plus_rate": 0.387,
+      "top10_kishu_avg": 97.47,
+      "top10_machine_avg": 100.18,
+      "top10_machine_top3_avg": 115.6,
+      "adv_kishu": -0.07,
+      "adv_machine": 2.64,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.503451",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 61.7,
+          "predicted_rate": 103.7,
+          "actual_rate": 89.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 609,
+          "predicted_score": 59.8,
+          "predicted_rate": 96.8,
+          "actual_rate": 90.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 514,
+          "predicted_score": 58.4,
+          "predicted_rate": 92.8,
+          "actual_rate": 99.6,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ鉄拳6",
+          "台番": 491,
+          "predicted_score": 56.9,
+          "predicted_rate": 88.7,
+          "actual_rate": 112.1,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 612,
+          "predicted_score": 56.5,
+          "predicted_rate": 95.0,
+          "actual_rate": 99.3,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 608,
+          "predicted_score": 53.4,
+          "predicted_rate": 93.6,
+          "actual_rate": 98.6,
+          "hit": false
+        },
+        {
+          "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
+          "台番": 639,
+          "predicted_score": 52.4,
+          "predicted_rate": 91.5,
+          "actual_rate": 131.4,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 50.8,
+          "predicted_rate": 90.9,
+          "actual_rate": 98.7,
+          "hit": false
+        },
+        {
+          "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
+          "台番": 638,
+          "predicted_score": 50.4,
+          "predicted_rate": 92.2,
+          "actual_rate": 78.5,
+          "hit": false
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 771,
+          "predicted_score": 49.8,
+          "predicted_rate": 101.4,
+          "actual_rate": 103.3,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 94.8,
+      "base_plus_rate": 0.3313,
+      "top10_kishu_avg": 95.8,
+      "top10_machine_avg": 95.5,
+      "top10_machine_top3_avg": 109.47,
+      "adv_kishu": 1.0,
+      "adv_machine": 0.7,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.523326",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 68.3,
+          "predicted_rate": 101.9,
+          "actual_rate": 79.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 609,
+          "predicted_score": 65.0,
+          "predicted_rate": 96.1,
+          "actual_rate": 86.6,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 64.1,
+          "predicted_rate": 100.0,
+          "actual_rate": 92.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 608,
+          "predicted_score": 63.9,
+          "predicted_rate": 93.8,
+          "actual_rate": 90.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 612,
+          "predicted_score": 63.7,
+          "predicted_rate": 95.2,
+          "actual_rate": 96.5,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 512,
+          "predicted_score": 62.3,
+          "predicted_rate": 95.7,
+          "actual_rate": 97.7,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 514,
+          "predicted_score": 62.3,
+          "predicted_rate": 93.7,
+          "actual_rate": 96.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 466,
+          "predicted_score": 61.0,
+          "predicted_rate": 95.5,
+          "actual_rate": 113.8,
+          "hit": true
+        },
+        {
+          "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
+          "台番": 638,
+          "predicted_score": 59.7,
+          "predicted_rate": 90.7,
+          "actual_rate": 116.9,
+          "hit": true
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 59.7,
+          "predicted_rate": 95.4,
+          "actual_rate": 84.3,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 96.4,
+      "base_plus_rate": 0.3746,
+      "top10_kishu_avg": 98.11,
+      "top10_machine_avg": 97.23,
+      "top10_machine_top3_avg": 108.53,
+      "adv_kishu": 1.7,
+      "adv_machine": 0.83,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.552997",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 72.8,
+          "predicted_rate": 99.3,
+          "actual_rate": 87.9,
+          "hit": false
+        },
+        {
+          "機種": "ゴーゴージャグラー３",
+          "台番": 645,
+          "predicted_score": 70.2,
+          "predicted_rate": 95.0,
+          "actual_rate": 108.3,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 68.5,
+          "predicted_rate": 98.9,
+          "actual_rate": 111.4,
+          "hit": true
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 59.0,
+          "predicted_rate": 93.2,
+          "actual_rate": 95.8,
+          "hit": false
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 467,
+          "predicted_score": 56.0,
+          "predicted_rate": 100.9,
+          "actual_rate": 105.9,
+          "hit": true
+        },
+        {
+          "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
+          "台番": 637,
+          "predicted_score": 54.9,
+          "predicted_rate": 99.8,
+          "actual_rate": 103.8,
+          "hit": true
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 461,
+          "predicted_score": 53.5,
+          "predicted_rate": 100.0,
+          "actual_rate": 93.9,
+          "hit": false
+        },
+        {
+          "機種": "いざ！番長",
+          "台番": 465,
+          "predicted_score": 53.2,
+          "predicted_rate": 94.1,
+          "actual_rate": 75.1,
+          "hit": false
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 676,
+          "predicted_score": 52.4,
+          "predicted_rate": 100.4,
+          "actual_rate": 92.8,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 672,
+          "predicted_score": 51.3,
+          "predicted_rate": 100.6,
+          "actual_rate": 97.4,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-26",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 96.83,
+      "base_plus_rate": 0.3746,
+      "top10_kishu_avg": 97.47,
+      "top10_machine_avg": 94.05,
+      "top10_machine_top3_avg": 104.47,
+      "adv_kishu": 0.64,
+      "adv_machine": -2.78,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.571578",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 75.2,
+          "predicted_rate": 98.4,
+          "actual_rate": 53.5,
+          "hit": false
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 676,
+          "predicted_score": 71.3,
+          "predicted_rate": 99.4,
+          "actual_rate": 102.6,
+          "hit": true
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 672,
+          "predicted_score": 67.9,
+          "predicted_rate": 100.7,
+          "actual_rate": 92.2,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 461,
+          "predicted_score": 66.4,
+          "predicted_rate": 100.2,
+          "actual_rate": 104.7,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 779,
+          "predicted_score": 64.4,
+          "predicted_rate": 95.6,
+          "actual_rate": 90.2,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 63.9,
+          "predicted_rate": 93.9,
+          "actual_rate": 106.1,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 61.3,
+          "predicted_rate": 93.0,
+          "actual_rate": 96.2,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 58.2,
+          "predicted_rate": 113.2,
+          "actual_rate": 100.1,
+          "hit": true
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 52.5,
+          "predicted_rate": 98.5,
+          "actual_rate": 99.5,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 780,
+          "predicted_score": 48.8,
+          "predicted_rate": 97.1,
+          "actual_rate": 95.4,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-27",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 320,
+      "base_avg": 96.57,
+      "base_plus_rate": 0.3594,
+      "top10_kishu_avg": 95.0,
+      "top10_machine_avg": 96.13,
+      "top10_machine_top3_avg": 118.0,
+      "adv_kishu": -1.57,
+      "adv_machine": -0.44,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.593016",
+      "matched_machines": [
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 672,
+          "predicted_score": 68.4,
+          "predicted_rate": 99.8,
+          "actual_rate": 113.0,
+          "hit": true
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 66.5,
+          "predicted_rate": 98.6,
+          "actual_rate": 98.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 64.0,
+          "predicted_rate": 92.2,
+          "actual_rate": 84.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 61.8,
+          "predicted_rate": 93.3,
+          "actual_rate": 92.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 563,
+          "predicted_score": 57.2,
+          "predicted_rate": 93.0,
+          "actual_rate": 82.6,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 56.3,
+          "predicted_rate": 91.8,
+          "actual_rate": 56.2,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 561,
+          "predicted_score": 54.9,
+          "predicted_rate": 93.2,
+          "actual_rate": 122.4,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 707,
+          "predicted_score": 51.9,
+          "predicted_rate": 101.2,
+          "actual_rate": 87.9,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 460,
+          "predicted_score": 50.3,
+          "predicted_rate": 97.7,
+          "actual_rate": 105.5,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 670,
+          "predicted_score": 47.3,
+          "predicted_rate": 96.9,
+          "actual_rate": 118.6,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 320,
+      "base_avg": 96.22,
+      "base_plus_rate": 0.3625,
+      "top10_kishu_avg": 96.9,
+      "top10_machine_avg": 106.39,
+      "top10_machine_top3_avg": 127.1,
+      "adv_kishu": 0.67,
+      "adv_machine": 10.17,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.624755",
+      "matched_machines": [
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 682,
+          "predicted_score": 69.1,
+          "predicted_rate": 98.8,
+          "actual_rate": 102.8,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 67.2,
+          "predicted_rate": 93.7,
+          "actual_rate": 96.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 707,
+          "predicted_score": 66.5,
+          "predicted_rate": 98.9,
+          "actual_rate": 119.9,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 780,
+          "predicted_score": 65.0,
+          "predicted_rate": 95.8,
+          "actual_rate": 104.0,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 63.6,
+          "predicted_rate": 91.8,
+          "actual_rate": 136.4,
+          "hit": true
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 466,
+          "predicted_score": 58.8,
+          "predicted_rate": 93.6,
+          "actual_rate": 70.3,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 563,
+          "predicted_score": 58.3,
+          "predicted_rate": 91.2,
+          "actual_rate": 97.2,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 459,
+          "predicted_score": 57.3,
+          "predicted_rate": 93.1,
+          "actual_rate": 115.9,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 56.9,
+          "predicted_rate": 87.6,
+          "actual_rate": 96.4,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 53.6,
+          "predicted_rate": 110.4,
+          "actual_rate": 125.0,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-04-29",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 100.04,
+      "base_plus_rate": 0.4644,
+      "top10_kishu_avg": 99.06,
+      "top10_machine_avg": 96.8,
+      "top10_machine_top3_avg": 105.47,
+      "adv_kishu": -0.98,
+      "adv_machine": -3.24,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.653911",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 712,
+          "predicted_score": 71.1,
+          "predicted_rate": 99.0,
+          "actual_rate": 100.0,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 69.3,
+          "predicted_rate": 94.0,
+          "actual_rate": 97.9,
+          "hit": false
+        },
+        {
+          "機種": "ネオアイムジャグラーEX",
+          "台番": 678,
+          "predicted_score": 63.1,
+          "predicted_rate": 97.3,
+          "actual_rate": 101.9,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 62.9,
+          "predicted_rate": 88.1,
+          "actual_rate": 111.0,
+          "hit": true
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 674,
+          "predicted_score": 60.8,
+          "predicted_rate": 97.4,
+          "actual_rate": 100.2,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 60.5,
+          "predicted_rate": 93.7,
+          "actual_rate": 103.5,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 59.9,
+          "predicted_rate": 98.3,
+          "actual_rate": 93.0,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 563,
+          "predicted_score": 59.2,
+          "predicted_rate": 92.2,
+          "actual_rate": 86.0,
+          "hit": false
+        },
+        {
+          "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
+          "台番": 637,
+          "predicted_score": 55.7,
+          "predicted_rate": 92.0,
+          "actual_rate": 75.2,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 689,
+          "predicted_score": 52.0,
+          "predicted_rate": 97.5,
+          "actual_rate": 99.3,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 322,
+      "base_avg": 97.01,
+      "base_plus_rate": 0.4037,
+      "top10_kishu_avg": 98.37,
+      "top10_machine_avg": 89.95,
+      "top10_machine_top3_avg": 100.13,
+      "adv_kishu": 1.36,
+      "adv_machine": -7.06,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.686871",
+      "matched_machines": [
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 67.0,
+          "predicted_rate": 98.2,
+          "actual_rate": 97.5,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 689,
+          "predicted_score": 66.9,
+          "predicted_rate": 97.7,
+          "actual_rate": 76.3,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 65.5,
+          "predicted_rate": 94.1,
+          "actual_rate": 104.7,
+          "hit": true
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 673,
+          "predicted_score": 64.3,
+          "predicted_rate": 98.3,
+          "actual_rate": 84.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 709,
+          "predicted_score": 58.5,
+          "predicted_rate": 92.8,
+          "actual_rate": 95.3,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 57.3,
+          "predicted_rate": 91.1,
+          "actual_rate": 94.1,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 711,
+          "predicted_score": 56.6,
+          "predicted_rate": 103.6,
+          "actual_rate": 78.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 580,
+          "predicted_score": 54.8,
+          "predicted_rate": 109.8,
+          "actual_rate": 98.2,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 563,
+          "predicted_score": 54.6,
+          "predicted_rate": 91.2,
+          "actual_rate": 88.9,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 559,
+          "predicted_score": 54.1,
+          "predicted_rate": 94.5,
+          "actual_rate": 81.2,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 97.42,
+      "base_plus_rate": 0.4211,
+      "top10_kishu_avg": 97.91,
+      "top10_machine_avg": 95.45,
+      "top10_machine_top3_avg": 110.0,
+      "adv_kishu": 0.5,
+      "adv_machine": -1.97,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.714965",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 711,
+          "predicted_score": 72.7,
+          "predicted_rate": 100.9,
+          "actual_rate": 79.3,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 705,
+          "predicted_score": 71.9,
+          "predicted_rate": 99.7,
+          "actual_rate": 97.8,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 673,
+          "predicted_score": 69.8,
+          "predicted_rate": 96.3,
+          "actual_rate": 84.8,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 539,
+          "predicted_score": 69.5,
+          "predicted_rate": 97.9,
+          "actual_rate": 107.5,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 69.4,
+          "predicted_rate": 97.6,
+          "actual_rate": 97.9,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 709,
+          "predicted_score": 66.8,
+          "predicted_rate": 93.5,
+          "actual_rate": 116.0,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 542,
+          "predicted_score": 66.4,
+          "predicted_rate": 92.3,
+          "actual_rate": 106.5,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 580,
+          "predicted_score": 65.9,
+          "predicted_rate": 108.4,
+          "actual_rate": 95.0,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 689,
+          "predicted_score": 65.7,
+          "predicted_rate": 94.7,
+          "actual_rate": 90.1,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 65.1,
+          "predicted_rate": 91.9,
+          "actual_rate": 79.6,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-02",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 322,
+      "base_avg": 95.93,
+      "base_plus_rate": 0.3758,
+      "top10_kishu_avg": 94.04,
+      "top10_machine_avg": 96.55,
+      "top10_machine_top3_avg": 109.57,
+      "adv_kishu": -1.88,
+      "adv_machine": 0.62,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.741371",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 705,
+          "predicted_score": 83.2,
+          "predicted_rate": 100.2,
+          "actual_rate": 81.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 580,
+          "predicted_score": 81.3,
+          "predicted_rate": 107.2,
+          "actual_rate": 87.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 80.4,
+          "predicted_rate": 97.7,
+          "actual_rate": 101.0,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 711,
+          "predicted_score": 79.3,
+          "predicted_rate": 97.6,
+          "actual_rate": 107.7,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 689,
+          "predicted_score": 73.8,
+          "predicted_rate": 93.8,
+          "actual_rate": 98.2,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 72.6,
+          "predicted_rate": 98.5,
+          "actual_rate": 95.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 69.5,
+          "predicted_rate": 92.8,
+          "actual_rate": 92.1,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 458,
+          "predicted_score": 69.0,
+          "predicted_rate": 89.6,
+          "actual_rate": 120.0,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 67.6,
+          "predicted_rate": 94.8,
+          "actual_rate": 100.4,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 559,
+          "predicted_score": 67.2,
+          "predicted_rate": 92.7,
+          "actual_rate": 81.6,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-03",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 99.74,
+      "base_plus_rate": 0.4923,
+      "top10_kishu_avg": 96.69,
+      "top10_machine_avg": 99.21,
+      "top10_machine_top3_avg": 114.47,
+      "adv_kishu": -3.05,
+      "adv_machine": -0.53,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.768427",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 705,
+          "predicted_score": 72.1,
+          "predicted_rate": 97.3,
+          "actual_rate": 69.3,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 67.1,
+          "predicted_rate": 98.0,
+          "actual_rate": 101.8,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 62.7,
+          "predicted_rate": 95.8,
+          "actual_rate": 91.1,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 689,
+          "predicted_score": 62.5,
+          "predicted_rate": 94.0,
+          "actual_rate": 112.3,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 537,
+          "predicted_score": 62.0,
+          "predicted_rate": 105.8,
+          "actual_rate": 125.4,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 559,
+          "predicted_score": 61.8,
+          "predicted_rate": 91.3,
+          "actual_rate": 105.7,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 61.5,
+          "predicted_rate": 92.5,
+          "actual_rate": 100.3,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 561,
+          "predicted_score": 59.9,
+          "predicted_rate": 93.3,
+          "actual_rate": 85.1,
+          "hit": false
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 59.1,
+          "predicted_rate": 103.0,
+          "actual_rate": 99.5,
+          "hit": false
+        },
+        {
+          "機種": "スマスロヨルムンガンド",
+          "台番": 466,
+          "predicted_score": 57.6,
+          "predicted_rate": 85.2,
+          "actual_rate": 101.6,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-04",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 95.96,
+      "base_plus_rate": 0.3622,
+      "top10_kishu_avg": 98.98,
+      "top10_machine_avg": 104.45,
+      "top10_machine_top3_avg": 131.17,
+      "adv_kishu": 3.02,
+      "adv_machine": 8.49,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.789290",
+      "matched_machines": [
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 79.1,
+          "predicted_rate": 102.3,
+          "actual_rate": 83.8,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 705,
+          "predicted_score": 70.8,
+          "predicted_rate": 92.7,
+          "actual_rate": 118.3,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 68.9,
+          "predicted_rate": 95.4,
+          "actual_rate": 113.4,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 561,
+          "predicted_score": 63.6,
+          "predicted_rate": 92.2,
+          "actual_rate": 146.6,
+          "hit": true
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 461,
+          "predicted_score": 61.6,
+          "predicted_rate": 95.0,
+          "actual_rate": 70.5,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 459,
+          "predicted_score": 61.3,
+          "predicted_rate": 94.7,
+          "actual_rate": 94.9,
+          "hit": false
+        },
+        {
+          "機種": "真打 吉宗",
+          "台番": 460,
+          "predicted_score": 56.7,
+          "predicted_rate": 100.0,
+          "actual_rate": 128.6,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 572,
+          "predicted_score": 55.0,
+          "predicted_rate": 87.7,
+          "actual_rate": 118.3,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 54.6,
+          "predicted_rate": 98.3,
+          "actual_rate": 97.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 538,
+          "predicted_score": 52.6,
+          "predicted_rate": 107.0,
+          "actual_rate": 73.1,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-05",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 95.69,
+      "base_plus_rate": 0.3715,
+      "top10_kishu_avg": 100.88,
+      "top10_machine_avg": 96.1,
+      "top10_machine_top3_avg": 105.1,
+      "adv_kishu": 5.19,
+      "adv_machine": 0.41,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.812916",
+      "matched_machines": [
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 88.0,
+          "predicted_rate": 100.8,
+          "actual_rate": 96.8,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 74.2,
+          "predicted_rate": 97.5,
+          "actual_rate": 88.6,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 68.3,
+          "predicted_rate": 94.3,
+          "actual_rate": 95.5,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 709,
+          "predicted_score": 66.3,
+          "predicted_rate": 93.2,
+          "actual_rate": 98.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 66.2,
+          "predicted_rate": 102.5,
+          "actual_rate": 86.2,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 539,
+          "predicted_score": 62.0,
+          "predicted_rate": 92.8,
+          "actual_rate": 95.9,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 538,
+          "predicted_score": 61.9,
+          "predicted_rate": 103.1,
+          "actual_rate": 90.2,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 攻殻機動隊",
+          "台番": 540,
+          "predicted_score": 60.7,
+          "predicted_rate": 92.0,
+          "actual_rate": 92.5,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 58.6,
+          "predicted_rate": 106.2,
+          "actual_rate": 118.0,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 781,
+          "predicted_score": 57.6,
+          "predicted_rate": 98.1,
+          "actual_rate": 98.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 96.32,
+      "base_plus_rate": 0.3994,
+      "top10_kishu_avg": 95.64,
+      "top10_machine_avg": 94.54,
+      "top10_machine_top3_avg": 115.37,
+      "adv_kishu": -0.68,
+      "adv_machine": -1.78,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.836832",
+      "matched_machines": [
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 87.8,
+          "predicted_rate": 100.2,
+          "actual_rate": 121.9,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 72.1,
+          "predicted_rate": 101.1,
+          "actual_rate": 74.5,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 781,
+          "predicted_score": 67.1,
+          "predicted_rate": 98.0,
+          "actual_rate": 108.6,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 66.2,
+          "predicted_rate": 94.7,
+          "actual_rate": 78.8,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 66.0,
+          "predicted_rate": 97.1,
+          "actual_rate": 103.1,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 709,
+          "predicted_score": 63.8,
+          "predicted_rate": 93.6,
+          "actual_rate": 81.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 571,
+          "predicted_score": 60.9,
+          "predicted_rate": 96.7,
+          "actual_rate": 115.6,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 574,
+          "predicted_score": 54.4,
+          "predicted_rate": 105.8,
+          "actual_rate": 87.5,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 53.1,
+          "predicted_rate": 98.6,
+          "actual_rate": 77.5,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 50.0,
+          "predicted_rate": 102.5,
+          "actual_rate": 96.3,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 94.5,
+      "base_plus_rate": 0.3622,
+      "top10_kishu_avg": 96.92,
+      "top10_machine_avg": 100.26,
+      "top10_machine_top3_avg": 116.73,
+      "adv_kishu": 2.42,
+      "adv_machine": 5.76,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.859379",
+      "matched_machines": [
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 73.7,
+          "predicted_rate": 97.1,
+          "actual_rate": 79.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 709,
+          "predicted_score": 71.0,
+          "predicted_rate": 92.5,
+          "actual_rate": 114.6,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 68.6,
+          "predicted_rate": 95.7,
+          "actual_rate": 99.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 68.6,
+          "predicted_rate": 91.1,
+          "actual_rate": 98.6,
+          "hit": false
+        },
+        {
+          "機種": "ハッピージャグラーＶＩＩＩ",
+          "台番": 669,
+          "predicted_score": 66.2,
+          "predicted_rate": 96.2,
+          "actual_rate": 98.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 574,
+          "predicted_score": 64.9,
+          "predicted_rate": 104.0,
+          "actual_rate": 100.5,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 64.6,
+          "predicted_rate": 96.5,
+          "actual_rate": 100.5,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 559,
+          "predicted_score": 60.6,
+          "predicted_rate": 93.3,
+          "actual_rate": 135.1,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 60.4,
+          "predicted_rate": 102.6,
+          "actual_rate": 87.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 560,
+          "predicted_score": 55.5,
+          "predicted_rate": 99.4,
+          "actual_rate": 89.3,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 94.28,
+      "base_plus_rate": 0.3096,
+      "top10_kishu_avg": 95.9,
+      "top10_machine_avg": 100.05,
+      "top10_machine_top3_avg": 116.17,
+      "adv_kishu": 1.62,
+      "adv_machine": 5.77,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.881406",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 75.8,
+          "predicted_rate": 101.2,
+          "actual_rate": 116.9,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 73.7,
+          "predicted_rate": 95.2,
+          "actual_rate": 94.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 779,
+          "predicted_score": 71.6,
+          "predicted_rate": 97.3,
+          "actual_rate": 92.1,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 651,
+          "predicted_score": 71.5,
+          "predicted_rate": 96.3,
+          "actual_rate": 96.4,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 69.3,
+          "predicted_rate": 95.9,
+          "actual_rate": 95.4,
+          "hit": false
+        },
+        {
+          "機種": "ハッピージャグラーＶＩＩＩ",
+          "台番": 669,
+          "predicted_score": 67.9,
+          "predicted_rate": 96.8,
+          "actual_rate": 106.9,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 560,
+          "predicted_score": 67.0,
+          "predicted_rate": 98.6,
+          "actual_rate": 75.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 66.8,
+          "predicted_rate": 92.3,
+          "actual_rate": 122.7,
+          "hit": true
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 666,
+          "predicted_score": 64.2,
+          "predicted_rate": 95.1,
+          "actual_rate": 91.1,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 704,
+          "predicted_score": 62.6,
+          "predicted_rate": 102.5,
+          "actual_rate": 108.9,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 99.51,
+      "base_plus_rate": 0.4303,
+      "top10_kishu_avg": 101.59,
+      "top10_machine_avg": 96.59,
+      "top10_machine_top3_avg": 104.8,
+      "adv_kishu": 2.09,
+      "adv_machine": -2.92,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.904455",
+      "matched_machines": [
+        {
+          "機種": "マイジャグラーV",
+          "台番": 651,
+          "predicted_score": 71.5,
+          "predicted_rate": 96.6,
+          "actual_rate": 105.0,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 71.5,
+          "predicted_rate": 95.6,
+          "actual_rate": 90.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 779,
+          "predicted_score": 71.2,
+          "predicted_rate": 97.4,
+          "actual_rate": 97.8,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 663,
+          "predicted_score": 68.9,
+          "predicted_rate": 98.6,
+          "actual_rate": 98.3,
+          "hit": false
+        },
+        {
+          "機種": "ハッピージャグラーＶＩＩＩ",
+          "台番": 668,
+          "predicted_score": 68.6,
+          "predicted_rate": 96.9,
+          "actual_rate": 99.0,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 649,
+          "predicted_score": 68.3,
+          "predicted_rate": 97.8,
+          "actual_rate": 95.3,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 68.2,
+          "predicted_rate": 95.5,
+          "actual_rate": 110.4,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 560,
+          "predicted_score": 65.6,
+          "predicted_rate": 96.3,
+          "actual_rate": 85.3,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 63.9,
+          "predicted_rate": 97.1,
+          "actual_rate": 93.9,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 666,
+          "predicted_score": 61.9,
+          "predicted_rate": 94.9,
+          "actual_rate": 90.9,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-10",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 98.55,
+      "base_plus_rate": 0.4149,
+      "top10_kishu_avg": 98.1,
+      "top10_machine_avg": 95.44,
+      "top10_machine_top3_avg": 110.87,
+      "adv_kishu": -0.46,
+      "adv_machine": -3.11,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.926898",
+      "matched_machines": [
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 779,
+          "predicted_score": 78.2,
+          "predicted_rate": 97.6,
+          "actual_rate": 89.1,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 663,
+          "predicted_score": 76.7,
+          "predicted_rate": 98.5,
+          "actual_rate": 98.1,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 649,
+          "predicted_score": 74.0,
+          "predicted_rate": 97.6,
+          "actual_rate": 95.3,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 71.8,
+          "predicted_rate": 96.4,
+          "actual_rate": 98.8,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 577,
+          "predicted_score": 70.7,
+          "predicted_rate": 95.0,
+          "actual_rate": 120.2,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 575,
+          "predicted_score": 68.4,
+          "predicted_rate": 97.7,
+          "actual_rate": 98.2,
+          "hit": false
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 666,
+          "predicted_score": 68.3,
+          "predicted_rate": 94.5,
+          "actual_rate": 85.5,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 560,
+          "predicted_score": 66.5,
+          "predicted_rate": 94.5,
+          "actual_rate": 74.9,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 572,
+          "predicted_score": 65.7,
+          "predicted_rate": 93.3,
+          "actual_rate": 113.6,
+          "hit": true
+        },
+        {
+          "機種": "ウルトラミラクルジャグラー",
+          "台番": 683,
+          "predicted_score": 64.5,
+          "predicted_rate": 96.6,
+          "actual_rate": 80.7,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-11",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 323,
+      "base_avg": 94.9,
+      "base_plus_rate": 0.3467,
+      "top10_kishu_avg": 95.44,
+      "top10_machine_avg": 96.73,
+      "top10_machine_top3_avg": 106.37,
+      "adv_kishu": 0.55,
+      "adv_machine": 1.83,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 8,
+      "evaluated_at": "2026-05-18T09:55:26.951388",
+      "matched_machines": [
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 575,
+          "predicted_score": 74.9,
+          "predicted_rate": 98.0,
+          "actual_rate": 86.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 779,
+          "predicted_score": 73.4,
+          "predicted_rate": 96.8,
+          "actual_rate": 104.2,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 690,
+          "predicted_score": 73.0,
+          "predicted_rate": 96.8,
+          "actual_rate": 108.2,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 70.4,
+          "predicted_rate": 98.9,
+          "actual_rate": 84.4,
+          "hit": false
+        },
+        {
+          "機種": "吉宗",
+          "台番": 585,
+          "predicted_score": 70.2,
+          "predicted_rate": 96.9,
+          "actual_rate": 89.5,
+          "hit": false
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 627,
+          "predicted_score": 67.8,
+          "predicted_rate": 95.7,
+          "actual_rate": 100.8,
+          "hit": true
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 615,
+          "predicted_score": 66.7,
+          "predicted_rate": 94.8,
+          "actual_rate": 106.7,
+          "hit": true
+        },
+        {
+          "機種": "ウルトラミラクルジャグラー",
+          "台番": 683,
+          "predicted_score": 64.5,
+          "predicted_rate": 94.7,
+          "actual_rate": 93.6,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 321,
+      "base_avg": 94.88,
+      "base_plus_rate": 0.3769,
+      "top10_kishu_avg": 96.52,
+      "top10_machine_avg": 96.79,
+      "top10_machine_top3_avg": 127.03,
+      "adv_kishu": 1.65,
+      "adv_machine": 1.91,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:26.972850",
+      "matched_machines": [
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 575,
+          "predicted_score": 78.4,
+          "predicted_rate": 97.0,
+          "actual_rate": 111.4,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 69.1,
+          "predicted_rate": 96.5,
+          "actual_rate": 81.5,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 66.2,
+          "predicted_rate": 94.8,
+          "actual_rate": 98.5,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 692,
+          "predicted_score": 60.1,
+          "predicted_rate": 100.8,
+          "actual_rate": 90.4,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 781,
+          "predicted_score": 58.8,
+          "predicted_rate": 99.5,
+          "actual_rate": 103.2,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 705,
+          "predicted_score": 57.8,
+          "predicted_rate": 100.1,
+          "actual_rate": 157.1,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 571,
+          "predicted_score": 55.9,
+          "predicted_rate": 99.6,
+          "actual_rate": 66.0,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 579,
+          "predicted_score": 52.5,
+          "predicted_rate": 104.2,
+          "actual_rate": 41.0,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 52.4,
+          "predicted_rate": 105.4,
+          "actual_rate": 112.6,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 611,
+          "predicted_score": 49.9,
+          "predicted_rate": 96.2,
+          "actual_rate": 106.2,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-13",
+      "category": "旧イベント日",
+      "model_version": "v8.1",
+      "n_actual": 323,
+      "base_avg": 98.73,
+      "base_plus_rate": 0.4241,
+      "top10_kishu_avg": 97.54,
+      "top10_machine_avg": 98.5,
+      "top10_machine_top3_avg": 106.33,
+      "adv_kishu": -1.18,
+      "adv_machine": -0.23,
+      "top10_machine_plus_rate": 0.5556,
+      "top10_machine_n_matched": 9,
+      "evaluated_at": "2026-05-18T09:55:26.991934",
+      "matched_machines": [
+        {
+          "機種": "スマスロ モンスターハンターライズ",
+          "台番": 642,
+          "predicted_score": 81.1,
+          "predicted_rate": 103.0,
+          "actual_rate": 100.9,
+          "hit": true
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 692,
+          "predicted_score": 70.1,
+          "predicted_rate": 99.3,
+          "actual_rate": 113.5,
+          "hit": true
+        },
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 770,
+          "predicted_score": 62.9,
+          "predicted_rate": 94.2,
+          "actual_rate": 104.0,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 579,
+          "predicted_score": 60.6,
+          "predicted_rate": 96.3,
+          "actual_rate": 81.1,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 571,
+          "predicted_score": 60.1,
+          "predicted_rate": 95.3,
+          "actual_rate": 93.1,
+          "hit": false
+        },
+        {
+          "機種": "ウルトラミラクルジャグラー",
+          "台番": 685,
+          "predicted_score": 57.3,
+          "predicted_rate": 101.7,
+          "actual_rate": 101.5,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 570,
+          "predicted_score": 54.1,
+          "predicted_rate": 89.2,
+          "actual_rate": 92.4,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 691,
+          "predicted_score": 52.4,
+          "predicted_rate": 101.3,
+          "actual_rate": 101.4,
+          "hit": true
+        },
+        {
+          "機種": "LBパチスロ ヱヴァンゲリヲン～約束の扉～",
+          "台番": 760,
+          "predicted_score": 52.3,
+          "predicted_rate": 99.4,
+          "actual_rate": 98.6,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 322,
+      "base_avg": 96.03,
+      "base_plus_rate": 0.3913,
+      "top10_kishu_avg": 93.3,
+      "top10_machine_avg": 89.75,
+      "top10_machine_top3_avg": 114.67,
+      "adv_kishu": -2.74,
+      "adv_machine": -6.28,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:27.007530",
+      "matched_machines": [
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 571,
+          "predicted_score": 75.6,
+          "predicted_rate": 95.0,
+          "actual_rate": 67.7,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 570,
+          "predicted_score": 72.4,
+          "predicted_rate": 90.1,
+          "actual_rate": 137.0,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 72.2,
+          "predicted_rate": 93.6,
+          "actual_rate": 79.0,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 634,
+          "predicted_score": 71.6,
+          "predicted_rate": 95.4,
+          "actual_rate": 104.7,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 579,
+          "predicted_score": 70.5,
+          "predicted_rate": 100.9,
+          "actual_rate": 82.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 576,
+          "predicted_score": 67.5,
+          "predicted_rate": 91.1,
+          "actual_rate": 79.2,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 631,
+          "predicted_score": 67.1,
+          "predicted_rate": 90.8,
+          "actual_rate": 83.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 66.4,
+          "predicted_rate": 89.3,
+          "actual_rate": 91.5,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 580,
+          "predicted_score": 55.1,
+          "predicted_rate": 108.7,
+          "actual_rate": 102.3,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 591,
+          "predicted_score": 54.9,
+          "predicted_rate": 96.3,
+          "actual_rate": 70.3,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "n_actual": 322,
+      "base_avg": 95.24,
+      "base_plus_rate": 0.3354,
+      "top10_kishu_avg": 95.84,
+      "top10_machine_avg": 92.97,
+      "top10_machine_top3_avg": 118.67,
+      "adv_kishu": 0.6,
+      "adv_machine": -2.27,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T09:55:27.023188",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 712,
+          "predicted_score": 71.1,
+          "predicted_rate": 98.9,
+          "actual_rate": 95.1,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 67.9,
+          "predicted_rate": 91.4,
+          "actual_rate": 99.4,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 670,
+          "predicted_score": 67.6,
+          "predicted_rate": 98.8,
+          "actual_rate": 94.2,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロからくりサーカス",
+          "台番": 579,
+          "predicted_score": 66.2,
+          "predicted_rate": 95.9,
+          "actual_rate": 47.6,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 713,
+          "predicted_score": 65.4,
+          "predicted_rate": 94.1,
+          "actual_rate": 90.5,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 571,
+          "predicted_score": 64.4,
+          "predicted_rate": 91.7,
+          "actual_rate": 64.9,
+          "hit": false
+        },
+        {
+          "機種": "ファンキージャグラー２ＫＴ",
+          "台番": 671,
+          "predicted_score": 62.9,
+          "predicted_rate": 94.8,
+          "actual_rate": 106.2,
+          "hit": true
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 622,
+          "predicted_score": 60.4,
+          "predicted_rate": 106.5,
+          "actual_rate": 82.0,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 576,
+          "predicted_score": 59.3,
+          "predicted_rate": 89.9,
+          "actual_rate": 149.9,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 58.2,
+          "predicted_rate": 89.0,
+          "actual_rate": 99.9,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "category": "通常日",
+      "model_version": "v8.1",
+      "n_actual": 323,
+      "base_avg": 97.78,
+      "base_plus_rate": 0.4303,
+      "top10_kishu_avg": 98.95,
+      "top10_machine_avg": 108.32,
+      "top10_machine_top3_avg": 125.6,
+      "adv_kishu": 1.17,
+      "adv_machine": 10.54,
+      "top10_machine_plus_rate": 0.625,
+      "top10_machine_n_matched": 8,
+      "evaluated_at": "2026-05-18T09:55:27.044178",
+      "matched_machines": [
+        {
+          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
+          "台番": 769,
+          "predicted_score": 66.4,
+          "predicted_rate": 97.9,
+          "actual_rate": 105.1,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 712,
+          "predicted_score": 65.2,
+          "predicted_rate": 97.6,
+          "actual_rate": 108.5,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 62.1,
+          "predicted_rate": 95.7,
+          "actual_rate": 98.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ かぐや様は告らせたい",
+          "台番": 565,
+          "predicted_score": 61.6,
+          "predicted_rate": 96.6,
+          "actual_rate": 125.7,
+          "hit": true
+        },
+        {
+          "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
+          "台番": 512,
+          "predicted_score": 61.1,
+          "predicted_rate": 77.5,
+          "actual_rate": 142.6,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 713,
+          "predicted_score": 60.8,
+          "predicted_rate": 93.1,
+          "actual_rate": 95.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 575,
+          "predicted_score": 59.6,
+          "predicted_rate": 94.5,
+          "actual_rate": 85.4,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 573,
+          "predicted_score": 58.2,
+          "predicted_rate": 89.6,
+          "actual_rate": 105.1,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "date": "2026-05-17",
+      "category": "通常日",
+      "model_version": "v9.4",
+      "n_actual": 323,
+      "base_avg": 96.63,
+      "base_plus_rate": 0.356,
+      "top10_kishu_avg": 98.2,
+      "top10_machine_avg": 93.67,
+      "top10_machine_top3_avg": 114.3,
+      "adv_kishu": 1.57,
+      "adv_machine": -2.96,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-05-18T12:05:21.618314",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 69.2,
+          "predicted_rate": 96.2,
+          "actual_rate": 100.5,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 713,
+          "predicted_score": 68.5,
+          "predicted_rate": 93.0,
+          "actual_rate": 97.6,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 673,
+          "predicted_score": 66.8,
+          "predicted_rate": 100.0,
+          "actual_rate": 98.5,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 572,
+          "predicted_score": 66.1,
+          "predicted_rate": 95.2,
+          "actual_rate": 73.6,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
+          "台番": 575,
+          "predicted_score": 65.1,
+          "predicted_rate": 91.8,
+          "actual_rate": 73.7,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 703,
+          "predicted_score": 64.3,
+          "predicted_rate": 92.2,
+          "actual_rate": 66.3,
+          "hit": false
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 615,
+          "predicted_score": 63.9,
+          "predicted_rate": 96.0,
+          "actual_rate": 127.0,
+          "hit": true
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 627,
+          "predicted_score": 60.9,
+          "predicted_rate": 107.0,
+          "actual_rate": 115.4,
+          "hit": true
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 628,
+          "predicted_score": 58.4,
+          "predicted_rate": 104.6,
+          "actual_rate": 86.7,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 672,
+          "predicted_score": 57.7,
+          "predicted_rate": 97.3,
+          "actual_rate": 97.4,
+          "hit": false
+        }
+      ]
+    }
+  ],
+  "all_history": [
+    {
+      "date": "2026-01-31",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.0,
+      "adv_kishu": 2.38,
+      "adv_machine": 1.04,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-01",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.8,
+      "adv_kishu": 2.33,
+      "adv_machine": 3.94,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-02",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 93.94,
+      "adv_kishu": 2.32,
+      "adv_machine": 0.6,
+      "top10_machine_plus_rate": 0.2857,
+      "top10_machine_n_matched": 7
+    },
+    {
+      "date": "2026-02-03",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.09,
+      "adv_kishu": -1.74,
+      "adv_machine": -2.59,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-04",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.1,
+      "adv_kishu": 1.48,
+      "adv_machine": 4.44,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-05",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.46,
+      "adv_kishu": NaN,
+      "adv_machine": NaN,
+      "top10_machine_plus_rate": NaN,
+      "top10_machine_n_matched": 0
+    },
+    {
+      "date": "2026-02-06",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.6,
+      "adv_kishu": NaN,
+      "adv_machine": NaN,
+      "top10_machine_plus_rate": NaN,
+      "top10_machine_n_matched": 0
+    },
+    {
+      "date": "2026-02-07",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.06,
+      "adv_kishu": -1.88,
+      "adv_machine": -7.36,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-08",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.85,
+      "adv_kishu": 2.69,
+      "adv_machine": 4.46,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-09",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.56,
+      "adv_kishu": -0.18,
+      "adv_machine": 0.19,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-10",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.73,
+      "adv_kishu": -3.19,
+      "adv_machine": -7.46,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-11",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.78,
+      "adv_kishu": 1.0,
+      "adv_machine": 4.41,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-12",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.98,
+      "adv_kishu": 3.57,
+      "adv_machine": -2.61,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-13",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.99,
+      "adv_kishu": 1.1,
+      "adv_machine": -4.87,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-14",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.84,
+      "adv_kishu": 2.68,
+      "adv_machine": 3.17,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-15",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.62,
+      "adv_kishu": 1.21,
+      "adv_machine": -5.15,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-16",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.12,
+      "adv_kishu": -2.44,
+      "adv_machine": 2.19,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-17",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.07,
+      "adv_kishu": 1.14,
+      "adv_machine": -5.14,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-18",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 93.98,
+      "adv_kishu": 1.79,
+      "adv_machine": 0.92,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-19",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.58,
+      "adv_kishu": 0.15,
+      "adv_machine": -3.25,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-20",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.46,
+      "adv_kishu": 0.45,
+      "adv_machine": 4.92,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-21",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.74,
+      "adv_kishu": -1.07,
+      "adv_machine": 5.73,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-22",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.03,
+      "adv_kishu": 0.94,
+      "adv_machine": 6.05,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-23",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 100.22,
+      "adv_kishu": -4.08,
+      "adv_machine": -1.31,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-02-24",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.09,
+      "adv_kishu": 2.2,
+      "adv_machine": -0.39,
+      "top10_machine_plus_rate": 0.3333,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-02-25",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.78,
+      "adv_kishu": 3.52,
+      "adv_machine": -1.62,
+      "top10_machine_plus_rate": 0.3333,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-02-26",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 93.07,
+      "adv_kishu": 2.47,
+      "adv_machine": -0.31,
+      "top10_machine_plus_rate": 0.1111,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-02-27",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.15,
+      "adv_kishu": 4.28,
+      "adv_machine": -6.15,
+      "top10_machine_plus_rate": 0.1111,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-02-28",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.76,
+      "adv_kishu": -1.71,
+      "adv_machine": 0.92,
+      "top10_machine_plus_rate": 0.4444,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-03-01",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.8,
+      "adv_kishu": 1.24,
+      "adv_machine": 5.57,
+      "top10_machine_plus_rate": 0.6667,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-03-02",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.51,
+      "adv_kishu": 8.03,
+      "adv_machine": 2.89,
+      "top10_machine_plus_rate": 0.6667,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-03-03",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.19,
+      "adv_kishu": -1.87,
+      "adv_machine": -7.84,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-04",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.76,
+      "adv_kishu": 1.83,
+      "adv_machine": 2.99,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-05",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.03,
+      "adv_kishu": 1.0,
+      "adv_machine": 4.82,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-06",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.03,
+      "adv_kishu": 1.65,
+      "adv_machine": -1.33,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-07",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.28,
+      "adv_kishu": 3.17,
+      "adv_machine": -0.25,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-08",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.02,
+      "adv_kishu": -2.87,
+      "adv_machine": -1.4,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-09",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 101.21,
+      "adv_kishu": -2.36,
+      "adv_machine": 1.66,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-10",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.69,
+      "adv_kishu": 1.46,
+      "adv_machine": -1.68,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-11",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.29,
+      "adv_kishu": 1.28,
+      "adv_machine": 7.16,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-12",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 93.08,
+      "adv_kishu": 4.12,
+      "adv_machine": 7.44,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-13",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.41,
+      "adv_kishu": -3.2,
+      "adv_machine": 3.11,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-14",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.01,
+      "adv_kishu": 2.06,
+      "adv_machine": 0.2,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-15",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.05,
+      "adv_kishu": -0.06,
+      "adv_machine": 4.22,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-16",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.01,
+      "adv_kishu": 3.97,
+      "adv_machine": 1.65,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-17",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 92.88,
+      "adv_kishu": 1.81,
+      "adv_machine": 4.38,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-18",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.54,
+      "adv_kishu": 0.03,
+      "adv_machine": -2.89,
+      "top10_machine_plus_rate": 0.2222,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-03-19",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.94,
+      "adv_kishu": -3.66,
+      "adv_machine": 3.35,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-20",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.46,
+      "adv_kishu": -1.14,
+      "adv_machine": -4.46,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-21",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.06,
+      "adv_kishu": 1.99,
+      "adv_machine": 2.9,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-22",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.61,
+      "adv_kishu": -1.12,
+      "adv_machine": -7.65,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-23",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.17,
+      "adv_kishu": 0.77,
+      "adv_machine": 1.96,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-24",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.4,
+      "adv_kishu": -0.44,
+      "adv_machine": 6.07,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-25",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.0,
+      "adv_kishu": 3.27,
+      "adv_machine": 5.02,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-26",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.77,
+      "adv_kishu": 3.13,
+      "adv_machine": 2.91,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-27",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.83,
+      "adv_kishu": 1.72,
+      "adv_machine": 1.62,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-28",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.0,
+      "adv_kishu": 0.33,
+      "adv_machine": 8.1,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-29",
+      "category": "強化イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.83,
+      "adv_kishu": -0.63,
+      "adv_machine": -2.75,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-30",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.4,
+      "adv_kishu": 0.82,
+      "adv_machine": 1.39,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-03-31",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.55,
+      "adv_kishu": 0.81,
+      "adv_machine": 9.9,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-01",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.58,
+      "adv_kishu": -2.82,
+      "adv_machine": -6.58,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-02",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.48,
+      "adv_kishu": -1.27,
+      "adv_machine": 3.45,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-03",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.68,
+      "adv_kishu": -2.72,
+      "adv_machine": -9.49,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-04",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.7,
+      "adv_kishu": -1.0,
+      "adv_machine": 9.79,
+      "top10_machine_plus_rate": 0.7,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-05",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.49,
+      "adv_kishu": -0.0,
+      "adv_machine": -0.84,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-06",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.92,
+      "adv_kishu": 1.47,
+      "adv_machine": 8.5,
+      "top10_machine_plus_rate": 0.5556,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-04-07",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.75,
+      "adv_kishu": 0.27,
+      "adv_machine": 1.58,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-08",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.91,
+      "adv_kishu": 1.39,
+      "adv_machine": -2.72,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-09",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 100.16,
+      "adv_kishu": 0.3,
+      "adv_machine": 0.75,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-10",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.41,
+      "adv_kishu": -1.55,
+      "adv_machine": 3.08,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-11",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.58,
+      "adv_kishu": -3.55,
+      "adv_machine": -10.7,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-12",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.18,
+      "adv_kishu": 2.96,
+      "adv_machine": -0.47,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-13",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 98.66,
+      "adv_kishu": 0.87,
+      "adv_machine": 7.05,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-14",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.99,
+      "adv_kishu": 2.77,
+      "adv_machine": 3.58,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-15",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.36,
+      "adv_kishu": 5.26,
+      "adv_machine": 5.48,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-16",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.01,
+      "adv_kishu": 3.54,
+      "adv_machine": 9.2,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-17",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.07,
+      "adv_kishu": 1.91,
+      "adv_machine": 3.73,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-18",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.11,
+      "adv_kishu": -0.93,
+      "adv_machine": 3.22,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-19",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.47,
+      "adv_kishu": 3.21,
+      "adv_machine": 7.41,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-20",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.05,
+      "adv_kishu": -1.68,
+      "adv_machine": -8.1,
+      "top10_machine_plus_rate": 0.1111,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-04-21",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.04,
+      "adv_kishu": 0.23,
+      "adv_machine": -10.09,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-22",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.86,
+      "adv_kishu": 1.53,
+      "adv_machine": 4.43,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-23",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 97.54,
+      "adv_kishu": -0.07,
+      "adv_machine": 2.64,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-24",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.8,
+      "adv_kishu": 1.0,
+      "adv_machine": 0.7,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-25",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.4,
+      "adv_kishu": 1.7,
+      "adv_machine": 0.83,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-26",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.83,
+      "adv_kishu": 0.64,
+      "adv_machine": -2.78,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-27",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.57,
+      "adv_kishu": -1.57,
+      "adv_machine": -0.44,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-28",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.22,
+      "adv_kishu": 0.67,
+      "adv_machine": 10.17,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-29",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 100.04,
+      "adv_kishu": -0.98,
+      "adv_machine": -3.24,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-04-30",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.01,
+      "adv_kishu": 1.36,
+      "adv_machine": -7.06,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-01",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 97.42,
+      "adv_kishu": 0.5,
+      "adv_machine": -1.97,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-02",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.93,
+      "adv_kishu": -1.88,
+      "adv_machine": 0.62,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-03",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.74,
+      "adv_kishu": -3.05,
+      "adv_machine": -0.53,
+      "top10_machine_plus_rate": 0.6,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-04",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.96,
+      "adv_kishu": 3.02,
+      "adv_machine": 8.49,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-05",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.69,
+      "adv_kishu": 5.19,
+      "adv_machine": 0.41,
+      "top10_machine_plus_rate": 0.1,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-06",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.32,
+      "adv_kishu": -0.68,
+      "adv_machine": -1.78,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-07",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.5,
+      "adv_kishu": 2.42,
+      "adv_machine": 5.76,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-08",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.28,
+      "adv_kishu": 1.62,
+      "adv_machine": 5.77,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-09",
+      "category": "旧イベント日",
+      "model_version": "v9.7",
+      "base_avg": 99.51,
+      "adv_kishu": 2.09,
+      "adv_machine": -2.92,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-10",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 98.55,
+      "adv_kishu": -0.46,
+      "adv_machine": -3.11,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-11",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.9,
+      "adv_kishu": 0.55,
+      "adv_machine": 1.83,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 8
+    },
+    {
+      "date": "2026-05-12",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 94.88,
+      "adv_kishu": 1.65,
+      "adv_machine": 1.91,
+      "top10_machine_plus_rate": 0.5,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-13",
+      "category": "旧イベント日",
+      "model_version": "v8.1",
+      "base_avg": 98.73,
+      "adv_kishu": -1.18,
+      "adv_machine": -0.23,
+      "top10_machine_plus_rate": 0.5556,
+      "top10_machine_n_matched": 9
+    },
+    {
+      "date": "2026-05-14",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 96.03,
+      "adv_kishu": -2.74,
+      "adv_machine": -6.28,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-15",
+      "category": "通常日",
+      "model_version": "v9.7",
+      "base_avg": 95.24,
+      "adv_kishu": 0.6,
+      "adv_machine": -2.27,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-05-16",
+      "category": "通常日",
+      "model_version": "v8.1",
+      "base_avg": 97.78,
+      "adv_kishu": 1.17,
+      "adv_machine": 10.54,
+      "top10_machine_plus_rate": 0.625,
+      "top10_machine_n_matched": 8
+    },
+    {
+      "date": "2026-05-17",
+      "category": "通常日",
+      "model_version": "v9.4",
+      "base_avg": 96.63,
+      "adv_kishu": 1.57,
+      "adv_machine": -2.96,
+      "top10_machine_plus_rate": 0.3,
+      "top10_machine_n_matched": 10
+    }
+  ],
+  "by_category": {
+    "強化イベント日": {
+      "n_days": 6,
+      "avg_adv_kishu": -1.83,
+      "avg_adv_machine": -0.08,
+      "avg_top10_plus_rate": 0.45
+    },
+    "旧イベント日": {
+      "n_days": 14,
+      "avg_adv_kishu": -0.45,
+      "avg_adv_machine": -0.74,
+      "avg_top10_plus_rate": 0.4183
+    },
+    "通常日": {
+      "n_days": 87,
+      "avg_adv_kishu": 1.05,
+      "avg_adv_machine": 1.19,
+      "avg_top10_plus_rate": 0.3843
+    }
+  },
+  "summary": {
+    "rolling_7d": {
+      "n_days": 7,
+      "adv_kishu": 0.23,
+      "adv_machine": 0.36,
+      "top10_plus_rate": 0.43
+    },
+    "rolling_30d": {
+      "n_days": 30,
+      "adv_kishu": 0.52,
+      "adv_machine": 0.37,
+      "top10_plus_rate": 0.37
+    },
+    "all_time": {
+      "n_days": 107,
+      "adv_kishu": 0.68,
+      "adv_machine": 0.86,
+      "top10_plus_rate": 0.39
+    }
+  }
+}
