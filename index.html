@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta name="theme-color" content="#1a8f3a" />
   <link rel="manifest" href="./manifest.json" />
-  <title>じゃらん五反田 狙い目</title>
+  <title>狙い目</title>
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -680,13 +680,6 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
                 {row["機種"]}
               </span>
               <ClassificationBadge cls={row["分類"]} />
-              {minRepoUrl && (
-                <a href={minRepoUrl} target="_blank" rel="noopener noreferrer"
-                   onClick={e => e.stopPropagation()}
-                   className="text-[9px] text-slate-400 hover:text-emerald-600 underline underline-offset-1">
-                  みんレポ↗
-                </a>
-              )}
             </div>
             <div className="flex flex-wrap gap-2 mt-2 text-xs text-slate-600">
               <span>直近 <RateLabel value={row["直近平均"]} /></span>
@@ -832,13 +825,7 @@ function Header({ data }) {
   return (
     <div className={`${colors.bg} text-white px-4 py-4`}>
       <div className="flex items-center justify-between">
-        <div className="text-xs opacity-90">じゃらん五反田 狙い目</div>
-        {minRepoUrl && (
-          <a href={minRepoUrl} target="_blank" rel="noopener noreferrer"
-             className="text-[10px] bg-white/20 hover:bg-white/30 px-2 py-1 rounded-full font-semibold tracking-wide">
-            みんレポ ↗
-          </a>
-        )}
+        <div className="text-xs opacity-90">狙い目</div>
       </div>
       <div className="flex items-baseline justify-between mt-1">
         <div>
