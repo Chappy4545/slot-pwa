@@ -290,6 +290,12 @@ function MiniLineChart({ daily }) {
   return <div style={{ height: "160px", position: "relative" }}><canvas ref={canvasRef} /></div>;
 }
 
+function bandColor(adv) {
+  if (adv >= 2.0) return { bg: "rgba(16,185,129,0.85)", border: "#059669" };
+  if (adv > 0)   return { bg: "rgba(16,185,129,0.55)", border: "#10b981" };
+  return           { bg: "rgba(239,68,68,0.60)",  border: "#ef4444" };
+}
+
 function ScoreBandBarChart({ scoreBands }) {
   const canvasRef = useRef(null);
   const chartRef = useRef(null);
@@ -304,8 +310,8 @@ function ScoreBandBarChart({ scoreBands }) {
         labels: scoreBands.map(b => b.band),
         datasets: [{
           label: "ADV(%)", data: scoreBands.map(b => b.adv),
-          backgroundColor: scoreBands.map(b => b.adv > 0 ? "rgba(16,185,129,0.7)" : "rgba(239,68,68,0.6)"),
-          borderColor: scoreBands.map(b => b.adv > 0 ? "#10b981" : "#ef4444"),
+          backgroundColor: scoreBands.map(b => bandColor(b.adv).bg),
+          borderColor: scoreBands.map(b => bandColor(b.adv).border),
           borderWidth: 1,
         }],
       },
@@ -313,14 +319,57 @@ function ScoreBandBarChart({ scoreBands }) {
         responsive: true, maintainAspectRatio: false,
         plugins: { legend: { display: false } },
         scales: {
-          x: { ticks: { font: { size: 10 } } },
+          x: { ticks: { font: { size: 9 } } },
           y: { ticks: { font: { size: 9 }, callback: v => (v > 0 ? "+" : "") + v + "%" } },
         },
       },
     });
     return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
   }, [scoreBands]);
-  return <div style={{ height: "140px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+  return <div style={{ height: "160px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
+function ScoreBandCommentary({ scoreBands }) {
+  if (!scoreBands || scoreBands.length === 0) return null;
+  const baseline = (scoreBands.find(b => b.band === "50未満") || {}).adv ?? 0;
+  const sorted = [...scoreBands].sort((a, b) => b.adv - a.adv);
+  const best = sorted[0];
+  const inversions = [];
+  const order = ["80+","75-79","70-74","65-69","60-64","55-59","50-54","50未満"];
+  for (let i = 0; i < order.length - 1; i++) {
+    const hi = scoreBands.find(b => b.band === order[i]);
+    const lo = scoreBands.find(b => b.band === order[i + 1]);
+    if (hi && lo && hi.adv < lo.adv - 0.5) {
+      inversions.push(`${order[i]}(${hi.adv > 0 ? "+" : ""}${hi.adv}%) < ${order[i+1]}(${lo.adv > 0 ? "+" : ""}${lo.adv}%)`);
+    }
+  }
+  const band7579 = scoreBands.find(b => b.band === "75-79");
+  return (
+    <div className="mt-3 space-y-2 text-xs text-slate-600">
+      <div className="bg-slate-50 rounded-lg p-3 border border-slate-100">
+        <span className="font-semibold text-slate-700">理想：</span>
+        スコアが高いほどADVが高くなる単調増加（80+ &gt; 75-79 &gt; 70-74 … &gt; 50未満）。
+        スコアが予測精度に直結していれば、右から左にかけてグラフが右肩上がりになります。
+      </div>
+      {inversions.length > 0 && (
+        <div className="bg-amber-50 rounded-lg p-3 border border-amber-200">
+          <span className="font-semibold text-amber-700">⚠ 逆転あり：</span>
+          {inversions.map((s, i) => <div key={i} className="mt-0.5 text-amber-700">{s}</div>)}
+          <div className="mt-1 text-slate-500">スコアが低い帯のほうが高い帯より出ているケースです。モデルの誤検知が集中している可能性があります。</div>
+        </div>
+      )}
+      {band7579 && band7579.adv < 0 && (
+        <div className="bg-red-50 rounded-lg p-3 border border-red-200">
+          <span className="font-semibold text-red-700">❌ 75-79帯がマイナス ({band7579.adv}%)：</span>
+          <span className="text-slate-600"> 「高スコアなのに出ない」最も注意すべき帯。本命候補に含まれるため実害あり。n={band7579.n}でまだ統計的断定はできないですが、継続観察が必要です。</span>
+        </div>
+      )}
+      <div className="bg-emerald-50 rounded-lg p-3 border border-emerald-100">
+        <span className="font-semibold text-emerald-700">✅ 最良帯：{best.band} ({best.adv > 0 ? "+" : ""}{best.adv}%)</span>
+        <span className="text-slate-600"> n={best.n}。このスコア帯の機種・台を狙うのが最も期待値が高いです。</span>
+      </div>
+    </div>
+  );
 }
 
 function KishuTrendChart({ trend }) {
@@ -431,7 +480,8 @@ function BacktestTab() {
       )}
       {bt.score_bands && bt.score_bands.length > 0 && (
         <div className="bg-white rounded-xl border border-slate-200 p-4">
-          <div className="text-xs font-semibold text-slate-700 mb-2">スコア帯別ADV</div>
+          <div className="text-xs font-semibold text-slate-700 mb-1">スコア帯別ADV</div>
+          <div className="text-[10px] text-slate-400 mb-2">理想：左ほど高い（右肩上がり）。赤い帯は誤検知の可能性。</div>
           <ScoreBandBarChart scoreBands={bt.score_bands} />
         </div>
       )}
@@ -506,6 +556,7 @@ function BacktestTab() {
               ))}
             </tbody>
           </table>
+          <ScoreBandCommentary scoreBands={bt.score_bands} />
         </div>
       )}
 
