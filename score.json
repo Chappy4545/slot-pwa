@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-19T09:28:47.793383",
+  "generated_at": "2026-05-19T10:36:57.895248",
   "target_date": "2026-05-19",
   "target_category": "旧イベント日",
-  "model_version": "v9.12",
-  "model_description": "K4反転(平均回帰逆張り)+K7強化(→0.40)+K8削除+kishuTOP5+本命閾値65(通常日)",
+  "model_version": "v9.13",
+  "model_description": "K4反転+K7強化+K8削除+kishuTOP5+本命閾値65(通常日)/75(旧イベント日)",
   "store_stage": {
     "stage": "平常期",
     "recent_avg": 96.29,
@@ -5635,7 +5635,7 @@
       "台番": 580,
       "末尾": 0,
       "score": 72.7,
-      "分類": "本命",
+      "分類": "見送り",
       "信頼度": "A",
       "reason_tags": [
         "連敗3日",
