@@ -1698,6 +1698,9 @@ function MachineStreakCard() {
   return (
     <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
       <div className="text-xs font-semibold text-slate-700">直近14日の機種傾向（TOP10登場ベース）</div>
+      <div className="text-[10px] text-slate-400 leading-relaxed">
+        モデルの機種別予測精度。🔥ホットはモデルとの相性◎、🥶コールドはモデルが外しやすい傾向にあるため予測スコアから20pt差し引き済み。
+      </div>
       {hot.length > 0 && (
         <div className="space-y-1.5">
           <div className="text-[10px] font-bold text-orange-600">🔥 ホット機種（的中率70%以上）</div>
