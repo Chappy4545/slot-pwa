@@ -1619,6 +1619,69 @@ function BottomNav({ tab, onChange }) {
   );
 }
 
+function DailyReviewCard() {
+  const [review, setReview] = useState(null);
+  useEffect(() => {
+    fetch("history.json?_=" + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d?.daily_review) setReview(d.daily_review); })
+      .catch(() => {});
+  }, []);
+  if (!review) return null;
+
+  const sc = review.total_samai || 0;
+  const scColor = sc > 0 ? "text-emerald-600" : sc < 0 ? "text-red-500" : "text-slate-500";
+  const scBg    = sc > 0 ? "bg-emerald-50" : sc < 0 ? "bg-red-50" : "bg-slate-50";
+  const sign = v => (v || 0) > 0 ? "+" : "";
+  const mColor = v => (v || 0) > 0 ? "text-emerald-600" : "text-red-500";
+
+  return (
+    <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-2.5">
+      <div className="flex items-center justify-between">
+        <div className="text-xs font-semibold text-slate-700">
+          昨日（{review.date?.slice(5)}）の振り返り
+        </div>
+        <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${CAT_STYLE[review.category] || "bg-slate-100 text-slate-500"}`}>
+          {CAT_SHORT[review.category] || review.category}
+        </span>
+      </div>
+      <div className="space-y-0.5 text-xs text-slate-600">
+        <div>{review.kishu_msg}</div>
+        <div>{review.machine_msg}</div>
+      </div>
+      <div className={`rounded-lg p-2.5 text-center ${scBg}`}>
+        <div className="text-[10px] text-slate-500 mb-0.5">{review.samai_msg}</div>
+        <div className={`text-xl font-bold ${scColor}`}>
+          {sign(sc)}{sc.toLocaleString()}枚
+        </div>
+        <div className="text-[9px] text-slate-400 mt-0.5">的中率 {review.hit_rate}%</div>
+      </div>
+      <div className="grid grid-cols-2 gap-2 text-[10px]">
+        {review.best_machine && (
+          <div className="bg-emerald-50 rounded-lg p-2 space-y-0.5">
+            <div className="text-emerald-700 font-semibold">🥇 ベスト台</div>
+            <div className="text-slate-600 truncate">{review.best_machine["機種"]}</div>
+            <div className="text-slate-500">#{review.best_machine["台番"]}</div>
+            <div className={`font-mono font-semibold ${mColor(review.best_machine["差枚"])}`}>
+              {sign(review.best_machine["差枚"])}{(review.best_machine["差枚"] || 0).toLocaleString()}枚
+            </div>
+          </div>
+        )}
+        {review.worst_machine && (
+          <div className="bg-red-50 rounded-lg p-2 space-y-0.5">
+            <div className="text-red-600 font-semibold">🔻 ワースト台</div>
+            <div className="text-slate-600 truncate">{review.worst_machine["機種"]}</div>
+            <div className="text-slate-500">#{review.worst_machine["台番"]}</div>
+            <div className={`font-mono font-semibold ${mColor(review.worst_machine["差枚"])}`}>
+              {(review.worst_machine["差枚"] || 0).toLocaleString()}枚
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function App() {
   const [data, setData] = useState(null);
   const [err, setErr] = useState(null);
@@ -1697,6 +1760,7 @@ function App() {
             const misokuriKishu = kishuAll.filter(r => !["本命","対抗","穴"].includes(r["分類"]));
             return (
               <>
+                <DailyReviewCard />
                 <div className="text-xs text-slate-500 px-1">
                   今日狙うべき機種 TOP{kishuAll.length}。タップで台TOP5を展開。
                 </div>
