@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-19T11:04:42.787473",
+  "generated_at": "2026-05-19T11:13:00.966245",
   "history": [
     {
       "date": "2026-04-19",
@@ -15,7 +15,7 @@
       "adv_machine": 7.41,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:41.959606",
+      "evaluated_at": "2026-05-19T11:13:00.210687",
       "matched_machines": [
         {
           "機種": "スマスロ鉄拳6",
@@ -133,7 +133,7 @@
       "adv_machine": -8.1,
       "top10_machine_plus_rate": 0.1111,
       "top10_machine_n_matched": 9,
-      "evaluated_at": "2026-05-19T11:04:41.980460",
+      "evaluated_at": "2026-05-19T11:13:00.226915",
       "matched_machines": [
         {
           "機種": "ネオアイムジャグラーEX",
@@ -241,7 +241,7 @@
       "adv_machine": -10.09,
       "top10_machine_plus_rate": 0.1,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:41.998824",
+      "evaluated_at": "2026-05-19T11:13:00.246522",
       "matched_machines": [
         {
           "機種": "ネオアイムジャグラーEX",
@@ -359,7 +359,7 @@
       "adv_machine": 4.43,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.015937",
+      "evaluated_at": "2026-05-19T11:13:00.266629",
       "matched_machines": [
         {
           "機種": "スマスロ 攻殻機動隊",
@@ -477,7 +477,7 @@
       "adv_machine": 2.64,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.032774",
+      "evaluated_at": "2026-05-19T11:13:00.286560",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -595,7 +595,7 @@
       "adv_machine": 0.7,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.049026",
+      "evaluated_at": "2026-05-19T11:13:00.301020",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -713,7 +713,7 @@
       "adv_machine": 0.83,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.071733",
+      "evaluated_at": "2026-05-19T11:13:00.315710",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -831,7 +831,7 @@
       "adv_machine": -2.78,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.095197",
+      "evaluated_at": "2026-05-19T11:13:00.330380",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -949,7 +949,7 @@
       "adv_machine": -0.44,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.117538",
+      "evaluated_at": "2026-05-19T11:13:00.344140",
       "matched_machines": [
         {
           "機種": "ミスタージャグラー",
@@ -1067,7 +1067,7 @@
       "adv_machine": 10.17,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.139635",
+      "evaluated_at": "2026-05-19T11:13:00.358578",
       "matched_machines": [
         {
           "機種": "ネオアイムジャグラーEX",
@@ -1185,7 +1185,7 @@
       "adv_machine": -3.24,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.158305",
+      "evaluated_at": "2026-05-19T11:13:00.373514",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1303,7 +1303,7 @@
       "adv_machine": -7.06,
       "top10_machine_plus_rate": 0.1,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.175718",
+      "evaluated_at": "2026-05-19T11:13:00.388163",
       "matched_machines": [
         {
           "機種": "スマスロ ハナビ",
@@ -1421,7 +1421,7 @@
       "adv_machine": -1.97,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.199500",
+      "evaluated_at": "2026-05-19T11:13:00.402491",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1539,7 +1539,7 @@
       "adv_machine": 0.62,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.220301",
+      "evaluated_at": "2026-05-19T11:13:00.417271",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1657,7 +1657,7 @@
       "adv_machine": -0.53,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.239561",
+      "evaluated_at": "2026-05-19T11:13:00.431225",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1775,7 +1775,7 @@
       "adv_machine": 8.49,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.263627",
+      "evaluated_at": "2026-05-19T11:13:00.445543",
       "matched_machines": [
         {
           "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -1893,7 +1893,7 @@
       "adv_machine": 0.41,
       "top10_machine_plus_rate": 0.1,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.285170",
+      "evaluated_at": "2026-05-19T11:13:00.459651",
       "matched_machines": [
         {
           "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -2011,7 +2011,7 @@
       "adv_machine": -1.78,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.301184",
+      "evaluated_at": "2026-05-19T11:13:00.473900",
       "matched_machines": [
         {
           "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -2129,7 +2129,7 @@
       "adv_machine": 5.76,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.319293",
+      "evaluated_at": "2026-05-19T11:13:00.489182",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -2247,7 +2247,7 @@
       "adv_machine": 5.77,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.341353",
+      "evaluated_at": "2026-05-19T11:13:00.503705",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2365,7 +2365,7 @@
       "adv_machine": -2.92,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.357267",
+      "evaluated_at": "2026-05-19T11:13:00.517889",
       "matched_machines": [
         {
           "機種": "マイジャグラーV",
@@ -2483,7 +2483,7 @@
       "adv_machine": -3.11,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.373908",
+      "evaluated_at": "2026-05-19T11:13:00.532170",
       "matched_machines": [
         {
           "機種": "スマスロ ハナビ",
@@ -2601,7 +2601,7 @@
       "adv_machine": 1.83,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 8,
-      "evaluated_at": "2026-05-19T11:04:42.390408",
+      "evaluated_at": "2026-05-19T11:13:00.546123",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -2699,7 +2699,7 @@
       "adv_machine": 1.91,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.420655",
+      "evaluated_at": "2026-05-19T11:13:00.566935",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -2817,7 +2817,7 @@
       "adv_machine": -0.23,
       "top10_machine_plus_rate": 0.5556,
       "top10_machine_n_matched": 9,
-      "evaluated_at": "2026-05-19T11:04:42.438228",
+      "evaluated_at": "2026-05-19T11:13:00.584149",
       "matched_machines": [
         {
           "機種": "スマスロ モンスターハンターライズ",
@@ -2925,7 +2925,7 @@
       "adv_machine": -6.28,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.454398",
+      "evaluated_at": "2026-05-19T11:13:00.610775",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -3043,7 +3043,7 @@
       "adv_machine": -2.27,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.470391",
+      "evaluated_at": "2026-05-19T11:13:00.631535",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -3161,7 +3161,7 @@
       "adv_machine": 10.54,
       "top10_machine_plus_rate": 0.625,
       "top10_machine_n_matched": 8,
-      "evaluated_at": "2026-05-19T11:04:42.485956",
+      "evaluated_at": "2026-05-19T11:13:00.649582",
       "matched_machines": [
         {
           "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -3259,7 +3259,7 @@
       "adv_machine": -2.96,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.503619",
+      "evaluated_at": "2026-05-19T11:13:00.668583",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -3377,7 +3377,7 @@
       "adv_machine": 2.32,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-05-19T11:04:42.523281",
+      "evaluated_at": "2026-05-19T11:13:00.687966",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -4869,5 +4869,25 @@
       "G数": 7829,
       "hit": false
     }
+  },
+  "machine_streaks": {
+    "hot": [],
+    "cold": [
+      {
+        "機種": "スマスロ 攻殻機動隊",
+        "n": 3,
+        "hit_rate": 0.0
+      },
+      {
+        "機種": "マイジャグラーV",
+        "n": 9,
+        "hit_rate": 11.1
+      },
+      {
+        "機種": "Lパチスロからくりサーカス",
+        "n": 5,
+        "hit_rate": 20.0
+      }
+    ]
   }
 }
