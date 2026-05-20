@@ -693,31 +693,16 @@ function StoreContextBanner({ stageData }) {
 
 function StoreTab({ data }) {
   const [bt, setBt] = React.useState(null);
-  const [hist, setHist] = React.useState(null);
 
   React.useEffect(() => {
     fetch("backtest.json?_=" + Date.now())
       .then(r => r.ok ? r.json() : null)
       .then(d => setBt(d))
       .catch(() => {});
-    fetch("history.json?_=" + Date.now())
-      .then(r => r.ok ? r.json() : null)
-      .then(d => setHist(d))
-      .catch(() => {});
   }, []);
 
   const histAvg = data.store_stage?.hist_avg ?? 97;
   const advColor = v => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
-
-  // date → 差枚合計（history.jsonのmatched_machinesから）
-  const samaiMap = React.useMemo(() => {
-    const map = {};
-    for (const row of (hist?.history || [])) {
-      const ms = row.matched_machines || [];
-      if (ms.length > 0) map[row.date] = ms.reduce((s, m) => s + (m.差枚 || 0), 0);
-    }
-    return map;
-  }, [hist]);
 
   // 直近14日（全カテゴリ）
   const recentDays = React.useMemo(() => {
@@ -795,7 +780,7 @@ function StoreTab({ data }) {
             </span>
           )}
         </div>
-        <div className="text-[10px] text-slate-400">60日平均 {histAvg}% 基準。差枚は予測上位台の合計。</div>
+        <div className="text-[10px] text-slate-400">60日平均 {histAvg}% 基準。差枚は店全体の総差枚。</div>
         {recentDays.length === 0 ? (
           <div className="text-center text-slate-400 text-xs py-4">
             {bt ? "データなし" : "読み込み中..."}
@@ -823,8 +808,8 @@ function StoreTab({ data }) {
                     <td className={`py-1.5 text-right font-mono ${diff > 1.2 ? "text-red-500" : diff < -1.2 ? "text-emerald-600" : "text-slate-600"}`}>
                       {d.baseline_avg?.toFixed(1)}%
                     </td>
-                    <td className={`py-1.5 text-right font-semibold font-mono ${samai != null ? (samai > 0 ? "text-emerald-600" : "text-red-500") : "text-slate-300"}`}>
-                      {samai != null ? `${samai > 0 ? "+" : ""}${samai.toLocaleString()}` : "—"}
+                    <td className={`py-1.5 text-right font-semibold font-mono ${d.store_samai != null ? (d.store_samai > 0 ? "text-emerald-600" : "text-red-500") : "text-slate-300"}`}>
+                      {d.store_samai != null ? `${d.store_samai > 0 ? "+" : ""}${d.store_samai.toLocaleString()}` : "—"}
                     </td>
                     <td className={`py-1.5 text-right font-semibold ${advColor(d.adv_machine)}`}>
                       {d.adv_machine != null ? `${d.adv_machine > 0 ? "+" : ""}${d.adv_machine?.toFixed(1)}%` : "—"}
