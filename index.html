@@ -693,31 +693,49 @@ function StoreContextBanner({ stageData }) {
 
 function StoreTab({ data }) {
   const [bt, setBt] = React.useState(null);
+  const [hist, setHist] = React.useState(null);
 
   React.useEffect(() => {
     fetch("backtest.json?_=" + Date.now())
       .then(r => r.ok ? r.json() : null)
       .then(d => setBt(d))
       .catch(() => {});
+    fetch("history.json?_=" + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(d => setHist(d))
+      .catch(() => {});
   }, []);
 
   const histAvg = data.store_stage?.hist_avg ?? 97;
   const advColor = v => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
 
-  const recentOldEvents = React.useMemo(() => {
+  // date → 差枚合計（history.jsonのmatched_machinesから）
+  const samaiMap = React.useMemo(() => {
+    const map = {};
+    for (const row of (hist?.history || [])) {
+      const ms = row.matched_machines || [];
+      if (ms.length > 0) map[row.date] = ms.reduce((s, m) => s + (m.差枚 || 0), 0);
+    }
+    return map;
+  }, [hist]);
+
+  // 直近14日（全カテゴリ）
+  const recentDays = React.useMemo(() => {
     if (!bt?.daily) return [];
     return bt.daily
-      .filter(d => d.category === "旧イベント日" && d.baseline_avg != null)
-      .slice(-6)
+      .filter(d => d.baseline_avg != null)
+      .slice(-14)
       .reverse();
   }, [bt]);
 
-  const avgOldBase = recentOldEvents.length > 0
-    ? recentOldEvents.reduce((s, d) => s + d.baseline_avg, 0) / recentOldEvents.length
+  // 旧イベのみで出し過ぎ判定
+  const oldEventDays = recentDays.filter(d => d.category === "旧イベント日");
+  const avgOldBase = oldEventDays.length > 0
+    ? oldEventDays.reduce((s, d) => s + d.baseline_avg, 0) / oldEventDays.length
     : null;
   const isOvergenerous = avgOldBase != null && avgOldBase > histAvg + 1.2;
   const isUndergenerous = avgOldBase != null && avgOldBase < histAvg - 1.2;
-  const verdict = isOvergenerous ? "出し過ぎ傾向 → 絞り気味の可能性"
+  const verdict = isOvergenerous ? "出し過ぎ → 絞り気味か"
                 : isUndergenerous ? "絞り傾向 → 出す可能性"
                 : "通常レンジ";
   const verdictStyle = isOvergenerous ? "bg-blue-100 text-blue-700"
@@ -767,38 +785,46 @@ function StoreTab({ data }) {
         </div>
       )}
 
-      {/* 旧イベント日履歴 */}
+      {/* 直近14日実績テーブル */}
       <div className="bg-white rounded-xl border border-slate-200 p-4 space-y-3">
         <div className="flex items-center justify-between">
-          <div className="text-xs font-semibold text-slate-700">直近の旧イベント日実績</div>
+          <div className="text-xs font-semibold text-slate-700">直近14日の実績</div>
           {avgOldBase != null && (
             <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${verdictStyle}`}>
-              {isOvergenerous ? "↓ " : isUndergenerous ? "↑ " : ""}{verdict}
+              旧イベ {isOvergenerous ? "↓ " : isUndergenerous ? "↑ " : ""}{verdict}
             </span>
           )}
         </div>
-        <div className="text-[10px] text-slate-400">60日平均ベース {histAvg}% を基準に判定</div>
-        {recentOldEvents.length === 0 ? (
+        <div className="text-[10px] text-slate-400">60日平均 {histAvg}% 基準。差枚は予測上位台の合計。</div>
+        {recentDays.length === 0 ? (
           <div className="text-center text-slate-400 text-xs py-4">
-            {bt ? "旧イベント日データなし" : "読み込み中..."}
+            {bt ? "データなし" : "読み込み中..."}
           </div>
         ) : (
           <table className="w-full text-xs">
             <thead><tr className="text-slate-400 border-b text-right">
               <th className="text-left pb-1">日付</th>
-              <th className="pb-1">全体出率</th>
-              <th className="pb-1">60日比</th>
-              <th className="pb-1">台ADV</th>
+              <th className="pb-1">出率</th>
+              <th className="pb-1">差枚</th>
+              <th className="pb-1">ADV</th>
             </tr></thead>
             <tbody>
-              {recentOldEvents.map(d => {
+              {recentDays.map(d => {
                 const diff = d.baseline_avg != null ? +(d.baseline_avg - histAvg).toFixed(1) : null;
+                const samai = samaiMap[d.date];
                 return (
                   <tr key={d.date} className="border-b border-slate-50">
-                    <td className="py-1.5 font-mono text-slate-600">{(d.date || "").slice(5)}</td>
-                    <td className="py-1.5 text-right font-mono">{d.baseline_avg?.toFixed(1)}%</td>
-                    <td className={`py-1.5 text-right font-semibold ${diff > 1.2 ? "text-red-500" : diff < -1.2 ? "text-emerald-600" : "text-slate-400"}`}>
-                      {diff != null ? `${diff > 0 ? "+" : ""}${diff}%` : "—"}
+                    <td className="py-1.5">
+                      <div className="font-mono text-slate-600 leading-tight">{(d.date || "").slice(5)}</div>
+                      <span className={`text-[9px] font-bold px-1 py-0 rounded ${CAT_STYLE[d.category] || "bg-slate-100 text-slate-500"}`}>
+                        {CAT_SHORT[d.category] || "?"}
+                      </span>
+                    </td>
+                    <td className={`py-1.5 text-right font-mono ${diff > 1.2 ? "text-red-500" : diff < -1.2 ? "text-emerald-600" : "text-slate-600"}`}>
+                      {d.baseline_avg?.toFixed(1)}%
+                    </td>
+                    <td className={`py-1.5 text-right font-semibold font-mono ${samai != null ? (samai > 0 ? "text-emerald-600" : "text-red-500") : "text-slate-300"}`}>
+                      {samai != null ? `${samai > 0 ? "+" : ""}${samai.toLocaleString()}` : "—"}
                     </td>
                     <td className={`py-1.5 text-right font-semibold ${advColor(d.adv_machine)}`}>
                       {d.adv_machine != null ? `${d.adv_machine > 0 ? "+" : ""}${d.adv_machine?.toFixed(1)}%` : "—"}
