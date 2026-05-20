@@ -822,7 +822,7 @@ function StoreTab({ data }) {
                         {CAT_SHORT[d.category] || "?"}
                       </span>
                     </td>
-                    <td className={`py-1.5 text-right font-mono ${diff > 1.2 ? "text-red-500" : diff < -1.2 ? "text-emerald-600" : "text-slate-600"}`}>
+                    <td className={`py-1.5 text-right font-mono ${diff > 1.2 ? "text-emerald-600" : diff < -1.2 ? "text-red-500" : "text-slate-600"}`}>
                       {d.baseline_avg?.toFixed(1)}%
                     </td>
                     <td className={`py-1.5 text-right font-semibold font-mono ${d.store_samai != null ? (d.store_samai > 0 ? "text-emerald-600" : "text-red-500") : "text-slate-300"}`}>
