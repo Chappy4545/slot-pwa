@@ -1512,18 +1512,28 @@ function HistoryTab() {
       </div>
 
       {/* ② KPIカード (7日・30日・全期間) */}
-      <div className="grid grid-cols-3 gap-2">
+      <div className="space-y-2">
         {[
-          ["7日", r7.adv_machine, r7.n_days],
-          ["30日", r30.adv_machine, r30.n_days],
-          ["全期間", all.adv_machine, all.n_days],
-        ].map(([label, val, n]) => (
-          <div key={label} className="bg-white rounded-xl border border-slate-200 p-3 text-center">
-            <div className="text-[10px] text-slate-500">台ADV ({label})<InfoTip {...ADV_MACHINE_TIP} /></div>
-            <div className={`text-lg font-bold ${typeof val === "number" ? advColor(val) : "text-slate-400"}`}>
-              {typeof val === "number" ? `${val > 0 ? "+" : ""}${val.toFixed(2)}%` : "—"}
+          ["7日", r7.adv_kishu, r7.adv_machine, r7.n_days],
+          ["30日", r30.adv_kishu, r30.adv_machine, r30.n_days],
+          ["全期間", all.adv_kishu, all.adv_machine, all.n_days],
+        ].map(([label, kishu, machine, n]) => (
+          <div key={label} className="bg-white rounded-xl border border-slate-200 p-3">
+            <div className="text-[10px] text-slate-400 mb-2">{label}（{n != null ? `${n}日` : "—"}）</div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="text-center">
+                <div className="text-[10px] text-slate-500 mb-0.5">機種ADV</div>
+                <div className={`text-xl font-bold ${typeof kishu === "number" ? advColor(kishu) : "text-slate-400"}`}>
+                  {typeof kishu === "number" ? `${kishu > 0 ? "+" : ""}${kishu.toFixed(2)}%` : "—"}
+                </div>
+              </div>
+              <div className="text-center">
+                <div className="text-[10px] text-slate-500 mb-0.5">台ADV<InfoTip {...ADV_MACHINE_TIP} /></div>
+                <div className={`text-xl font-bold ${typeof machine === "number" ? advColor(machine) : "text-slate-400"}`}>
+                  {typeof machine === "number" ? `${machine > 0 ? "+" : ""}${machine.toFixed(2)}%` : "—"}
+                </div>
+              </div>
             </div>
-            {n != null && <div className="text-[9px] text-slate-400">{n}日</div>}
           </div>
         ))}
       </div>
