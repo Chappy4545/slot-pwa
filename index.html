@@ -704,6 +704,14 @@ function StoreTab({ data }) {
   const histAvg = data.store_stage?.hist_avg ?? 97;
   const advColor = v => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
 
+  // 直近30日合計差枚
+  const samai30 = React.useMemo(() => {
+    if (!bt?.daily) return null;
+    const days = bt.daily.filter(d => d.store_samai != null).slice(-30);
+    if (days.length === 0) return null;
+    return { total: days.reduce((s, d) => s + d.store_samai, 0), n: days.length };
+  }, [bt]);
+
   // 直近14日（全カテゴリ）
   const recentDays = React.useMemo(() => {
     if (!bt?.daily) return [];
@@ -767,6 +775,16 @@ function StoreTab({ data }) {
               {" "}vs 全曜日平均
             </div>
           )}
+        </div>
+      )}
+
+      {/* 直近30日 総差枚 */}
+      {samai30 && (
+        <div className={`rounded-xl border p-4 ${samai30.total > 0 ? "bg-emerald-50 border-emerald-200" : "bg-slate-50 border-slate-200"}`}>
+          <div className="text-[10px] text-slate-500 mb-1">直近{samai30.n}日 店全体 総差枚（みんレポ報告台合計）</div>
+          <div className={`text-2xl font-bold ${samai30.total > 0 ? "text-emerald-600" : "text-red-500"}`}>
+            {samai30.total > 0 ? "+" : ""}{samai30.total.toLocaleString()}枚
+          </div>
         </div>
       )}
 
