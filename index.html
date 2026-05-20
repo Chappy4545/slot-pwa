@@ -796,7 +796,6 @@ function StoreTab({ data }) {
             <tbody>
               {recentDays.map(d => {
                 const diff = d.baseline_avg != null ? +(d.baseline_avg - histAvg).toFixed(1) : null;
-                const samai = samaiMap[d.date];
                 return (
                   <tr key={d.date} className="border-b border-slate-50">
                     <td className="py-1.5">
