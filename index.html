@@ -1955,6 +1955,34 @@ function SeisekiTab({ modelPerf }) {
               </div>
             </div>
           </div>
+          <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-3">
+            <div className="font-semibold text-slate-700">機種ADV と 台ADV の関係</div>
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <div className="bg-slate-100 rounded-lg px-3 py-2 flex-1 text-center text-slate-600">
+                  <div className="font-semibold">ベースライン</div>
+                  <div className="text-slate-400">店全体・全323台の平均出率</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-full border-l-2 border-blue-300 pl-3 py-1">
+                  <div className="text-blue-600 font-semibold">↓ 機種シグナル（K系）で絞り込み</div>
+                  <div className="text-slate-500 mt-0.5">Kishu TOP10機種の<strong>全台</strong>平均 → <span className="font-semibold text-blue-600">機種ADV</span></div>
+                  <div className="text-slate-400">※設定が入っていない台も混ざるため薄まりやすい</div>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <div className="w-full border-l-2 border-emerald-400 pl-3 py-1">
+                  <div className="text-emerald-600 font-semibold">↓ 台番シグナル（S系）でさらに絞り込み</div>
+                  <div className="text-slate-500 mt-0.5">台番 TOP10の平均 → <span className="font-semibold text-emerald-600">台ADV</span></div>
+                  <div className="text-slate-400">※2段階フィルターにより機種ADVより高くなりやすい</div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-slate-50 rounded-lg p-2 text-slate-500 leading-relaxed">
+              台ADVは機種ADVに<strong>積み上がる</strong>ものではなく、どちらもベースラインからの差として独立に計算。機種選択が土台で、台番がその上に精度を加える構造。
+            </div>
+          </div>
         </div>
       )}
     </div>
