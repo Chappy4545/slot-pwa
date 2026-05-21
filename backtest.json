@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-21T09:18:07.555504",
+  "generated_at": "2026-05-21T10:04:58.241019",
   "date_range": "2025-07-15 ~ 2026-05-20",
   "n_days": 304,
   "overall": {
@@ -165,9 +165,9 @@
   "cls_stats": [
     {
       "cls": "本命",
-      "n": 2634,
-      "avg_rate": 98.2,
-      "plus_rate": 42.6,
+      "n": 2887,
+      "avg_rate": 98.4,
+      "plus_rate": 43.0,
       "adv": 1.8
     },
     {
@@ -186,10 +186,10 @@
     },
     {
       "cls": "見送り",
-      "n": 3734,
-      "avg_rate": 98.0,
-      "plus_rate": 42.0,
-      "adv": -0.2
+      "n": 3481,
+      "avg_rate": 97.8,
+      "plus_rate": 41.6,
+      "adv": -0.3
     }
   ],
   "suggestions": [

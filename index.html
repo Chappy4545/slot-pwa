@@ -452,19 +452,6 @@ function BacktestTab() {
       .catch(() => { setErr(true); setLoading(false); });
   }, []);
 
-  if (loading) return <div className="text-center py-12 text-slate-400 text-sm">読み込み中...</div>;
-  if (err || !bt) return (
-    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 space-y-2">
-      <div className="font-semibold">backtest.json が見つかりません</div>
-      <div>以下を実行してください:</div>
-      <div className="font-mono bg-amber-100 px-3 py-2 rounded text-xs">python backtest.py</div>
-      <div className="text-xs text-amber-600">完了後にこのタブをリロード</div>
-    </div>
-  );
-
-  const ov = bt.overall || {};
-  const advColor = (v) => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
-
   const storeSamaiStats = React.useMemo(() => {
     if (!bt?.daily) return null;
     const days = bt.daily.filter(d => d.store_samai != null && d.adv_machine != null);
@@ -481,6 +468,19 @@ function BacktestTab() {
       minus: calc(days.filter(d => d.store_samai <= 0)),
     };
   }, [bt]);
+
+  if (loading) return <div className="text-center py-12 text-slate-400 text-sm">読み込み中...</div>;
+  if (err || !bt) return (
+    <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-sm text-amber-800 space-y-2">
+      <div className="font-semibold">backtest.json が見つかりません</div>
+      <div>以下を実行してください:</div>
+      <div className="font-mono bg-amber-100 px-3 py-2 rounded text-xs">python backtest.py</div>
+      <div className="text-xs text-amber-600">完了後にこのタブをリロード</div>
+    </div>
+  );
+
+  const ov = bt.overall || {};
+  const advColor = (v) => v > 0 ? "text-emerald-600" : v < 0 ? "text-red-500" : "text-slate-500";
 
   return (
     <div className="space-y-4">

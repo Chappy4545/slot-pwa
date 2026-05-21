@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-21T09:17:52.763502",
+  "generated_at": "2026-05-21T10:05:20.910993",
   "target_date": "2026-05-21",
   "target_category": "通常日",
-  "model_version": "v9.15",
-  "model_description": "K4反転+K7強化+K8削除+旧イベント日kishuTOP12+bonus閾値3+本命閾値65(通常日)/75(旧イベント日)+S6/S7廃止(逆効果確認)",
+  "model_version": "v9.16",
+  "model_description": "K4反転+K7強化+K8削除+旧イベント日kishuTOP12+bonus閾値3+本命閾値65(通常日)/70(旧イベント日)+S6/S7廃止(逆効果確認)",
   "store_stage": {
     "stage": "平常期",
     "recent_avg": 96.41,
