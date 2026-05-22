@@ -810,7 +810,6 @@ function StoreTab({ data }) {
 
   return (
     <div className="space-y-3">
-      <StrategyCard card={data.strategy_card} />
       <EventDayWarning category={data.target_category} />
 
       {/* 営業ステージ */}
@@ -919,36 +918,6 @@ function StoreTab({ data }) {
         {samaiView === "monthly" && (
           <>
             <div className="text-[10px] text-slate-400">月ごとの店全体 合計差枚・平均出率。</div>
-            {monthlySummary.length > 0 && (() => {
-              const chartData = [...monthlySummary].reverse().slice(-12);
-              const maxAbs = Math.max(...chartData.map(m => Math.abs(m.samai)), 1);
-              const W = 100, H = 88, padTop = 4, padBot = 16;
-              const barAreaH = H - padTop - padBot;
-              const zeroY = padTop + barAreaH / 2;
-              const maxBarH = barAreaH / 2 - 2;
-              const bw = W / chartData.length;
-              return (
-                <svg viewBox={`0 0 ${W} ${H}`} className="w-full" style={{height:"100px"}}>
-                  <line x1="0" y1={zeroY} x2={W} y2={zeroY} stroke="#e2e8f0" strokeWidth="0.5"/>
-                  {chartData.map((m, i) => {
-                    const ratio = m.samai / maxAbs;
-                    const bh = Math.max(Math.abs(ratio) * maxBarH, 0.5);
-                    const x = i * bw + bw * 0.15;
-                    const w = bw * 0.7;
-                    const y = ratio >= 0 ? zeroY - bh : zeroY;
-                    const isCur = m.month === thisMonth;
-                    return (
-                      <g key={m.month}>
-                        <rect x={x} y={y} width={w} height={bh} fill={m.samai >= 0 ? "#10b981" : "#ef4444"} opacity={isCur ? 1 : 0.7} rx="0.4"/>
-                        <text x={x + w/2} y={H - 2} textAnchor="middle" fontSize="4.5" fill={isCur ? "#3b82f6" : "#94a3b8"} fontWeight={isCur ? "bold" : "normal"}>
-                          {parseInt(m.month.slice(5))}月
-                        </text>
-                      </g>
-                    );
-                  })}
-                </svg>
-              );
-            })()}
             {monthlySummary.length === 0 ? (
               <div className="text-center text-slate-400 text-xs py-4">{bt ? "データなし" : "読み込み中..."}</div>
             ) : (
