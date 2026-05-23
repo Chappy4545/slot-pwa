@@ -381,14 +381,19 @@ function KishuTrendChart({ trend }) {
     if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
     const labels = trend.map(d => (d.date || "").slice(5));
     const avgRates = trend.map(d => d.avg_rate != null ? +parseFloat(d.avg_rate).toFixed(1) : null);
+    const totalSamai = trend.map(d => d.total_samai != null ? +d.total_samai : null);
     const totalGames = trend.map(d => d.total_games != null ? +d.total_games : null);
     const ctx = canvasRef.current.getContext("2d");
     chartRef.current = new Chart(ctx, {
       data: {
         labels,
         datasets: [
-          { type: "bar", label: "合計G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.35)", borderColor: "rgba(148,163,184,0.6)", borderWidth: 1, yAxisID: "yG" },
-          { type: "line", label: "平均出率", data: avgRates, borderColor: "#10b981", backgroundColor: "rgba(16,185,129,0.08)", borderWidth: 2, pointRadius: 3, tension: 0.2, fill: true, yAxisID: "yR" },
+          { type: "bar", label: "差枚", data: totalSamai,
+            backgroundColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.45)" : "rgba(239,68,68,0.45)"),
+            borderColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.8)" : "rgba(239,68,68,0.8)"),
+            borderWidth: 1, yAxisID: "yS" },
+          { type: "bar", label: "G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.2)", borderColor: "rgba(148,163,184,0.4)", borderWidth: 1, yAxisID: "yG" },
+          { type: "line", label: "出率", data: avgRates, borderColor: "#10b981", backgroundColor: "rgba(16,185,129,0.06)", borderWidth: 2, pointRadius: 3, tension: 0.2, fill: true, yAxisID: "yR" },
           { type: "line", label: "100%", data: trend.map(() => 100), borderColor: "#f59e0b", borderWidth: 1, pointRadius: 0, borderDash: [3, 3], yAxisID: "yR" },
         ],
       },
@@ -397,7 +402,8 @@ function KishuTrendChart({ trend }) {
         plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
         scales: {
           yR: { type: "linear", position: "left", ticks: { font: { size: 9 }, callback: v => v + "%" } },
-          yG: { type: "linear", position: "right", grid: { drawOnChartArea: false }, ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v / 1000).toFixed(0) + "k" : v } },
+          yS: { type: "linear", position: "right", grid: { drawOnChartArea: false }, ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v/1000).toFixed(0)+"k" : v <= -1000 ? "-"+(Math.abs(v)/1000).toFixed(0)+"k" : v } },
+          yG: { display: false },
           x: { ticks: { font: { size: 8 }, maxRotation: 0 } },
         },
       },
@@ -1042,6 +1048,9 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
               <span>Top3 <RateLabel value={row["Top3平均"]} /></span>
               <span>P率 {row["連日P率"]}</span>
               <span>+α <span className={row["+α"] > 0 ? "text-red-600 font-semibold" : (row["+α"] < 0 ? "text-blue-600" : "")}>{row["+α"] > 0 ? "+" : ""}{row["+α"]}%</span></span>
+              {row["土日差"] != null && Math.abs(row["土日差"]) >= 1 && (
+                <span>土日 <span className={row["土日差"] > 0 ? "text-orange-500 font-semibold" : "text-slate-400"}>{row["土日差"] > 0 ? "+" : ""}{row["土日差"]}%</span></span>
+              )}
               <span className="text-slate-500">{row["台数"]}台</span>
             </div>
             <TagChips reasonTags={row["reason_tags"]} riskTags={row["risk_tags"]} />
