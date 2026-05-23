@@ -389,22 +389,19 @@ function KishuTrendChart({ trend }) {
         labels,
         datasets: [
           { type: "bar", label: "差枚", data: totalSamai,
-            backgroundColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.45)" : "rgba(239,68,68,0.45)"),
-            borderColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.8)" : "rgba(239,68,68,0.8)"),
-            borderWidth: 1, yAxisID: "yS" },
-          { type: "bar", label: "G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.2)", borderColor: "rgba(148,163,184,0.4)", borderWidth: 1, yAxisID: "yG" },
-          { type: "line", label: "出率", data: avgRates, borderColor: "#10b981", backgroundColor: "rgba(16,185,129,0.06)", borderWidth: 2, pointRadius: 3, tension: 0.2, fill: true, yAxisID: "yR" },
-          { type: "line", label: "100%", data: trend.map(() => 100), borderColor: "#f59e0b", borderWidth: 1, pointRadius: 0, borderDash: [3, 3], yAxisID: "yR" },
+            backgroundColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.5)" : "rgba(239,68,68,0.5)"),
+            borderColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.9)" : "rgba(239,68,68,0.9)"),
+            borderWidth: 1, yAxisID: "yS", order: 1 },
+          { type: "bar", label: "G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.18)", borderColor: "rgba(148,163,184,0.35)", borderWidth: 1, yAxisID: "yG", order: 2 },
         ],
       },
       options: {
         responsive: true, maintainAspectRatio: false,
         plugins: { legend: { position: "top", labels: { font: { size: 9 }, boxWidth: 10 } } },
         scales: {
-          yR: { type: "linear", position: "left", ticks: { font: { size: 9 }, callback: v => v + "%" } },
-          yS: { type: "linear", position: "right", grid: { drawOnChartArea: false }, ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v/1000).toFixed(0)+"k" : v <= -1000 ? "-"+(Math.abs(v)/1000).toFixed(0)+"k" : v } },
-          yG: { display: false },
-          x: { ticks: { font: { size: 8 }, maxRotation: 0 } },
+          yS: { type: "linear", position: "left", ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v/1000).toFixed(0)+"k" : v <= -1000 ? (v/1000).toFixed(0)+"k" : v } },
+          yG: { type: "linear", position: "right", grid: { drawOnChartArea: false }, ticks: { font: { size: 8 }, callback: v => v >= 1000 ? (v/1000).toFixed(0)+"k" : v } },
+          x: { ticks: { font: { size: 8 }, maxRotation: 45, maxTicksLimit: 15 } },
         },
       },
     });
@@ -2238,16 +2235,20 @@ function App() {
                   </div>
                 )}
                 {misokuriKishu.length > 0 && (
-                  <div className="space-y-1.5 opacity-50">
+                  <div className="space-y-1.5">
                     <div className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-xs font-bold text-slate-500">
                       <span>見送り機種</span>
                       <span className="ml-auto">{misokuriKishu.length}機種</span>
                     </div>
                     {misokuriKishu.map(row => (
                       <KishuCard key={row["機種"]} row={row}
-                        expanded={false} onToggle={() => {}} machines={[]}
+                        expanded={!!expandedKishu[row["機種"]]}
+                        onToggle={() => toggleKishu(row["機種"])}
+                        machines={(data.machine_by_kishu || {})[row["機種"]] || []}
                         favorites={favorites} toggleFav={toggleFav}
                         minRepoUrl={data.min_repo_url}
+                        kishuTrend={(data.kishu_trend || {})[row["機種"]]}
+                        machineTrend={data.machine_trend || {}}
                         hotKishus={hotKishus} coldKishus={coldKishus} />
                     ))}
                   </div>

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-23T14:16:18.699202",
+  "generated_at": "2026-05-23T14:21:23.210173",
   "target_date": "2026-05-23",
   "target_category": "旧イベント日",
   "model_version": "v9.16",
@@ -27,6 +27,118 @@
   "min_repo_url": "https://min-repo.com/3005754/",
   "kishu_trend": {
     "A-SLOT+ ディスクアップ ULTRAREMIX": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 97.0,
+        "total_games": 14535,
+        "total_samai": -668,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 115.9,
+        "total_games": 8880,
+        "total_samai": 3822,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 100.6,
+        "total_games": 10534,
+        "total_samai": 101,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 103.1,
+        "total_games": 8696,
+        "total_samai": 637,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 104.1,
+        "total_games": 9219,
+        "total_samai": 934,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 103.9,
+        "total_games": 16292,
+        "total_samai": 4974,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 95.2,
+        "total_games": 17065,
+        "total_samai": -2628,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 110.3,
+        "total_games": 14121,
+        "total_samai": 6068,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 84.2,
+        "total_games": 12703,
+        "total_samai": -4751,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 92.5,
+        "total_games": 13044,
+        "total_samai": -1878,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 106.8,
+        "total_games": 12622,
+        "total_samai": 3716,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 91.9,
+        "total_games": 15301,
+        "total_samai": -3210,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 101.2,
+        "total_games": 13565,
+        "total_samai": 1039,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 96.7,
+        "total_games": 19157,
+        "total_samai": -1677,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 105.8,
+        "total_games": 15480,
+        "total_samai": 2880,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 89.8,
+        "total_games": 10034,
+        "total_samai": -2508,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 103.9,
@@ -128,6 +240,118 @@
     ],
     "L ToLOVEるダークネス TRANCE ver.8.7": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 100.4,
+        "total_games": 22552,
+        "total_samai": 1590,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 91.9,
+        "total_games": 12257,
+        "total_samai": -1878,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 101.1,
+        "total_games": 16132,
+        "total_samai": 2947,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 93.2,
+        "total_games": 15681,
+        "total_samai": -2894,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 100.7,
+        "total_games": 16582,
+        "total_samai": -55,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 85.3,
+        "total_games": 7569,
+        "total_samai": -3118,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 90.2,
+        "total_games": 19123,
+        "total_samai": -5783,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 98.1,
+        "total_games": 9117,
+        "total_samai": -1993,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 91.9,
+        "total_games": 12363,
+        "total_samai": -1860,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 77.1,
+        "total_games": 10901,
+        "total_samai": -6530,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 89.0,
+        "total_games": 20120,
+        "total_samai": -4912,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 91.9,
+        "total_games": 9176,
+        "total_samai": 1670,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 95.5,
+        "total_games": 17185,
+        "total_samai": -436,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 90.6,
+        "total_games": 14017,
+        "total_samai": -3114,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 91.6,
+        "total_games": 15910,
+        "total_samai": -5324,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 79.9,
+        "total_games": 11352,
+        "total_samai": -4927,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 97.6,
         "total_games": 22562,
@@ -227,6 +451,118 @@
       }
     ],
     "LBパチスロ ヱヴァンゲリヲン～約束の扉～": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 100.8,
+        "total_games": 20962,
+        "total_samai": -60,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 80.9,
+        "total_games": 7710,
+        "total_samai": -3139,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 94.9,
+        "total_games": 8880,
+        "total_samai": -607,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 100.3,
+        "total_games": 9470,
+        "total_samai": 1114,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 102.6,
+        "total_games": 9544,
+        "total_samai": 2051,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 99.3,
+        "total_games": 12856,
+        "total_samai": -122,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 111.9,
+        "total_games": 22566,
+        "total_samai": 8925,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 91.4,
+        "total_games": 11082,
+        "total_samai": -2221,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 90.0,
+        "total_games": 11849,
+        "total_samai": 785,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 86.6,
+        "total_games": 7763,
+        "total_samai": -3078,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 110.8,
+        "total_games": 22236,
+        "total_samai": 7184,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 100.2,
+        "total_games": 12435,
+        "total_samai": 1488,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 92.5,
+        "total_games": 6986,
+        "total_samai": 297,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 102.3,
+        "total_games": 11575,
+        "total_samai": 767,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 106.0,
+        "total_games": 5943,
+        "total_samai": 689,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 98.0,
+        "total_games": 6614,
+        "total_samai": -190,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 103.8,
@@ -414,6 +750,118 @@
     ],
     "Lパチスロ かぐや様は告らせたい": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 96.9,
+        "total_games": 29234,
+        "total_samai": -306,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 90.7,
+        "total_games": 11453,
+        "total_samai": -3846,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 83.9,
+        "total_games": 24463,
+        "total_samai": -9786,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 83.4,
+        "total_games": 20727,
+        "total_samai": -10481,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 109.2,
+        "total_games": 21548,
+        "total_samai": 9343,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 90.1,
+        "total_games": 13824,
+        "total_samai": -2828,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 94.8,
+        "total_games": 42896,
+        "total_samai": -5838,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 90.3,
+        "total_games": 19868,
+        "total_samai": -2689,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 96.3,
+        "total_games": 19598,
+        "total_samai": -2790,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 87.1,
+        "total_games": 15849,
+        "total_samai": -5244,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 82.8,
+        "total_games": 34818,
+        "total_samai": -16767,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 88.3,
+        "total_games": 17174,
+        "total_samai": 10,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 98.1,
+        "total_games": 26550,
+        "total_samai": 770,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 103.6,
+        "total_games": 23532,
+        "total_samai": 2276,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 87.0,
+        "total_games": 17072,
+        "total_samai": -3416,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 97.0,
+        "total_games": 23903,
+        "total_samai": 2985,
+        "n_machines": 5
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 88.7,
         "total_games": 37017,
@@ -513,6 +961,118 @@
       }
     ],
     "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 94.6,
+        "total_games": 45394,
+        "total_samai": -8166,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 91.1,
+        "total_games": 38318,
+        "total_samai": -9443,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 100.5,
+        "total_games": 48787,
+        "total_samai": 1283,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 105.5,
+        "total_games": 48188,
+        "total_samai": 9776,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 99.7,
+        "total_games": 32137,
+        "total_samai": -544,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 95.5,
+        "total_games": 31445,
+        "total_samai": -3513,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 92.9,
+        "total_games": 44438,
+        "total_samai": -9567,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 98.0,
+        "total_games": 27794,
+        "total_samai": 1214,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 94.2,
+        "total_games": 38517,
+        "total_samai": -4586,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 92.3,
+        "total_games": 39488,
+        "total_samai": -6025,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 98.2,
+        "total_games": 41302,
+        "total_samai": 773,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 107.4,
+        "total_games": 33868,
+        "total_samai": 12301,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 100.0,
+        "total_games": 30904,
+        "total_samai": 1116,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 95.4,
+        "total_games": 30363,
+        "total_samai": -3981,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 104.3,
+        "total_games": 21922,
+        "total_samai": 3968,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 85.9,
+        "total_games": 29945,
+        "total_samai": -9243,
+        "n_machines": 6
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 94.8,
@@ -614,6 +1174,118 @@
     ],
     "Lパチスロからくりサーカス": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 109.4,
+        "total_games": 26636,
+        "total_samai": 7415,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 77.1,
+        "total_games": 9250,
+        "total_samai": -4838,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 88.7,
+        "total_games": 18582,
+        "total_samai": -6826,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 113.1,
+        "total_games": 30341,
+        "total_samai": 10970,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 84.3,
+        "total_games": 4713,
+        "total_samai": 1204,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 125.9,
+        "total_games": 7491,
+        "total_samai": 8754,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 97.1,
+        "total_games": 30067,
+        "total_samai": -848,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 111.6,
+        "total_games": 20125,
+        "total_samai": 2029,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 99.6,
+        "total_games": 17867,
+        "total_samai": -1778,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 92.7,
+        "total_games": 20328,
+        "total_samai": -3315,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 107.2,
+        "total_games": 33124,
+        "total_samai": 7001,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 69.8,
+        "total_games": 7078,
+        "total_samai": -5771,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 93.0,
+        "total_games": 19415,
+        "total_samai": -4020,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 107.2,
+        "total_games": 24584,
+        "total_samai": 8307,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 97.0,
+        "total_games": 10143,
+        "total_samai": -348,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 104.3,
+        "total_games": 12520,
+        "total_samai": 1851,
+        "n_machines": 4
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 97.2,
         "total_games": 33970,
@@ -713,6 +1385,118 @@
       }
     ],
     "Lパチスロ炎炎ノ消防隊2": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 107.6,
+        "total_games": 55494,
+        "total_samai": 15234,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 90.8,
+        "total_games": 41614,
+        "total_samai": -12965,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 86.5,
+        "total_games": 52222,
+        "total_samai": -20102,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 94.3,
+        "total_games": 50392,
+        "total_samai": -8355,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 99.1,
+        "total_games": 29138,
+        "total_samai": 534,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 87.4,
+        "total_games": 27469,
+        "total_samai": -2951,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.7,
+        "total_games": 68521,
+        "total_samai": 3908,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 103.6,
+        "total_games": 37881,
+        "total_samai": 3984,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 90.0,
+        "total_games": 34577,
+        "total_samai": -9801,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 106.7,
+        "total_games": 53592,
+        "total_samai": 11675,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 97.2,
+        "total_games": 63831,
+        "total_samai": -3325,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 95.7,
+        "total_games": 42780,
+        "total_samai": -3467,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 94.6,
+        "total_games": 50446,
+        "total_samai": -6405,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 97.0,
+        "total_games": 45175,
+        "total_samai": 613,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 98.6,
+        "total_games": 39333,
+        "total_samai": 3687,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 83.8,
+        "total_games": 33116,
+        "total_samai": -12567,
+        "n_machines": 8
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 97.8,
@@ -814,6 +1598,118 @@
     ],
     "Lパチスロ革命機ヴァルヴレイヴ2": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 84.6,
+        "total_games": 53917,
+        "total_samai": -22715,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 96.3,
+        "total_games": 32578,
+        "total_samai": -4133,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 99.3,
+        "total_games": 55089,
+        "total_samai": 2919,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 93.8,
+        "total_games": 56066,
+        "total_samai": -8778,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 98.2,
+        "total_games": 25668,
+        "total_samai": -1815,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 91.7,
+        "total_games": 39727,
+        "total_samai": -6718,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 90.8,
+        "total_games": 74987,
+        "total_samai": -19388,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 102.7,
+        "total_games": 46666,
+        "total_samai": 8740,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 108.8,
+        "total_games": 42958,
+        "total_samai": 13418,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 113.1,
+        "total_games": 49430,
+        "total_samai": 35836,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 91.6,
+        "total_games": 72035,
+        "total_samai": -17533,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 102.9,
+        "total_games": 60161,
+        "total_samai": 8640,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 107.0,
+        "total_games": 63598,
+        "total_samai": 17644,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 86.6,
+        "total_games": 49141,
+        "total_samai": -8716,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 90.5,
+        "total_games": 34929,
+        "total_samai": -6191,
+        "n_machines": 9
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 99.9,
+        "total_games": 31141,
+        "total_samai": 1699,
+        "n_machines": 9
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 102.7,
         "total_games": 80461,
@@ -913,6 +1809,118 @@
       }
     ],
     "L東京喰種": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 104.3,
+        "total_games": 83331,
+        "total_samai": 13158,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 91.2,
+        "total_games": 55259,
+        "total_samai": -6739,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 92.6,
+        "total_games": 114621,
+        "total_samai": -18844,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 97.8,
+        "total_games": 104641,
+        "total_samai": -40,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 95.3,
+        "total_games": 51633,
+        "total_samai": -7100,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 92.7,
+        "total_games": 51823,
+        "total_samai": -2234,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 94.6,
+        "total_games": 124929,
+        "total_samai": -15513,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 92.3,
+        "total_games": 57116,
+        "total_samai": -1089,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 97.7,
+        "total_games": 86747,
+        "total_samai": 635,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 89.7,
+        "total_games": 79651,
+        "total_samai": -15938,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 98.7,
+        "total_games": 120342,
+        "total_samai": -2012,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 98.1,
+        "total_games": 111937,
+        "total_samai": -2999,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 92.5,
+        "total_games": 102240,
+        "total_samai": -17795,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 102.7,
+        "total_games": 93279,
+        "total_samai": 14323,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 99.6,
+        "total_games": 75140,
+        "total_samai": 7596,
+        "n_machines": 16
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 96.5,
+        "total_games": 65421,
+        "total_samai": 4128,
+        "n_machines": 16
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 100.5,
@@ -1014,6 +2022,118 @@
     ],
     "L無職転生～異世界行ったら本気だす～": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 105.7,
+        "total_games": 10595,
+        "total_samai": 7627,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 104.9,
+        "total_games": 11350,
+        "total_samai": 3037,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 80.9,
+        "total_games": 14965,
+        "total_samai": -8124,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 96.9,
+        "total_games": 17184,
+        "total_samai": -309,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 122.5,
+        "total_games": 13408,
+        "total_samai": 10665,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 96.4,
+        "total_games": 8409,
+        "total_samai": -755,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 99.8,
+        "total_games": 18568,
+        "total_samai": 964,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 85.9,
+        "total_games": 14806,
+        "total_samai": -6537,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 68.4,
+        "total_games": 6843,
+        "total_samai": -6242,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 82.3,
+        "total_games": 9806,
+        "total_samai": -4597,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 102.9,
+        "total_games": 16316,
+        "total_samai": 2473,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 89.9,
+        "total_games": 11022,
+        "total_samai": 206,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 111.1,
+        "total_games": 14085,
+        "total_samai": 5120,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 102.4,
+        "total_games": 14709,
+        "total_samai": 1991,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 96.3,
+        "total_games": 10892,
+        "total_samai": 1040,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 115.6,
+        "total_games": 11101,
+        "total_samai": 6346,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 105.7,
         "total_games": 21199,
@@ -1113,6 +2233,118 @@
       }
     ],
     "いざ！番長": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 120.6,
+        "total_games": 27505,
+        "total_samai": 17339,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 96.7,
+        "total_games": 13239,
+        "total_samai": -1878,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 88.2,
+        "total_games": 26026,
+        "total_samai": -8529,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 87.2,
+        "total_games": 18004,
+        "total_samai": -4444,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 103.0,
+        "total_games": 17297,
+        "total_samai": 187,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 80.2,
+        "total_games": 8831,
+        "total_samai": -5288,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 105.0,
+        "total_games": 32162,
+        "total_samai": 5149,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 99.5,
+        "total_games": 22314,
+        "total_samai": -1027,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 123.3,
+        "total_games": 17567,
+        "total_samai": 12988,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 93.9,
+        "total_games": 13235,
+        "total_samai": -2868,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 112.6,
+        "total_games": 29371,
+        "total_samai": 12602,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 85.5,
+        "total_games": 20856,
+        "total_samai": -8228,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 92.7,
+        "total_games": 22520,
+        "total_samai": -3434,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 76.6,
+        "total_games": 12606,
+        "total_samai": -8603,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 84.6,
+        "total_games": 9438,
+        "total_samai": -3300,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 104.8,
+        "total_games": 16622,
+        "total_samai": 3955,
+        "n_machines": 4
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 105.6,
@@ -1214,6 +2446,118 @@
     ],
     "ウルトラミラクルジャグラー": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 100.0,
+        "total_games": 21014,
+        "total_samai": 105,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 94.1,
+        "total_games": 15194,
+        "total_samai": -2845,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 89.9,
+        "total_games": 7983,
+        "total_samai": -2658,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 100.8,
+        "total_games": 16417,
+        "total_samai": 430,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 96.6,
+        "total_games": 11908,
+        "total_samai": -1475,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 97.2,
+        "total_games": 12485,
+        "total_samai": -602,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 99.4,
+        "total_games": 20813,
+        "total_samai": -276,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 100.0,
+        "total_games": 11578,
+        "total_samai": 1409,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 96.6,
+        "total_games": 10766,
+        "total_samai": -577,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 93.5,
+        "total_games": 16961,
+        "total_samai": -214,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 110.7,
+        "total_games": 19888,
+        "total_samai": 6277,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 101.8,
+        "total_games": 11403,
+        "total_samai": 763,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 90.7,
+        "total_games": 13220,
+        "total_samai": -3084,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 104.5,
+        "total_games": 15513,
+        "total_samai": 2383,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 102.9,
+        "total_games": 11888,
+        "total_samai": 1075,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 100.3,
+        "total_games": 14887,
+        "total_samai": -230,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 100.5,
         "total_games": 23318,
@@ -1313,6 +2657,118 @@
       }
     ],
     "クレアの秘宝伝～はじまりの扉と太陽の石～ボーナストリガーver.": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 95.9,
+        "total_games": 11524,
+        "total_samai": -1639,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 92.6,
+        "total_games": 6543,
+        "total_samai": -1540,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 105.8,
+        "total_games": 7759,
+        "total_samai": 328,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 98.5,
+        "total_games": 9079,
+        "total_samai": -215,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 108.3,
+        "total_games": 6653,
+        "total_samai": 4167,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 97.1,
+        "total_games": 9271,
+        "total_samai": -160,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.0,
+        "total_games": 18275,
+        "total_samai": 810,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 93.7,
+        "total_games": 8130,
+        "total_samai": 455,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 102.0,
+        "total_games": 13173,
+        "total_samai": 2919,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 102.0,
+        "total_games": 7276,
+        "total_samai": 157,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 110.7,
+        "total_games": 21401,
+        "total_samai": 8062,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 94.5,
+        "total_games": 9710,
+        "total_samai": 130,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 100.7,
+        "total_games": 11285,
+        "total_samai": 712,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 101.5,
+        "total_games": 8086,
+        "total_samai": 1227,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 90.8,
+        "total_games": 6880,
+        "total_samai": -1474,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 88.4,
+        "total_games": 6773,
+        "total_samai": -2678,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 91.9,
@@ -1414,6 +2870,118 @@
     ],
     "ゴーゴージャグラー３": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 99.7,
+        "total_games": 40264,
+        "total_samai": 680,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 101.3,
+        "total_games": 25936,
+        "total_samai": 1084,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 94.5,
+        "total_games": 31168,
+        "total_samai": -2292,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 94.7,
+        "total_games": 22021,
+        "total_samai": 1094,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 99.5,
+        "total_games": 22267,
+        "total_samai": -785,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 97.6,
+        "total_games": 29516,
+        "total_samai": -913,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 98.4,
+        "total_games": 41186,
+        "total_samai": -1720,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 87.7,
+        "total_games": 25221,
+        "total_samai": -7353,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 97.8,
+        "total_games": 30850,
+        "total_samai": 271,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 98.0,
+        "total_games": 31082,
+        "total_samai": -944,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 99.8,
+        "total_games": 43994,
+        "total_samai": -281,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 89.2,
+        "total_games": 29881,
+        "total_samai": -8394,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 97.2,
+        "total_games": 40753,
+        "total_samai": -2610,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 95.8,
+        "total_games": 32999,
+        "total_samai": -1214,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 102.8,
+        "total_games": 27114,
+        "total_samai": 1273,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 90.2,
+        "total_games": 23961,
+        "total_samai": -4689,
+        "n_machines": 6
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 105.8,
         "total_games": 48909,
@@ -1513,6 +3081,118 @@
       }
     ],
     "ジャグラーガールズSS": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 99.0,
+        "total_games": 18856,
+        "total_samai": -593,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 93.1,
+        "total_games": 8178,
+        "total_samai": -1494,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 97.0,
+        "total_games": 8486,
+        "total_samai": -519,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 94.0,
+        "total_games": 14418,
+        "total_samai": -2366,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 94.2,
+        "total_games": 11349,
+        "total_samai": -1914,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 106.2,
+        "total_games": 11422,
+        "total_samai": 2240,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 103.2,
+        "total_games": 22934,
+        "total_samai": 2347,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 98.4,
+        "total_games": 10017,
+        "total_samai": -680,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 96.9,
+        "total_games": 9641,
+        "total_samai": 112,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 94.4,
+        "total_games": 11691,
+        "total_samai": -1896,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 102.0,
+        "total_games": 22577,
+        "total_samai": 1698,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 106.4,
+        "total_games": 18319,
+        "total_samai": 3576,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 106.0,
+        "total_games": 15268,
+        "total_samai": 3079,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 92.6,
+        "total_games": 10371,
+        "total_samai": -1226,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 91.6,
+        "total_games": 7026,
+        "total_samai": -1078,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 91.8,
+        "total_games": 7462,
+        "total_samai": -1537,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 98.9,
@@ -1699,6 +3379,118 @@
       }
     ],
     "スマスロ ハナビ": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 101.7,
+        "total_games": 20908,
+        "total_samai": 3356,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 91.7,
+        "total_games": 17101,
+        "total_samai": -1922,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 99.1,
+        "total_games": 21208,
+        "total_samai": 772,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 98.4,
+        "total_games": 13909,
+        "total_samai": -492,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 97.7,
+        "total_games": 19812,
+        "total_samai": 592,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 100.7,
+        "total_games": 17090,
+        "total_samai": 480,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 102.5,
+        "total_games": 30530,
+        "total_samai": 2842,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 93.4,
+        "total_games": 21790,
+        "total_samai": -3002,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 103.9,
+        "total_games": 17373,
+        "total_samai": 2553,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 98.8,
+        "total_games": 20661,
+        "total_samai": -385,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 95.0,
+        "total_games": 20515,
+        "total_samai": -1066,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 97.3,
+        "total_games": 13887,
+        "total_samai": 874,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 95.3,
+        "total_games": 18497,
+        "total_samai": -1922,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 100.0,
+        "total_games": 15910,
+        "total_samai": 933,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 94.9,
+        "total_games": 15524,
+        "total_samai": -1595,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 88.4,
+        "total_games": 15757,
+        "total_samai": -3220,
+        "n_machines": 4
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 107.9,
@@ -1972,6 +3764,118 @@
     ],
     "スマスロ マギアレコード 魔法少女まどか☆マギカ外伝": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 98.2,
+        "total_games": 16211,
+        "total_samai": 1501,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 91.6,
+        "total_games": 5459,
+        "total_samai": -1184,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 100.8,
+        "total_games": 17156,
+        "total_samai": 1898,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 93.1,
+        "total_games": 18198,
+        "total_samai": -3909,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 109.8,
+        "total_games": 2292,
+        "total_samai": 177,
+        "n_machines": 2
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 104.5,
+        "total_games": 6863,
+        "total_samai": 1449,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 104.1,
+        "total_games": 23538,
+        "total_samai": 2468,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 89.2,
+        "total_games": 9971,
+        "total_samai": -1560,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 83.1,
+        "total_games": 11395,
+        "total_samai": -6319,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 82.1,
+        "total_games": 15233,
+        "total_samai": -5564,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 95.2,
+        "total_games": 20036,
+        "total_samai": -2860,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 90.2,
+        "total_games": 16560,
+        "total_samai": -4122,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 100.9,
+        "total_games": 14538,
+        "total_samai": 430,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 98.2,
+        "total_games": 17845,
+        "total_samai": -910,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 82.5,
+        "total_games": 2945,
+        "total_samai": -122,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 114.7,
+        "total_games": 15606,
+        "total_samai": 9041,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 105.1,
         "total_games": 22476,
@@ -2071,6 +3975,118 @@
       }
     ],
     "スマスロ ミリオンゴッド-神々の軌跡-": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 92.7,
+        "total_games": 186045,
+        "total_samai": -39102,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 87.7,
+        "total_games": 182983,
+        "total_samai": -64822,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 94.2,
+        "total_games": 186954,
+        "total_samai": -34423,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 93.6,
+        "total_games": 191421,
+        "total_samai": -34905,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 94.0,
+        "total_games": 200558,
+        "total_samai": -33145,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 100.4,
+        "total_games": 197382,
+        "total_samai": 3211,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 98.2,
+        "total_games": 204408,
+        "total_samai": -8494,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 92.4,
+        "total_games": 208972,
+        "total_samai": -48564,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 92.2,
+        "total_games": 196950,
+        "total_samai": -45131,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 95.0,
+        "total_games": 198964,
+        "total_samai": -27437,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 95.5,
+        "total_games": 200934,
+        "total_samai": -24392,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 91.0,
+        "total_games": 201554,
+        "total_samai": -54879,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 92.0,
+        "total_games": 198394,
+        "total_samai": -43901,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 95.6,
+        "total_games": 193853,
+        "total_samai": -24778,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 94.5,
+        "total_games": 190294,
+        "total_samai": -31473,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 88.6,
+        "total_games": 189973,
+        "total_samai": -63300,
+        "n_machines": 22
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 92.5,
@@ -2172,6 +4188,118 @@
     ],
     "スマスロ モンスターハンターライズ": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 83.6,
+        "total_games": 18622,
+        "total_samai": -8775,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 95.4,
+        "total_games": 6914,
+        "total_samai": -1090,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 104.2,
+        "total_games": 15257,
+        "total_samai": 1958,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 96.3,
+        "total_games": 19513,
+        "total_samai": 324,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 100.3,
+        "total_games": 14207,
+        "total_samai": 573,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 82.7,
+        "total_games": 7329,
+        "total_samai": -3156,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 99.9,
+        "total_games": 23719,
+        "total_samai": -344,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 105.2,
+        "total_games": 13249,
+        "total_samai": 6808,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 115.9,
+        "total_games": 13690,
+        "total_samai": 8305,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 92.6,
+        "total_games": 18379,
+        "total_samai": -2963,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 121.2,
+        "total_games": 25118,
+        "total_samai": 18013,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 101.9,
+        "total_games": 13255,
+        "total_samai": 1912,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 89.6,
+        "total_games": 14406,
+        "total_samai": -1776,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 93.3,
+        "total_games": 10713,
+        "total_samai": 1379,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 86.7,
+        "total_games": 13645,
+        "total_samai": -5081,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 92.8,
+        "total_games": 13456,
+        "total_samai": -799,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 100.3,
         "total_games": 24363,
@@ -2271,6 +4399,118 @@
       }
     ],
     "スマスロ 攻殻機動隊": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 97.1,
+        "total_games": 45027,
+        "total_samai": -3890,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 84.1,
+        "total_games": 22840,
+        "total_samai": -10184,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 98.3,
+        "total_games": 52261,
+        "total_samai": -2414,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 103.4,
+        "total_games": 46239,
+        "total_samai": 7377,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 98.9,
+        "total_games": 24904,
+        "total_samai": 3728,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 98.5,
+        "total_games": 26408,
+        "total_samai": -128,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.6,
+        "total_games": 52736,
+        "total_samai": 3368,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 112.3,
+        "total_games": 46998,
+        "total_samai": 20317,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 107.5,
+        "total_games": 47760,
+        "total_samai": 12137,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 97.5,
+        "total_games": 35435,
+        "total_samai": 103,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 91.2,
+        "total_games": 47600,
+        "total_samai": -9249,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 92.0,
+        "total_games": 38364,
+        "total_samai": -5161,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 91.1,
+        "total_games": 42828,
+        "total_samai": -11474,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 87.4,
+        "total_games": 37299,
+        "total_samai": -10955,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 94.3,
+        "total_games": 31221,
+        "total_samai": -4065,
+        "n_machines": 7
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 92.3,
+        "total_games": 27473,
+        "total_samai": -3565,
+        "n_machines": 7
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 114.8,
@@ -2372,6 +4612,118 @@
     ],
     "スマスロ 沖ドキ!DUO アンコール": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 71.8,
+        "total_games": 7501,
+        "total_samai": -5652,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 93.6,
+        "total_games": 10402,
+        "total_samai": -3482,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 77.1,
+        "total_games": 12475,
+        "total_samai": -8362,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 116.5,
+        "total_games": 10453,
+        "total_samai": 5904,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 86.7,
+        "total_games": 2395,
+        "total_samai": -1174,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 94.0,
+        "total_games": 10171,
+        "total_samai": -1225,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.8,
+        "total_games": 18685,
+        "total_samai": 3179,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 105.4,
+        "total_games": 9618,
+        "total_samai": -2341,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 101.7,
+        "total_games": 11720,
+        "total_samai": -1120,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 83.0,
+        "total_games": 5128,
+        "total_samai": -2607,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 97.3,
+        "total_games": 11083,
+        "total_samai": 3240,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 67.5,
+        "total_games": 2819,
+        "total_samai": -2222,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 80.5,
+        "total_games": 11851,
+        "total_samai": -6130,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 115.3,
+        "total_games": 16908,
+        "total_samai": 9173,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 99.4,
+        "total_games": 11984,
+        "total_samai": 630,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 87.0,
+        "total_games": 4619,
+        "total_samai": -2236,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 96.2,
         "total_games": 18520,
@@ -2471,6 +4823,118 @@
       }
     ],
     "スマスロ 甲鉄城のカバネリ 海門決戦": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 98.7,
+        "total_games": 157769,
+        "total_samai": -450,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 88.5,
+        "total_games": 114090,
+        "total_samai": -35473,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 99.2,
+        "total_games": 180333,
+        "total_samai": -2445,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 97.4,
+        "total_games": 176570,
+        "total_samai": -8962,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 98.0,
+        "total_games": 107645,
+        "total_samai": 283,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 94.1,
+        "total_games": 117306,
+        "total_samai": -11152,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.2,
+        "total_games": 173814,
+        "total_samai": 4172,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 96.7,
+        "total_games": 134471,
+        "total_samai": -7964,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 94.5,
+        "total_games": 141226,
+        "total_samai": -18698,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 93.6,
+        "total_games": 129058,
+        "total_samai": -12262,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 101.1,
+        "total_games": 177116,
+        "total_samai": 7718,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 100.0,
+        "total_games": 157594,
+        "total_samai": 654,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 101.0,
+        "total_games": 160119,
+        "total_samai": 8349,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 97.2,
+        "total_games": 162839,
+        "total_samai": -13438,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 93.6,
+        "total_games": 98379,
+        "total_samai": -16038,
+        "n_machines": 22
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 95.7,
+        "total_games": 103808,
+        "total_samai": -12406,
+        "n_machines": 22
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 96.4,
@@ -2572,6 +5036,118 @@
     ],
     "スマスロモンキーターンV": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 98.9,
+        "total_games": 75001,
+        "total_samai": -537,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 96.0,
+        "total_games": 39590,
+        "total_samai": 524,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 94.5,
+        "total_games": 67259,
+        "total_samai": -4846,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 100.8,
+        "total_games": 65968,
+        "total_samai": 6300,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 101.3,
+        "total_games": 36198,
+        "total_samai": 11268,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 89.6,
+        "total_games": 44141,
+        "total_samai": -3210,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 98.4,
+        "total_games": 87982,
+        "total_samai": -1361,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 98.3,
+        "total_games": 49489,
+        "total_samai": 2466,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 87.1,
+        "total_games": 51546,
+        "total_samai": -16548,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 101.8,
+        "total_games": 51215,
+        "total_samai": 10093,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 100.8,
+        "total_games": 84229,
+        "total_samai": 5213,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 94.7,
+        "total_games": 61694,
+        "total_samai": -195,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 91.0,
+        "total_games": 43702,
+        "total_samai": -3472,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 91.2,
+        "total_games": 50232,
+        "total_samai": -9798,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 92.3,
+        "total_games": 37293,
+        "total_samai": -3294,
+        "n_machines": 12
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 93.0,
+        "total_games": 42095,
+        "total_samai": -1607,
+        "n_machines": 12
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 95.2,
         "total_games": 89216,
@@ -2671,6 +5247,118 @@
       }
     ],
     "スマスロヨルムンガンド": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 78.9,
+        "total_games": 22049,
+        "total_samai": -13326,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 112.4,
+        "total_games": 23257,
+        "total_samai": 10080,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 97.9,
+        "total_games": 32622,
+        "total_samai": -2246,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 98.7,
+        "total_games": 30320,
+        "total_samai": 454,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 96.7,
+        "total_games": 19664,
+        "total_samai": -1622,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 78.5,
+        "total_games": 13897,
+        "total_samai": -8761,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 85.0,
+        "total_games": 27706,
+        "total_samai": -11507,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 83.3,
+        "total_games": 19825,
+        "total_samai": -8072,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 98.6,
+        "total_games": 28180,
+        "total_samai": 149,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 83.1,
+        "total_games": 17885,
+        "total_samai": -7657,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 94.5,
+        "total_games": 28121,
+        "total_samai": -2703,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 92.0,
+        "total_games": 23334,
+        "total_samai": -3106,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 76.8,
+        "total_games": 20192,
+        "total_samai": -11295,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 86.5,
+        "total_games": 16819,
+        "total_samai": -5089,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 79.7,
+        "total_games": 15155,
+        "total_samai": -7381,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 76.1,
+        "total_games": 13344,
+        "total_samai": -8753,
+        "n_machines": 4
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 98.2,
@@ -2772,6 +5460,118 @@
     ],
     "スマスロ化物語": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 91.8,
+        "total_games": 45136,
+        "total_samai": -2781,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 100.5,
+        "total_games": 23843,
+        "total_samai": 3524,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 85.6,
+        "total_games": 62686,
+        "total_samai": -23032,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 99.6,
+        "total_games": 68723,
+        "total_samai": 2617,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 109.7,
+        "total_games": 31265,
+        "total_samai": 12338,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 91.0,
+        "total_games": 28335,
+        "total_samai": 653,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 104.8,
+        "total_games": 78617,
+        "total_samai": 12221,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 82.6,
+        "total_games": 20990,
+        "total_samai": -9462,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 91.7,
+        "total_games": 39795,
+        "total_samai": -4313,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 106.0,
+        "total_games": 53139,
+        "total_samai": 13677,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 96.6,
+        "total_games": 74754,
+        "total_samai": -3394,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 94.6,
+        "total_games": 52092,
+        "total_samai": -597,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 91.0,
+        "total_games": 55993,
+        "total_samai": -9100,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 95.0,
+        "total_games": 47371,
+        "total_samai": 307,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 97.1,
+        "total_games": 26213,
+        "total_samai": 3707,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 95.9,
+        "total_games": 37835,
+        "total_samai": 1049,
+        "n_machines": 11
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 88.4,
         "total_games": 85068,
@@ -2871,6 +5671,118 @@
       }
     ],
     "スマスロ北斗の拳 転生の章2": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 98.4,
+        "total_games": 114628,
+        "total_samai": -1001,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 95.1,
+        "total_games": 90589,
+        "total_samai": -3060,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 98.6,
+        "total_games": 138371,
+        "total_samai": 317,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 97.1,
+        "total_games": 130787,
+        "total_samai": -8997,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 93.3,
+        "total_games": 76582,
+        "total_samai": -7100,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 103.1,
+        "total_games": 91077,
+        "total_samai": 7722,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 101.4,
+        "total_games": 158019,
+        "total_samai": 11070,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 101.4,
+        "total_games": 95870,
+        "total_samai": 5310,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 97.1,
+        "total_games": 119066,
+        "total_samai": 1502,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 97.2,
+        "total_games": 106365,
+        "total_samai": 888,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 100.2,
+        "total_games": 154869,
+        "total_samai": 1747,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 96.1,
+        "total_games": 121078,
+        "total_samai": -5432,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 94.7,
+        "total_games": 139023,
+        "total_samai": -16615,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 99.1,
+        "total_games": 108813,
+        "total_samai": 9687,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 94.5,
+        "total_games": 69356,
+        "total_samai": -4548,
+        "n_machines": 20
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 93.3,
+        "total_games": 85616,
+        "total_samai": 6,
+        "n_machines": 20
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 98.6,
@@ -2972,6 +5884,118 @@
     ],
     "ネオアイムジャグラーEX": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 96.7,
+        "total_games": 48917,
+        "total_samai": -4158,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 94.2,
+        "total_games": 28169,
+        "total_samai": -4982,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 101.3,
+        "total_games": 31781,
+        "total_samai": 1891,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 99.0,
+        "total_games": 40563,
+        "total_samai": 626,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 97.9,
+        "total_games": 29170,
+        "total_samai": 673,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 101.2,
+        "total_games": 32633,
+        "total_samai": 1082,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 106.2,
+        "total_games": 60396,
+        "total_samai": 11470,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 95.3,
+        "total_games": 33244,
+        "total_samai": -1192,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 102.3,
+        "total_games": 43915,
+        "total_samai": 3525,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 89.9,
+        "total_games": 27684,
+        "total_samai": -6442,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 103.2,
+        "total_games": 53461,
+        "total_samai": 5488,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 99.1,
+        "total_games": 35849,
+        "total_samai": -1056,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 97.7,
+        "total_games": 44455,
+        "total_samai": -1180,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 91.0,
+        "total_games": 27518,
+        "total_samai": -5692,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 98.0,
+        "total_games": 26640,
+        "total_samai": -1272,
+        "n_machines": 8
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 97.9,
+        "total_games": 30217,
+        "total_samai": -1119,
+        "n_machines": 8
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 98.0,
         "total_games": 59547,
@@ -3071,6 +6095,118 @@
       }
     ],
     "ハッピージャグラーＶＩＩＩ": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 97.2,
+        "total_games": 19107,
+        "total_samai": -1407,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 103.9,
+        "total_games": 12874,
+        "total_samai": 2108,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 95.1,
+        "total_games": 11479,
+        "total_samai": -681,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 99.1,
+        "total_games": 11482,
+        "total_samai": -346,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 98.1,
+        "total_games": 8250,
+        "total_samai": -297,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 93.7,
+        "total_games": 11698,
+        "total_samai": -1873,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 106.0,
+        "total_games": 21246,
+        "total_samai": 3851,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 101.8,
+        "total_games": 10840,
+        "total_samai": 267,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 95.7,
+        "total_games": 8992,
+        "total_samai": -964,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 99.4,
+        "total_games": 12554,
+        "total_samai": -418,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 108.3,
+        "total_games": 22105,
+        "total_samai": 5489,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 88.6,
+        "total_games": 10461,
+        "total_samai": -3563,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 100.1,
+        "total_games": 18794,
+        "total_samai": -88,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 94.7,
+        "total_games": 15290,
+        "total_samai": -1323,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 100.6,
+        "total_games": 11842,
+        "total_samai": 17,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 98.4,
+        "total_games": 10241,
+        "total_samai": 66,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 96.5,
@@ -3172,6 +6308,118 @@
     ],
     "パチスロ　甲鉄城のカバネリ": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 100.0,
+        "total_games": 17005,
+        "total_samai": 1977,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 87.5,
+        "total_games": 6536,
+        "total_samai": -2413,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 90.1,
+        "total_games": 10774,
+        "total_samai": -2458,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 87.7,
+        "total_games": 8976,
+        "total_samai": -3501,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 78.3,
+        "total_games": 4812,
+        "total_samai": -1475,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 92.7,
+        "total_games": 7082,
+        "total_samai": -610,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 111.0,
+        "total_games": 24820,
+        "total_samai": 7792,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 97.7,
+        "total_games": 4781,
+        "total_samai": -393,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 109.8,
+        "total_games": 6585,
+        "total_samai": 1804,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 94.3,
+        "total_games": 4443,
+        "total_samai": -236,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 97.1,
+        "total_games": 21666,
+        "total_samai": -1629,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 98.2,
+        "total_games": 10178,
+        "total_samai": 1353,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 75.4,
+        "total_games": 4974,
+        "total_samai": -3160,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 97.5,
+        "total_games": 11352,
+        "total_samai": 919,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 88.6,
+        "total_games": 3369,
+        "total_samai": -1941,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 99.2,
+        "total_games": 8179,
+        "total_samai": 3206,
+        "n_machines": 3
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 89.2,
         "total_games": 19769,
@@ -3271,6 +6519,118 @@
       }
     ],
     "ファンキージャグラー２ＫＴ": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 101.9,
+        "total_games": 38470,
+        "total_samai": 1971,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 104.3,
+        "total_games": 23887,
+        "total_samai": 3799,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 103.3,
+        "total_games": 29098,
+        "total_samai": 2680,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 95.0,
+        "total_games": 20557,
+        "total_samai": -3333,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 98.1,
+        "total_games": 21284,
+        "total_samai": 1458,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 97.8,
+        "total_games": 29554,
+        "total_samai": 353,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 100.7,
+        "total_games": 44309,
+        "total_samai": 1120,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 95.2,
+        "total_games": 25827,
+        "total_samai": -2317,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 99.5,
+        "total_games": 32256,
+        "total_samai": -602,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 97.1,
+        "total_games": 22958,
+        "total_samai": -1321,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 103.1,
+        "total_games": 44064,
+        "total_samai": 6232,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 104.8,
+        "total_games": 27629,
+        "total_samai": 5665,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 101.1,
+        "total_games": 39565,
+        "total_samai": 1478,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 101.4,
+        "total_games": 25718,
+        "total_samai": 2691,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 93.8,
+        "total_games": 18698,
+        "total_samai": -2552,
+        "n_machines": 6
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 98.1,
+        "total_games": 29002,
+        "total_samai": -393,
+        "n_machines": 6
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 100.1,
@@ -3372,6 +6732,118 @@
     ],
     "マイジャグラーV": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 99.1,
+        "total_games": 109824,
+        "total_samai": -1428,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 94.0,
+        "total_games": 87410,
+        "total_samai": -13506,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 98.2,
+        "total_games": 75951,
+        "total_samai": -1346,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 96.5,
+        "total_games": 78436,
+        "total_samai": -3325,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 96.1,
+        "total_games": 74861,
+        "total_samai": -2914,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 99.3,
+        "total_games": 84057,
+        "total_samai": -1007,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 99.9,
+        "total_games": 129907,
+        "total_samai": 69,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 99.4,
+        "total_games": 88036,
+        "total_samai": 327,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 99.7,
+        "total_games": 90795,
+        "total_samai": 3737,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 100.7,
+        "total_games": 90999,
+        "total_samai": 7314,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 98.8,
+        "total_games": 130466,
+        "total_samai": -1930,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 95.8,
+        "total_games": 98328,
+        "total_samai": -8545,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 99.4,
+        "total_games": 115997,
+        "total_samai": 962,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 97.1,
+        "total_games": 82414,
+        "total_samai": -2708,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 94.6,
+        "total_games": 75708,
+        "total_samai": -6500,
+        "n_machines": 18
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 98.6,
+        "total_games": 88502,
+        "total_samai": 2748,
+        "n_machines": 18
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 100.4,
         "total_games": 141798,
@@ -3471,6 +6943,118 @@
       }
     ],
     "ミスタージャグラー": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 97.9,
+        "total_games": 16115,
+        "total_samai": -505,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 96.1,
+        "total_games": 12157,
+        "total_samai": -1003,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 99.4,
+        "total_games": 11589,
+        "total_samai": -158,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 97.0,
+        "total_games": 8960,
+        "total_samai": -944,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 100.5,
+        "total_games": 9374,
+        "total_samai": 170,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 101.2,
+        "total_games": 14392,
+        "total_samai": 3041,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 92.8,
+        "total_games": 17506,
+        "total_samai": -3491,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 94.1,
+        "total_games": 12701,
+        "total_samai": -2355,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 91.4,
+        "total_games": 14420,
+        "total_samai": -3174,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 92.4,
+        "total_games": 8638,
+        "total_samai": -1674,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 101.7,
+        "total_games": 22933,
+        "total_samai": 1409,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 104.9,
+        "total_games": 14104,
+        "total_samai": 2745,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 102.5,
+        "total_games": 19007,
+        "total_samai": 1893,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 96.3,
+        "total_games": 9825,
+        "total_samai": 352,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 86.1,
+        "total_games": 8632,
+        "total_samai": -989,
+        "n_machines": 3
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 96.6,
+        "total_games": 14412,
+        "total_samai": -1507,
+        "n_machines": 3
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 102.4,
@@ -3572,6 +7156,118 @@
     ],
     "吉宗": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 96.5,
+        "total_games": 26285,
+        "total_samai": -3960,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 95.1,
+        "total_games": 12839,
+        "total_samai": -770,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 91.3,
+        "total_games": 29669,
+        "total_samai": -8014,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 98.7,
+        "total_games": 27103,
+        "total_samai": 1507,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 99.1,
+        "total_games": 11074,
+        "total_samai": 1011,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 86.7,
+        "total_games": 17850,
+        "total_samai": -6025,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 98.4,
+        "total_games": 29210,
+        "total_samai": -1199,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 104.6,
+        "total_games": 24689,
+        "total_samai": 2976,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 97.7,
+        "total_games": 19638,
+        "total_samai": -157,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 78.5,
+        "total_games": 18155,
+        "total_samai": -11174,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 108.1,
+        "total_games": 27643,
+        "total_samai": 10363,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 105.0,
+        "total_games": 27891,
+        "total_samai": 4910,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 92.4,
+        "total_games": 19634,
+        "total_samai": -2520,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 102.8,
+        "total_games": 17765,
+        "total_samai": 1198,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 100.5,
+        "total_games": 17690,
+        "total_samai": 4119,
+        "n_machines": 4
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 102.8,
+        "total_games": 14211,
+        "total_samai": 1200,
+        "n_machines": 4
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 116.8,
         "total_games": 33473,
@@ -3672,6 +7368,118 @@
     ],
     "沖ドキ！BLACK": [
       {
+        "date": "2026-04-23",
+        "avg_rate": 99.6,
+        "total_games": 24078,
+        "total_samai": -136,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 95.5,
+        "total_games": 50250,
+        "total_samai": -6023,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 99.4,
+        "total_games": 53406,
+        "total_samai": -2352,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 95.5,
+        "total_games": 50387,
+        "total_samai": -5277,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 86.7,
+        "total_games": 29180,
+        "total_samai": -10203,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 104.4,
+        "total_games": 31506,
+        "total_samai": 4851,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 99.3,
+        "total_games": 70127,
+        "total_samai": 1522,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 100.2,
+        "total_games": 34711,
+        "total_samai": 3632,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 103.0,
+        "total_games": 39838,
+        "total_samai": 564,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 96.7,
+        "total_games": 46773,
+        "total_samai": -6714,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 98.2,
+        "total_games": 52962,
+        "total_samai": -3067,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 99.3,
+        "total_games": 52934,
+        "total_samai": -3904,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 107.2,
+        "total_games": 50591,
+        "total_samai": 9907,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 96.6,
+        "total_games": 58082,
+        "total_samai": -4914,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 100.2,
+        "total_games": 39727,
+        "total_samai": 1370,
+        "n_machines": 11
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 97.0,
+        "total_games": 37966,
+        "total_samai": -4061,
+        "n_machines": 11
+      },
+      {
         "date": "2026-05-09",
         "avg_rate": 108.1,
         "total_games": 84702,
@@ -3771,6 +7579,118 @@
       }
     ],
     "真打 吉宗": [
+      {
+        "date": "2026-04-23",
+        "avg_rate": 98.0,
+        "total_games": 40169,
+        "total_samai": -1146,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-24",
+        "avg_rate": 99.9,
+        "total_games": 38028,
+        "total_samai": 1554,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-25",
+        "avg_rate": 98.7,
+        "total_games": 39403,
+        "total_samai": -1965,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-26",
+        "avg_rate": 93.7,
+        "total_games": 40167,
+        "total_samai": -7259,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-27",
+        "avg_rate": 93.7,
+        "total_games": 32353,
+        "total_samai": -5338,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-28",
+        "avg_rate": 99.5,
+        "total_games": 34314,
+        "total_samai": -192,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-29",
+        "avg_rate": 102.5,
+        "total_games": 41473,
+        "total_samai": 3474,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-04-30",
+        "avg_rate": 97.7,
+        "total_games": 38855,
+        "total_samai": -2930,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-01",
+        "avg_rate": 88.0,
+        "total_games": 41116,
+        "total_samai": -14851,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-02",
+        "avg_rate": 89.4,
+        "total_games": 38895,
+        "total_samai": -10461,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-03",
+        "avg_rate": 91.0,
+        "total_games": 41494,
+        "total_samai": -10666,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-04",
+        "avg_rate": 93.9,
+        "total_games": 35296,
+        "total_samai": -4602,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-05",
+        "avg_rate": 97.3,
+        "total_games": 40479,
+        "total_samai": -2587,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-06",
+        "avg_rate": 94.1,
+        "total_games": 37847,
+        "total_samai": -4288,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-07",
+        "avg_rate": 91.6,
+        "total_games": 41693,
+        "total_samai": -10153,
+        "n_machines": 5
+      },
+      {
+        "date": "2026-05-08",
+        "avg_rate": 114.3,
+        "total_games": 39887,
+        "total_samai": 15451,
+        "n_machines": 5
+      },
       {
         "date": "2026-05-09",
         "avg_rate": 96.8,
