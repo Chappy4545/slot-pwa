@@ -392,7 +392,7 @@ function KishuTrendChart({ trend }) {
             backgroundColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.5)" : "rgba(239,68,68,0.5)"),
             borderColor: totalSamai.map(v => v == null ? "rgba(0,0,0,0)" : v >= 0 ? "rgba(16,185,129,0.9)" : "rgba(239,68,68,0.9)"),
             borderWidth: 1, yAxisID: "yS", order: 1 },
-          { type: "bar", label: "G数", data: totalGames, backgroundColor: "rgba(148,163,184,0.18)", borderColor: "rgba(148,163,184,0.35)", borderWidth: 1, yAxisID: "yG", order: 2 },
+          { type: "line", label: "G数", data: totalGames, borderColor: "rgba(148,163,184,0.8)", backgroundColor: "transparent", borderWidth: 1.5, pointRadius: 2, tension: 0.2, yAxisID: "yG", order: 2 },
         ],
       },
       options: {
