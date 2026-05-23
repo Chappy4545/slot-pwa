@@ -1063,17 +1063,33 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
       </div>
       {expanded && (
         <div className="bg-emerald-50 border-t border-emerald-100 px-3 py-2 space-y-2">
-          {row["生涯差枚"] != null && (
-            <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
-              <div className="text-[10px] text-slate-400 mb-0.5">生涯累計差枚（データ取得開始〜昨日）</div>
-              <div className={`text-base font-bold font-mono ${row["生涯差枚"] < 0 ? "text-emerald-600" : "text-red-500"}`}>
-                {row["生涯差枚"] > 0 ? "+" : ""}{row["生涯差枚"].toLocaleString()}枚
+          <div className="grid grid-cols-2 gap-2">
+            {row["生涯差枚"] != null && (
+              <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
+                <div className="text-[10px] text-slate-400 mb-0.5">生涯累計差枚</div>
+                <div className={`text-base font-bold font-mono ${row["生涯差枚"] < 0 ? "text-emerald-600" : "text-red-500"}`}>
+                  {row["生涯差枚"] > 0 ? "+" : ""}{row["生涯差枚"].toLocaleString()}枚
+                </div>
+                <div className="text-[10px] text-slate-400 mt-0.5">
+                  {row["生涯差枚"] < 0 ? "店回収超" : "店放出超"}
+                </div>
               </div>
-              <div className="text-[10px] text-slate-400 mt-0.5">
-                {row["生涯差枚"] < 0 ? "店回収超（客負け超過）" : "店放出超（客勝ち超過）"}
-              </div>
-            </div>
-          )}
+            )}
+            {row["設定集中度"] != null && (() => {
+              const std = row["設定集中度"];
+              const isHigh = std >= 3.0;
+              const isMid  = std >= 1.5 && std < 3.0;
+              const label  = isHigh ? "台選び重要" : isMid ? "やや集中" : "均等放出";
+              const color  = isHigh ? "text-orange-600" : isMid ? "text-yellow-600" : "text-slate-400";
+              return (
+                <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
+                  <div className="text-[10px] text-slate-400 mb-0.5">設定集中度</div>
+                  <div className={`text-base font-bold ${color}`}>{std.toFixed(1)}</div>
+                  <div className={`text-[10px] mt-0.5 font-semibold ${color}`}>{label}</div>
+                </div>
+              );
+            })()}
+          </div>
           {kishuTrend && kishuTrend.length > 0 && (
             <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
               <div className="text-[10px] font-semibold text-slate-500 mb-1">機種別トレンド（直近30日）</div>
