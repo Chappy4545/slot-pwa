@@ -2177,7 +2177,7 @@ function App() {
 
           {/* ② 機種タブ */}
           {tab === "kishu" && (() => {
-            const kishuAll = data.kishu_top10 || [];
+            const kishuAll = data.kishu_all || data.kishu_top10 || [];
             const BLOCKS = [
               { cls: "本命", hdr: "bg-red-50 border-red-200 text-red-700" },
               { cls: "対抗", hdr: "bg-orange-50 border-orange-200 text-orange-600" },
@@ -2199,7 +2199,7 @@ function App() {
               <>
                 <StoreContextBanner stageData={data.store_stage} />
                 <div className="text-xs text-slate-500 px-1">
-                  今日狙うべき機種 TOP{kishuAll.length}。タップで台TOP5を展開。
+                  3台以上設置の全{kishuAll.length}機種をスコア順に表示。タップで台TOP5を展開。
                 </div>
                 {BLOCKS.map(({ cls, hdr }) => {
                   const group = kishuAll.filter(r => r["分類"] === cls);
