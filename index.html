@@ -917,7 +917,7 @@ function StoreTab({ data }) {
 
         {samaiView === "monthly" && (
           <>
-            <div className="text-[10px] text-slate-400">月ごとの店全体 合計差枚・平均出率。</div>
+            <div className="text-[10px] text-slate-400">月ごとの店全体 合計差枚・平均出率。日数はデータ取得済みの日のみ（カレンダー日数と異なる場合あり）。</div>
             {monthlySummary.length === 0 ? (
               <div className="text-center text-slate-400 text-xs py-4">{bt ? "データなし" : "読み込み中..."}</div>
             ) : (
