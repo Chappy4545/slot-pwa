@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-24T08:38:31.453024",
+  "generated_at": "2026-05-24T09:38:35.681574",
   "target_date": "2026-05-24",
   "target_category": "通常日",
-  "model_version": "v9.16",
-  "model_description": "K4反転+K7強化+K8削除+旧イベント日kishuTOP12+bonus閾値3+本命閾値65(通常日)/70(旧イベント日)+S6/S7廃止(逆効果確認)",
+  "model_version": "v9.17",
+  "model_description": "旧イベント日K5重視(0.65)+K7削除(0.0)。48日×機種1933件の相関分析でK7逆効果(r=-0.054)・K5有効(r=+0.109)を確認",
   "store_stage": {
     "stage": "平常期",
     "recent_avg": 96.43,
