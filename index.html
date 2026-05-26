@@ -1090,42 +1090,7 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
               );
             })()}
           </div>
-          {row["stand_data"] && row["stand_data"].length > 0 && (() => {
-            const hasLowData = row["stand_data"].some(s => s.n < 10);
-            return (
-              <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
-                <div className="text-[10px] font-semibold text-slate-500 mb-1.5">台番別出率ヒートマップ（生涯平均）</div>
-                <div className="flex flex-wrap gap-1">
-                  {row["stand_data"].map(s => {
-                    const diff = s.avg_rate - 100;
-                    const lowData = s.n < 10;
-                    const intensity = Math.min(Math.abs(diff) / 4, 1);
-                    const bg = lowData
-                      ? "rgba(148,163,184,0.15)"
-                      : diff > 0
-                        ? `rgba(16,185,129,${(0.15 + intensity * 0.65).toFixed(2)})`
-                        : `rgba(239,68,68,${(0.15 + intensity * 0.65).toFixed(2)})`;
-                    return (
-                      <div key={s["台番"]}
-                        className="flex flex-col items-center rounded px-1.5 py-1 min-w-[38px] text-center"
-                        style={{backgroundColor: bg}}
-                      >
-                        <div className="text-[9px] text-slate-500">{s["台番"]}番</div>
-                        <div className={`text-[10px] font-bold ${lowData ? "text-slate-400" : diff > 0 ? "text-emerald-700" : "text-red-600"}`}>
-                          {s.avg_rate.toFixed(1)}%
-                        </div>
-                        <div className="text-[8px] text-slate-400">{s.n}日</div>
-                      </div>
-                    );
-                  })}
-                </div>
-                {hasLowData && (
-                  <div className="text-[9px] text-slate-400 mt-1">灰色 = データ10日未満</div>
-                )}
-              </div>
-            );
-          })()}
-          {kishuTrend && kishuTrend.length > 0 && (
+{kishuTrend && kishuTrend.length > 0 && (
             <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
               <div className="text-[10px] font-semibold text-slate-500 mb-1">機種別トレンド（直近30日）</div>
               <KishuTrendChart trend={kishuTrend} />
