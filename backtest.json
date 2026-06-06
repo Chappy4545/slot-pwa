@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-06T17:10:30.043604",
+  "generated_at": "2026-06-06T17:39:56.532348",
   "date_range": "2025-07-15 ~ 2026-06-05",
   "n_days": 323,
   "overall": {
@@ -5663,7 +5663,7 @@
       "category": "通常日",
       "baseline_avg": 96.5,
       "store_samai": 15066,
-      "k1_avg": NaN,
+      "k1_avg": null,
       "k3_avg": 101.0,
       "k5_avg": 95.2,
       "k10_avg": 95.8,
