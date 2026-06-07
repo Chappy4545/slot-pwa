@@ -743,6 +743,169 @@ function StoreContextBanner({ stageData }) {
   );
 }
 
+function CumSamaiChart({ bt, thisMonth }) {
+  const canvasRef = React.useRef(null);
+  const chartRef = React.useRef(null);
+
+  const chartData = React.useMemo(() => {
+    if (!bt?.daily) return null;
+
+    // 月×日 → 差枚 のマップ
+    const byMonth = {};
+    for (const d of bt.daily) {
+      if (!d.date || d.store_samai == null) continue;
+      const month = d.date.slice(0, 7);
+      const day = parseInt(d.date.slice(8), 10);
+      if (!byMonth[month]) byMonth[month] = {};
+      byMonth[month][day] = d.store_samai;
+    }
+
+    // 月ごとの累計（日別）
+    const monthCum = {};
+    for (const [month, days] of Object.entries(byMonth)) {
+      const maxDay = Math.max(...Object.keys(days).map(Number));
+      let running = 0;
+      const cum = {};
+      for (let d = 1; d <= maxDay; d++) {
+        if (days[d] != null) running += days[d];
+        cum[d] = running;
+      }
+      monthCum[month] = cum;
+    }
+
+    // 当月未満のデータが15日以上ある月を対象に
+    const histMonths = Object.keys(monthCum)
+      .filter(m => m < thisMonth && Object.keys(monthCum[m]).length >= 15)
+      .sort();
+    const last3 = histMonths.slice(-3);
+    const last6 = histMonths.slice(-6);
+
+    // 日別平均累計ライン（その日のデータがある月だけ平均）
+    const avgLine = (months) => Array.from({ length: 31 }, (_, i) => {
+      const day = i + 1;
+      const vals = months.map(m => monthCum[m]?.[day]).filter(v => v != null);
+      return vals.length > 0 ? Math.round(vals.reduce((a, b) => a + b, 0) / vals.length) : null;
+    });
+
+    // 今月MTD累計
+    const currentLine = Array.from({ length: 31 }, (_, i) =>
+      monthCum[thisMonth]?.[i + 1] ?? null
+    );
+
+    return {
+      currentLine,
+      allTimeAvg: avgLine(histMonths),
+      last3Avg: avgLine(last3),
+      last6Avg: avgLine(last6),
+      histCount: histMonths.length,
+      last3Count: last3.length,
+      last6Count: last6.length,
+    };
+  }, [bt, thisMonth]);
+
+  React.useEffect(() => {
+    if (!canvasRef.current || !chartData) return;
+    if (typeof Chart === "undefined") return;
+    if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; }
+
+    const labels = Array.from({ length: 31 }, (_, i) => i + 1);
+
+    chartRef.current = new Chart(canvasRef.current.getContext("2d"), {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          {
+            label: `全期間平均(${chartData.histCount}ヶ月)`,
+            data: chartData.allTimeAvg,
+            borderColor: "rgba(148,163,184,0.9)",
+            borderWidth: 1.5,
+            borderDash: [6, 3],
+            pointRadius: 0,
+            tension: 0.3,
+            spanGaps: true,
+          },
+          {
+            label: `直近6ヶ月平均`,
+            data: chartData.last6Avg,
+            borderColor: "rgba(139,92,246,0.85)",
+            borderWidth: 1.5,
+            borderDash: [4, 2],
+            pointRadius: 0,
+            tension: 0.3,
+            spanGaps: true,
+          },
+          {
+            label: `直近3ヶ月平均`,
+            data: chartData.last3Avg,
+            borderColor: "rgba(249,115,22,0.85)",
+            borderWidth: 1.5,
+            borderDash: [3, 2],
+            pointRadius: 0,
+            tension: 0.3,
+            spanGaps: true,
+          },
+          {
+            label: "今月MTD",
+            data: chartData.currentLine,
+            borderColor: "rgba(16,185,129,1)",
+            backgroundColor: "rgba(16,185,129,0.08)",
+            borderWidth: 2.5,
+            pointRadius: 2,
+            pointHoverRadius: 4,
+            tension: 0.2,
+            spanGaps: false,
+            fill: "origin",
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: { font: { size: 9 }, padding: 6, boxWidth: 18 },
+          },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => {
+                const v = ctx.raw;
+                if (v == null) return null;
+                const sign = v >= 0 ? "+" : "";
+                return `${ctx.dataset.label}: ${sign}${Math.round(v).toLocaleString()}枚`;
+              },
+            },
+          },
+        },
+        scales: {
+          x: {
+            ticks: { font: { size: 9 }, maxTicksLimit: 10 },
+            grid: { color: "rgba(0,0,0,0.04)" },
+          },
+          y: {
+            ticks: {
+              font: { size: 9 },
+              callback: (v) => {
+                if (Math.abs(v) >= 10000) return (v >= 0 ? "+" : "") + (v / 10000).toFixed(0) + "万";
+                return (v >= 0 ? "+" : "") + v.toLocaleString();
+              },
+            },
+            grid: { color: "rgba(0,0,0,0.04)" },
+          },
+        },
+        interaction: { mode: "index", intersect: false },
+      },
+    });
+    return () => { if (chartRef.current) { chartRef.current.destroy(); chartRef.current = null; } };
+  }, [chartData]);
+
+  if (!chartData || chartData.histCount === 0) {
+    return <div className="text-center text-slate-400 text-xs py-6">過去データ不足（15日以上のある月が0）</div>;
+  }
+  return <div style={{ height: "210px", position: "relative" }}><canvas ref={canvasRef} /></div>;
+}
+
 function StoreTab({ data }) {
   const [bt, setBt] = React.useState(null);
 
@@ -860,7 +1023,7 @@ function StoreTab({ data }) {
         <div className="flex items-center justify-between">
           <div className="text-xs font-semibold text-slate-700">差枚実績</div>
           <div className="flex rounded-lg border border-slate-200 overflow-hidden text-[10px]">
-            {[["mtd", "今月日別"], ["monthly", "月別合計"]].map(([v, label]) => (
+            {[["mtd", "今月日別"], ["monthly", "月別合計"], ["cum", "累計推移"]].map(([v, label]) => (
               <button key={v} onClick={() => setSamaiView(v)}
                 className={`px-2.5 py-1 font-semibold ${samaiView === v ? "bg-slate-700 text-white" : "text-slate-500 hover:bg-slate-50"}`}>
                 {label}
@@ -915,6 +1078,13 @@ function StoreTab({ data }) {
                 </tbody>
               </table>
             )}
+          </>
+        )}
+
+        {samaiView === "cum" && (
+          <>
+            <div className="text-[10px] text-slate-400 mb-2">日別累計差枚の推移。今月MTDと過去月平均の比較。X軸=日付、Y軸=累計差枚。</div>
+            <CumSamaiChart bt={bt} thisMonth={thisMonth} />
           </>
         )}
 
