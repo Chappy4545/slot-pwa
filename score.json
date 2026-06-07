@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-07T09:09:18.341097",
+  "generated_at": "2026-06-08T00:27:56.418165",
   "target_date": "2026-06-07",
   "target_category": "通常日",
   "model_version": "v9.17",
@@ -13666,7 +13666,11 @@
           "avg_rate": 91.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 0.2,
+      "event_type": null,
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "スマスロ スーパーリオエース2",
@@ -14002,7 +14006,11 @@
           "avg_rate": 79.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 0.2,
+      "event_type": null,
+      "event_n_normal": 22,
+      "event_n_event": 5
     },
     {
       "機種": "ゴーゴージャグラー３",
@@ -14857,7 +14865,11 @@
           "avg_rate": 106.4,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.4,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "Lパチスロ炎炎ノ消防隊2",
@@ -15421,7 +15433,11 @@
           "avg_rate": 68.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 1.9,
+      "event_type": null,
+      "event_n_normal": 100,
+      "event_n_event": 18
     },
     {
       "機種": "ミスタージャグラー",
@@ -15656,7 +15672,11 @@
           "avg_rate": 98.0,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.2,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "ジャグラーガールズSS",
@@ -16024,7 +16044,11 @@
           "avg_rate": 100.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 4.1,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "ハッピージャグラーＶＩＩＩ",
@@ -16314,7 +16338,11 @@
           "avg_rate": 98.4,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.3,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -16779,7 +16807,11 @@
           "avg_rate": 128.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 4.3,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 22,
+      "event_n_event": 5
     },
     {
       "機種": "ウルトラミラクルジャグラー",
@@ -17071,7 +17103,11 @@
           "avg_rate": 121.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.1,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "ファンキージャグラー２ＫＴ",
@@ -17972,7 +18008,11 @@
           "avg_rate": 97.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.2,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "ネオアイムジャグラーEX",
@@ -19398,7 +19438,11 @@
           "avg_rate": 116.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.9,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 210,
+      "event_n_event": 42
     },
     {
       "機種": "L東京喰種",
@@ -20866,7 +20910,11 @@
           "avg_rate": 128.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.8,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "パチスロ　甲鉄城のカバネリ",
@@ -21113,7 +21161,11 @@
           "avg_rate": 79.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 5.4,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "マイジャグラーV",
@@ -22956,7 +23008,11 @@
           "avg_rate": 104.2,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.3,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "真打 吉宗",
@@ -23336,7 +23392,11 @@
           "avg_rate": 108.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 0.4,
+      "event_type": null,
+      "event_n_normal": 50,
+      "event_n_event": 12
     },
     {
       "機種": "Lパチスロ かぐや様は告らせたい",
@@ -23807,7 +23867,11 @@
           "avg_rate": 78.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 5.3,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "吉宗",
@@ -24025,7 +24089,11 @@
           "avg_rate": 75.2,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.3,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -25409,7 +25477,11 @@
           "avg_rate": 98.7,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 0.9,
+      "event_type": null,
+      "event_n_normal": 171,
+      "event_n_event": 35
     },
     {
       "機種": "スマスロ マギアレコード 魔法少女まどか☆マギカ外伝",
@@ -25946,7 +26018,11 @@
           "avg_rate": 82.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 5.0,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "Lパチスロ 機動戦士ガンダムユニコーン 覚醒DRIVE",
@@ -26338,7 +26414,11 @@
           "avg_rate": 66.7,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.4,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 39,
+      "event_n_event": 9
     },
     {
       "機種": "スマスロ 攻殻機動隊",
@@ -26686,7 +26766,11 @@
           "avg_rate": 78.0,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 1.4,
+      "event_type": null,
+      "event_n_normal": 100,
+      "event_n_event": 18
     },
     {
       "機種": "スマスロ モンスターハンターライズ",
@@ -27054,7 +27138,11 @@
           "avg_rate": 100.0,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 6.8,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "クレアの秘宝伝～はじまりの扉と太陽の石～ボーナストリガーver.",
@@ -27247,7 +27335,11 @@
           "avg_rate": 102.7,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 4.2,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 216,
+      "event_n_event": 42
     },
     {
       "機種": "スマスロ化物語",
@@ -27623,7 +27715,11 @@
           "avg_rate": 103.2,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.5,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 144,
+      "event_n_event": 29
     },
     {
       "機種": "スマスロ北斗の拳 転生の章2",
@@ -28930,7 +29026,11 @@
           "avg_rate": 116.3,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 1.8,
+      "event_type": null,
+      "event_n_normal": 123,
+      "event_n_event": 23
     },
     {
       "機種": "スマスロヨルムンガンド",
@@ -29144,7 +29244,11 @@
           "avg_rate": 95.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.5,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 50,
+      "event_n_event": 12
     },
     {
       "機種": "スマスロ ミリオンゴッド-神々の軌跡-",
@@ -30206,7 +30310,11 @@
           "avg_rate": 92.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 0.8,
+      "event_type": null,
+      "event_n_normal": 39,
+      "event_n_event": 9
     },
     {
       "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -30361,7 +30469,11 @@
           "avg_rate": 79.2,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 1.6,
+      "event_type": null,
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
@@ -31603,7 +31715,11 @@
           "avg_rate": 111.3,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 2.5,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 78,
+      "event_n_event": 13
     },
     {
       "機種": "スマスロ 沖ドキ!DUO アンコール",
@@ -32133,7 +32249,11 @@
           "avg_rate": 86.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 2.0,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 133,
+      "event_n_event": 26
     },
     {
       "機種": "L無職転生～異世界行ったら本気だす～",
@@ -32361,7 +32481,11 @@
           "avg_rate": 96.3,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 4.6,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 133,
+      "event_n_event": 26
     },
     {
       "機種": "LBパチスロ ヱヴァンゲリヲン～約束の扉～",
@@ -32468,7 +32592,11 @@
           "avg_rate": 111.9,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 5.5,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 266,
+      "event_n_event": 53
     },
     {
       "機種": "Lパチスロからくりサーカス",
@@ -33095,7 +33223,11 @@
           "avg_rate": 79.7,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 6.9,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "スマスロモンキーターンV",
@@ -34011,7 +34143,11 @@
           "avg_rate": 67.1,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 3.4,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "Lタクトオーパス デスティニー",
@@ -34169,7 +34305,11 @@
           "avg_rate": 120.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 7.3,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 22,
+      "event_n_event": 5
     },
     {
       "機種": "スマスロ バイオハザードRE:3",
@@ -34722,7 +34862,11 @@
           "avg_rate": 88.5,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 6.1,
+      "event_type": "旧イベ特化",
+      "event_n_normal": 22,
+      "event_n_event": 5
     },
     {
       "機種": "スマスロ ハナビ",
@@ -34956,7 +35100,11 @@
           "avg_rate": 86.4,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 1.7,
+      "event_type": null,
+      "event_n_normal": 100,
+      "event_n_event": 18
     },
     {
       "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
@@ -35117,7 +35265,11 @@
           "avg_rate": 111.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 2.6,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     },
     {
       "機種": "いざ！番長",
@@ -35454,7 +35606,11 @@
           "avg_rate": 90.6,
           "n": 1
         }
-      ]
+      ],
+      "event_premium": 2.9,
+      "event_type": "旧イベ傾向",
+      "event_n_normal": 271,
+      "event_n_event": 54
     }
   ],
   "kishu_top10": [
