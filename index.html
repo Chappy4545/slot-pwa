@@ -91,9 +91,9 @@ const PLUS_RATE_TIP = {
 };
 
 const CLS_INFO = {
-  "本命": { title: "本命とは", body: "通常日: score≥65 かつ 信頼度A/B/C かつ リスクタグ1個以下。\n旧イベント日: score≥70（65-69帯はADV低いため除外）。\n\n注意: リスクタグが2個以上あるとスコアが高くても「見送り」になります。" },
-  "対抗": { title: "対抗とは", body: "score≥50 かつ 信頼度A〜C かつ リスクタグ1個以下のとき。\n\nバックテストADV: +0.4%（通常日 +1.08%）\n\n旧イベント日の対抗は ADV -1.29% と信頼度が低いため、旧イベント日は本命のみ重視を推奨。" },
-  "穴":   { title: "穴とは",   body: "score≥40 かつ リスクタグ1個以下のとき。\n\nバックテストADV: +1.0%（通常日 +1.40% / 旧イベント日 +0.62%）\nスコアは低めですが一発の根拠がある台です。低投資で試す価値あり。" },
+  "本命": { title: "本命とは", body: "通常日: score≥65 かつ 信頼度A/B/C かつ リスクタグ1個以下。\n旧イベント日: score≥75（65-74帯はADV低いため除外）。\n\n注意: リスクタグが2個以上あるとスコアが高くても「見送り」になります。" },
+  "対抗": { title: "対抗とは", body: "score≥50 かつ 信頼度A〜C かつ リスクタグ1個以下のとき。\n\nバックテストADV: +1.0%\n\n旧イベント日は本命（score≥75）のみ重視を推奨。対抗は参考程度に。" },
+  "穴":   { title: "穴とは",   body: "score≥40 かつ リスクタグ1個以下のとき。\n\nバックテストADV: +1.1%\nスコアは低めですが一発の根拠がある台です。低投資で試す価値あり。" },
   "見送り": { title: "見送りとは", body: "以下のいずれかに該当:\n• 信頼度D（データ5日未満）\n• 深刻リスクあり（サンプル極少・直近出過ぎ）\n• リスクタグが2個以上\n\nスコアが高くてもリスクタグ2個で見送りになります。" },
 };
 
@@ -1132,8 +1132,8 @@ function EventDayWarning({ category }) {
       <div className="mt-2 bg-amber-50 border border-amber-300 rounded-xl px-4 py-3 text-xs space-y-1.5">
         <div className="font-bold text-amber-800">⚠ 旧イベント日 — 予測精度注意</div>
         <div className="text-amber-700 leading-relaxed">
-          対抗・穴カテゴリの信頼度が低め（バックテスト対抗ADV: <span className="font-semibold text-red-600">-1.29%</span>）。<br />
-          <span className="font-semibold">score 70以上の本命のみ</span>を優先してください。対抗は参考程度に。
+          対抗・穴カテゴリは旧イベント日に精度が低め。<br />
+          <span className="font-semibold">score 75以上の本命のみ</span>を優先してください。対抗は参考程度に。
         </div>
       </div>
     );
@@ -1143,7 +1143,7 @@ function EventDayWarning({ category }) {
       <div className="mt-2 bg-red-50 border border-red-200 rounded-xl px-4 py-3 text-xs space-y-1.5">
         <div className="font-bold text-red-700">🔥 強化イベント日 — サンプル少・参考値</div>
         <div className="text-red-600 leading-relaxed">
-          強化イベント日はデータが6日分のみ。本命（ADV +3.65%）は良好ですが、穴・対抗は信頼度が低いです。
+          強化イベント日はデータが12日分（随時更新）。本命（台ADV +1.38%）は良好ですが、穴・対抗は信頼度が低いです。
         </div>
       </div>
     );
@@ -1218,6 +1218,15 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
               {row.event_type === "通常日向き" && (
                 <span className="text-[10px] bg-slate-100 text-slate-400 px-1.5 py-0.5 rounded-full">通常{row.event_premium}%</span>
               )}
+              {row["全期間出率"] != null && row["全期間出率"] >= 98.5 && (row["全期間日数"] || 0) >= 90 && (
+                <span className="text-[10px] bg-yellow-100 text-yellow-700 px-1.5 py-0.5 rounded-full font-bold">★ 長期優遇</span>
+              )}
+              {row["直近差分"] != null && row["直近差分"] >= 3.0 && (
+                <span className="text-[10px] bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded-full font-bold">↑ 直近強化</span>
+              )}
+              {row["直近差分"] != null && row["直近差分"] <= -3.0 && (
+                <span className="text-[10px] bg-slate-100 text-slate-400 px-1.5 py-0.5 rounded-full">↓ 直近冷え</span>
+              )}
             </div>
             <div className="flex flex-wrap gap-2 mt-2 text-xs text-slate-600">
               <span>直近 <RateLabel value={row["直近平均"]} /></span>
@@ -1269,6 +1278,21 @@ function KishuCard({ row, expanded, onToggle, machines, favorites, toggleFav, mi
               );
             })()}
           </div>
+          {row["全期間出率"] != null && row["全期間出率"] > 0 && (
+            <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
+              <div className="text-[10px] text-slate-400 mb-1">長期 / 直近30日 出率</div>
+              <div className="flex items-baseline gap-2 flex-wrap">
+                <span className={`text-sm font-bold font-mono ${row["全期間出率"] >= 98.5 ? "text-amber-600" : "text-slate-600"}`}>{row["全期間出率"]}%</span>
+                <span className="text-[10px] text-slate-400">全期間</span>
+                {row["直近出率"] != null && row["直近出率"] > 0 && <>
+                  <span className="text-slate-300">→</span>
+                  <span className={`text-sm font-semibold font-mono ${(row["直近差分"] || 0) >= 3 ? "text-emerald-600" : (row["直近差分"] || 0) <= -3 ? "text-slate-400" : "text-slate-600"}`}>{row["直近出率"]}%</span>
+                  <span className="text-[10px] text-slate-400">直近</span>
+                  <span className={`text-[10px] font-semibold ${(row["直近差分"] || 0) > 0 ? "text-emerald-600" : "text-slate-400"}`}>({(row["直近差分"] || 0) > 0 ? "+" : ""}{row["直近差分"]})</span>
+                </>}
+              </div>
+            </div>
+          )}
 {kishuTrend && kishuTrend.length > 0 && (
             <div className="bg-white rounded-lg border border-slate-200 px-3 py-2">
               <div className="text-[10px] font-semibold text-slate-500 mb-1">機種別トレンド（直近30日）</div>
@@ -1395,7 +1419,7 @@ function Header({ data }) {
           </div>
         </div>
         <div className="text-right text-[11px] opacity-90">
-          <div>{data.model_version || "v8.1"}</div>
+          <div>{data.model_version || "v9.17"}</div>
           <div className="opacity-75">{generated}</div>
         </div>
       </div>
@@ -2057,7 +2081,7 @@ function HistoryTab() {
               })}
             </tbody>
           </table>
-          <div className="text-[10px] text-slate-400 mt-2">旧イベント日の対抗は精度低め（v9.8で本命 score≥70に引き上げ済み）</div>
+          <div className="text-[10px] text-slate-400 mt-2">旧イベント日の対抗は精度低め（v9.13で本命 score≥75に引き上げ済み）</div>
         </div>
       )}
 
@@ -2319,8 +2343,8 @@ function SeisekiTab({ modelPerf }) {
           <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-2">
             <div className="font-semibold text-slate-700">スコアの読み方</div>
             <div className="text-slate-600 space-y-1">
-              <div><strong>score</strong>: 総合スコア(0-100)。65+(通常日) / 70+(旧イベント日)で本命候補</div>
-              <div><strong>分類</strong>: 本命(65+A/B/C 通常日 / 70+A/B/C 旧イベント日)/ 対抗(50+A〜C)/ 穴(40+)/ 見送り</div>
+              <div><strong>score</strong>: 総合スコア(0-100)。65+(通常日) / 75+(旧イベント日)で本命候補</div>
+              <div><strong>分類</strong>: 本命(65+A/B/C 通常日 / 75+A/B/C 旧イベント日)/ 対抗(50+A〜C)/ 穴(40+)/ 見送り</div>
               <div><strong>信頼度</strong>: A(30+日)/ B(15+)/ C(5+)/ D(5未満)</div>
               <div><strong>緑タグ</strong>: 推奨理由 / <strong>赤タグ</strong>: リスク要因</div>
               <div><strong>+α</strong>: 当日カテゴリの機種プレミアム</div>
@@ -2330,7 +2354,7 @@ function SeisekiTab({ modelPerf }) {
             </div>
           </div>
           <div className="bg-white rounded-xl border border-slate-200 p-4 text-xs space-y-4">
-            <div className="font-semibold text-slate-700">算出ロジック (v9.16)</div>
+            <div className="font-semibold text-slate-700">算出ロジック (v9.17)</div>
             <div>
               <div className="font-semibold text-emerald-700 mb-1.5">機種スコア — 通常日</div>
               <div className="space-y-1 text-slate-600">
@@ -2353,7 +2377,7 @@ function SeisekiTab({ modelPerf }) {
             <div>
               <div className="font-semibold text-emerald-700 mb-1.5">分類ロジック</div>
               <div className="space-y-0.5 text-slate-600">
-                <div><span className="font-bold text-red-600">本命</span>: score≥65(通常日) / ≥70(旧イベント日) かつ 信頼度A/B/C かつ リスク1個以下</div>
+                <div><span className="font-bold text-red-600">本命</span>: score≥65(通常日) / ≥75(旧イベント日) かつ 信頼度A/B/C かつ リスク1個以下</div>
                 <div><span className="font-bold text-orange-500">対抗</span>: score≥50 かつ 信頼度A〜C かつ リスク1個以下</div>
                 <div><span className="font-bold text-purple-500">穴</span>: score≥40 かつ リスク1個以下</div>
                 <div><span className="text-slate-500">見送り</span>: 信頼度D、深刻リスク有、またはそれ以外</div>
@@ -2366,7 +2390,7 @@ function SeisekiTab({ modelPerf }) {
               <div className="flex items-center gap-2">
                 <div className="bg-slate-100 rounded-lg px-3 py-2 flex-1 text-center text-slate-600">
                   <div className="font-semibold">ベースライン</div>
-                  <div className="text-slate-400">店全体・全323台の平均出率</div>
+                  <div className="text-slate-400">店全体の平均出率</div>
                 </div>
               </div>
               <div className="flex items-center gap-2">
@@ -2389,6 +2413,85 @@ function SeisekiTab({ modelPerf }) {
             </div>
           </div>
         </div>
+      )}
+    </div>
+  );
+}
+
+function TodaySummaryCard({ picks, category }) {
+  const [reviewData, setReviewData] = useState(null);
+  useEffect(() => {
+    fetch("history.json?_=" + Date.now())
+      .then(r => r.ok ? r.json() : null)
+      .then(d => { if (d?.daily_review) setReviewData(d.daily_review); })
+      .catch(() => {});
+  }, []);
+
+  if (!picks || picks.length === 0) return null;
+
+  const getBadge = (row) => {
+    if ((row["全期間出率"] || 0) >= 98.5 && (row["全期間日数"] || 0) >= 90)
+      return { label: "★ 長期優遇", cls: "bg-yellow-100 text-yellow-700" };
+    if ((row["直近差分"] || 0) >= 3.0)
+      return { label: "↑ 直近強化", cls: "bg-emerald-100 text-emerald-700" };
+    if ((row["直近差分"] || 0) <= -3.0)
+      return { label: "↓ 直近冷え", cls: "bg-slate-100 text-slate-400" };
+    return null;
+  };
+
+  const results = reviewData?.picks_result || [];
+  const yDate = reviewData?.date;
+
+  return (
+    <div className="bg-white rounded-xl border border-slate-200 overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-2.5 bg-red-50 border-b border-red-100">
+        <div className="text-sm font-bold text-red-700">🎯 今日の結論</div>
+        <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${CAT_STYLE[category] || "bg-slate-100 text-slate-500"}`}>
+          {CAT_SHORT[category] || category}
+        </span>
+      </div>
+      <div className="divide-y divide-slate-100">
+        {picks.map((row, i) => {
+          const badge = getBadge(row);
+          return (
+            <div key={row["機種"]} className="flex items-center gap-2 px-4 py-2">
+              <span className="text-[11px] font-bold text-slate-300 w-4 shrink-0">{i + 1}</span>
+              <ClassificationBadge cls={row["分類"]} />
+              <span className="text-xs text-slate-700 font-semibold flex-1 truncate min-w-0">{row["機種"]}</span>
+              {badge && (
+                <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full shrink-0 ${badge.cls}`}>{badge.label}</span>
+              )}
+              <span className="text-xs font-bold text-slate-400 font-mono shrink-0">{row["score"]}</span>
+            </div>
+          );
+        })}
+      </div>
+      {results.length > 0 && (
+        <>
+          <div className="px-4 pt-2.5 pb-1.5 bg-slate-50 border-t border-slate-100">
+            <span className="text-[10px] font-semibold text-slate-500">
+              昨日{yDate ? `（${yDate.slice(5)}）` : ""}の結果
+            </span>
+          </div>
+          <div className="divide-y divide-slate-100 bg-slate-50 pb-1">
+            {results.map((r, i) => {
+              const rate = r.actual_avg_rate;
+              const hit = rate != null && rate >= 100;
+              return (
+                <div key={r["機種"]} className="flex items-center gap-2 px-4 py-1.5">
+                  <span className="text-[11px] font-bold text-slate-300 w-4 shrink-0">{i + 1}</span>
+                  <span className="text-xs text-slate-600 flex-1 truncate min-w-0">{r["機種"]}</span>
+                  <span className={`text-xs font-mono font-semibold shrink-0 ${rate == null ? "text-slate-300" : hit ? "text-emerald-600" : "text-red-400"}`}>
+                    {rate != null ? `${rate}%` : "—"}
+                  </span>
+                  <span className="text-xs w-4 text-center shrink-0">
+                    {rate != null ? (hit ? "✓" : "✗") : ""}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </>
       )}
     </div>
   );
@@ -2492,6 +2595,7 @@ function App() {
             return (
               <>
                 <StoreContextBanner stageData={data.store_stage} />
+                <TodaySummaryCard picks={data.top_picks || []} category={data.target_category} />
                 <div className="text-xs text-slate-500 px-1">
                   3台以上設置の全{kishuAll.length}機種をスコア順に表示。タップで台TOP5を展開。
                 </div>
