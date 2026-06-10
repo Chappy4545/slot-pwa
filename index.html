@@ -2418,6 +2418,49 @@ function SeisekiTab({ modelPerf }) {
   );
 }
 
+function PassDayCard({ kishuAll, category }) {
+  if (!kishuAll || kishuAll.length === 0) return null;
+  const hasHonmei = kishuAll.some(r => r["分類"] === "本命");
+  if (hasHonmei) return null;
+
+  const maxScore = Math.max(...kishuAll.map(r => r.score || 0));
+  const topMachine = kishuAll[0];
+  const threshold = category === "旧イベント日" ? 75 : 65;
+  const gap = (threshold - maxScore).toFixed(1);
+
+  return (
+    <div className="bg-amber-50 border border-amber-200 rounded-xl overflow-hidden">
+      <div className="flex items-center gap-2 px-4 py-2.5 bg-amber-100 border-b border-amber-200">
+        <span className="text-base">🟡</span>
+        <div className="text-sm font-bold text-amber-800">見送り推奨日</div>
+        <span className={`ml-auto text-[9px] font-bold px-1.5 py-0.5 rounded ${CAT_STYLE[category] || "bg-slate-100 text-slate-500"}`}>
+          {CAT_SHORT[category] || category}
+        </span>
+      </div>
+      <div className="px-4 py-3 space-y-2">
+        <div className="text-xs text-slate-700 leading-relaxed">
+          <span className="font-semibold">本命機種が出ていません。</span>
+          {' '}最高スコア <span className="font-mono font-bold text-amber-700">{maxScore}</span> が
+          本命閾値 <span className="font-mono">{threshold}</span> に届かず
+          <span className="text-slate-500">（{gap}pt不足）</span>。
+        </div>
+        <div className="text-[11px] text-slate-600 leading-relaxed">
+          無理に出陣せず<span className="font-semibold text-amber-700">見送るのも選択肢</span>です。
+          下記は対抗・穴の参考表示で、期待値は控えめになります。
+        </div>
+        {topMachine && (
+          <div className="bg-white/60 rounded-lg px-3 py-2 flex items-center gap-2 mt-1">
+            <span className="text-[10px] text-slate-500">最高機種:</span>
+            <ClassificationBadge cls={topMachine["分類"]} />
+            <span className="text-xs text-slate-700 truncate flex-1 min-w-0">{topMachine["機種"]}</span>
+            <span className="text-xs font-mono font-semibold text-slate-500">{topMachine.score}</span>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
 function TodaySummaryCard({ picks, category }) {
   const [reviewData, setReviewData] = useState(null);
   useEffect(() => {
@@ -2595,6 +2638,7 @@ function App() {
             return (
               <>
                 <StoreContextBanner stageData={data.store_stage} />
+                <PassDayCard kishuAll={kishuAll} category={data.target_category} />
                 <TodaySummaryCard picks={data.top_picks || []} category={data.target_category} />
                 <div className="text-xs text-slate-500 px-1">
                   3台以上設置の全{kishuAll.length}機種をスコア順に表示。タップで台TOP5を展開。
