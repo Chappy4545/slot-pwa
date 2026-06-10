@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-10T09:10:56.520008",
+  "generated_at": "2026-06-10T10:22:03.596088",
   "history": [
     {
       "date": "2026-05-11",
@@ -15,7 +15,7 @@
       "adv_machine": 1.83,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 8,
-      "evaluated_at": "2026-06-10T09:10:54.920051",
+      "evaluated_at": "2026-06-10T10:22:02.209795",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -113,7 +113,7 @@
       "adv_machine": 1.91,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:54.947950",
+      "evaluated_at": "2026-06-10T10:22:02.251490",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -231,7 +231,7 @@
       "adv_machine": -0.23,
       "top10_machine_plus_rate": 0.5556,
       "top10_machine_n_matched": 9,
-      "evaluated_at": "2026-06-10T09:10:54.989903",
+      "evaluated_at": "2026-06-10T10:22:02.293436",
       "matched_machines": [
         {
           "機種": "スマスロ モンスターハンターライズ",
@@ -339,7 +339,7 @@
       "adv_machine": -6.28,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.025860",
+      "evaluated_at": "2026-06-10T10:22:02.320289",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -457,7 +457,7 @@
       "adv_machine": -2.27,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.075154",
+      "evaluated_at": "2026-06-10T10:22:02.359461",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -575,7 +575,7 @@
       "adv_machine": 10.54,
       "top10_machine_plus_rate": 0.625,
       "top10_machine_n_matched": 8,
-      "evaluated_at": "2026-06-10T09:10:55.117121",
+      "evaluated_at": "2026-06-10T10:22:02.385022",
       "matched_machines": [
         {
           "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
@@ -673,7 +673,7 @@
       "adv_machine": -2.96,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.164990",
+      "evaluated_at": "2026-06-10T10:22:02.472779",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -791,7 +791,7 @@
       "adv_machine": 2.32,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.201023",
+      "evaluated_at": "2026-06-10T10:22:02.500350",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -909,7 +909,7 @@
       "adv_machine": -4.52,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.233656",
+      "evaluated_at": "2026-06-10T10:22:02.525759",
       "matched_machines": [
         {
           "機種": "スマスロ ハナビ",
@@ -1027,7 +1027,7 @@
       "adv_machine": 14.64,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.278641",
+      "evaluated_at": "2026-06-10T10:22:02.552919",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1145,7 +1145,7 @@
       "adv_machine": -6.6,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.335197",
+      "evaluated_at": "2026-06-10T10:22:02.578453",
       "matched_machines": [
         {
           "機種": "Lパチスロ革命機ヴァルヴレイヴ2",
@@ -1263,7 +1263,7 @@
       "adv_machine": 1.91,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.400465",
+      "evaluated_at": "2026-06-10T10:22:02.601343",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1381,7 +1381,7 @@
       "adv_machine": 0.89,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.461690",
+      "evaluated_at": "2026-06-10T10:22:02.628823",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1499,7 +1499,7 @@
       "adv_machine": 6.71,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.557368",
+      "evaluated_at": "2026-06-10T10:22:02.666778",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1617,7 +1617,7 @@
       "adv_machine": -0.25,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.588055",
+      "evaluated_at": "2026-06-10T10:22:02.690546",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1735,7 +1735,7 @@
       "adv_machine": -0.93,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.616977",
+      "evaluated_at": "2026-06-10T10:22:02.715489",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1853,7 +1853,7 @@
       "adv_machine": 6.55,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.642657",
+      "evaluated_at": "2026-06-10T10:22:02.747574",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -1971,7 +1971,7 @@
       "adv_machine": 5.57,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.674307",
+      "evaluated_at": "2026-06-10T10:22:02.777910",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2089,7 +2089,7 @@
       "adv_machine": 3.53,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.701182",
+      "evaluated_at": "2026-06-10T10:22:02.808048",
       "matched_machines": [
         {
           "機種": "L東京喰種",
@@ -2207,7 +2207,7 @@
       "adv_machine": 5.04,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.739177",
+      "evaluated_at": "2026-06-10T10:22:02.838107",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2325,7 +2325,7 @@
       "adv_machine": -0.69,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.766708",
+      "evaluated_at": "2026-06-10T10:22:02.867597",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2443,7 +2443,7 @@
       "adv_machine": 12.9,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.799794",
+      "evaluated_at": "2026-06-10T10:22:02.892266",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2561,7 +2561,7 @@
       "adv_machine": -5.55,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.832047",
+      "evaluated_at": "2026-06-10T10:22:02.920609",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -2679,7 +2679,7 @@
       "adv_machine": 5.37,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.862432",
+      "evaluated_at": "2026-06-10T10:22:02.943661",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -2797,7 +2797,7 @@
       "adv_machine": -4.25,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.902209",
+      "evaluated_at": "2026-06-10T10:22:02.968353",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2915,7 +2915,7 @@
       "adv_machine": 5.22,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.928375",
+      "evaluated_at": "2026-06-10T10:22:02.992958",
       "matched_machines": [
         {
           "機種": "Lパチスロ炎炎ノ消防隊2",
@@ -3033,7 +3033,7 @@
       "adv_machine": -7.13,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:55.956432",
+      "evaluated_at": "2026-06-10T10:22:03.022592",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -3151,7 +3151,7 @@
       "adv_machine": null,
       "top10_machine_plus_rate": null,
       "top10_machine_n_matched": 0,
-      "evaluated_at": "2026-06-10T09:10:55.995108",
+      "evaluated_at": "2026-06-10T10:22:03.081910",
       "matched_machines": []
     },
     {
@@ -3168,7 +3168,7 @@
       "adv_machine": -9.04,
       "top10_machine_plus_rate": 0.1429,
       "top10_machine_n_matched": 7,
-      "evaluated_at": "2026-06-10T09:10:56.023338",
+      "evaluated_at": "2026-06-10T10:22:03.109149",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -3256,7 +3256,7 @@
       "adv_machine": 5.19,
       "top10_machine_plus_rate": 0.7,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-06-10T09:10:56.051507",
+      "evaluated_at": "2026-06-10T10:22:03.140522",
       "matched_machines": [
         {
           "機種": "L東京喰種",
