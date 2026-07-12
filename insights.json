@@ -1,0 +1,185 @@
+{
+  "generated_at": "2026-07-12T16:51:21",
+  "today_condition": {
+    "target_date": "2026-07-12",
+    "target_category": "通常日",
+    "dow": 6,
+    "dow_name": "日",
+    "score": 46,
+    "level": "慎重",
+    "emoji": "🟠",
+    "headline": "慎重に見極めを",
+    "reasons": [
+      {
+        "label": "日曜",
+        "detail": "過去の台ADV +1.0%（並の曜日）",
+        "adj": -3.6
+      },
+      {
+        "label": "店サイクル",
+        "detail": "直近3日は概ね均衡（直近3日 -2,327枚）",
+        "adj": 0
+      },
+      {
+        "label": "モデル本命",
+        "detail": "本命なし・対抗 1機種（最高score 51）",
+        "adj": 0
+      }
+    ],
+    "disclaimer": "日次の勝敗自体は予測困難です。これは曜日傾向・店サイクル・本命有無から算出した記述的な目安です。"
+  },
+  "weekday_heatmap": [
+    {
+      "dow": 0,
+      "name": "月",
+      "n": 51,
+      "adv_machine": 0.96,
+      "store_samai_mean": -31841,
+      "store_plus_rate": 20.0
+    },
+    {
+      "dow": 1,
+      "name": "火",
+      "n": 52,
+      "adv_machine": 1.8,
+      "store_samai_mean": -25814,
+      "store_plus_rate": 33.0
+    },
+    {
+      "dow": 2,
+      "name": "水",
+      "n": 52,
+      "adv_machine": 2.95,
+      "store_samai_mean": -32826,
+      "store_plus_rate": 25.0
+    },
+    {
+      "dow": 3,
+      "name": "木",
+      "n": 52,
+      "adv_machine": 1.66,
+      "store_samai_mean": -40839,
+      "store_plus_rate": 15.0
+    },
+    {
+      "dow": 4,
+      "name": "金",
+      "n": 52,
+      "adv_machine": -0.38,
+      "store_samai_mean": -30206,
+      "store_plus_rate": 27.0
+    },
+    {
+      "dow": 5,
+      "name": "土",
+      "n": 52,
+      "adv_machine": 1.95,
+      "store_samai_mean": -40083,
+      "store_plus_rate": 21.0
+    },
+    {
+      "dow": 6,
+      "name": "日",
+      "n": 51,
+      "adv_machine": 0.96,
+      "store_samai_mean": -44630,
+      "store_plus_rate": 24.0
+    }
+  ],
+  "weekday_by_category": {
+    "通常日": [
+      {
+        "dow": 0,
+        "name": "月",
+        "n": 40,
+        "adv_machine": 1.16
+      },
+      {
+        "dow": 1,
+        "name": "火",
+        "n": 38,
+        "adv_machine": 1.68
+      },
+      {
+        "dow": 2,
+        "name": "水",
+        "n": 43,
+        "adv_machine": 3.03
+      },
+      {
+        "dow": 3,
+        "name": "木",
+        "n": 42,
+        "adv_machine": 1.63
+      },
+      {
+        "dow": 4,
+        "name": "金",
+        "n": 38,
+        "adv_machine": -0.2
+      },
+      {
+        "dow": 5,
+        "name": "土",
+        "n": 42,
+        "adv_machine": 2.0
+      },
+      {
+        "dow": 6,
+        "name": "日",
+        "n": 43,
+        "adv_machine": 1.29
+      }
+    ],
+    "旧イベント日": [
+      {
+        "dow": 0,
+        "name": "月",
+        "n": 8,
+        "adv_machine": 0.39
+      },
+      {
+        "dow": 1,
+        "name": "火",
+        "n": 9,
+        "adv_machine": 2.73
+      },
+      {
+        "dow": 2,
+        "name": "水",
+        "n": 8,
+        "adv_machine": 2.54
+      },
+      {
+        "dow": 3,
+        "name": "木",
+        "n": 8,
+        "adv_machine": 2.29
+      },
+      {
+        "dow": 4,
+        "name": "金",
+        "n": 10,
+        "adv_machine": -1.94
+      },
+      {
+        "dow": 5,
+        "name": "土",
+        "n": 9,
+        "adv_machine": 1.9
+      },
+      {
+        "dow": 6,
+        "name": "日",
+        "n": 6,
+        "adv_machine": -1.52
+      }
+    ]
+  },
+  "store_cycle": {
+    "last3_samai": -2327,
+    "last7_samai": -201033,
+    "percentile": 86.0,
+    "note": "直近3日は概ね均衡"
+  }
+}
