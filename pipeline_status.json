@@ -1,52 +1,59 @@
 {
-  "last_run": "2026-07-12T14:40:49",
-  "last_run_date": "2026-07-12",
+  "last_run": "2026-07-15T16:07:15",
+  "last_run_date": "2026-07-15",
   "success": true,
   "db_max_before": "2026-07-11",
-  "db_max_after": "2026-07-11",
-  "target_date": "2026-07-12",
-  "committed": true,
+  "db_max_after": "2026-07-14",
+  "target_date": "2026-07-15",
+  "committed": false,
   "note": "",
   "steps": [
     {
       "name": "scraper",
       "ok": true,
-      "duration_s": 41.1,
+      "duration_s": 183308.6,
       "returncode": 0,
       "error": null
     },
     {
       "name": "analyzer.build",
       "ok": true,
-      "duration_s": 3.6,
+      "duration_s": 17.0,
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "name": "backfill",
+      "ok": true,
+      "duration_s": 25.2,
       "returncode": 0,
       "error": null
     },
     {
       "name": "daily_target",
       "ok": true,
-      "duration_s": 6.7,
+      "duration_s": 7.6,
       "returncode": 0,
       "error": null
     },
     {
       "name": "backtest",
       "ok": true,
-      "duration_s": 0.8,
+      "duration_s": 9.0,
+      "returncode": 0,
+      "error": null
+    },
+    {
+      "name": "insights",
+      "ok": true,
+      "duration_s": 0.7,
       "returncode": 0,
       "error": null
     },
     {
       "name": "ptown",
       "ok": true,
-      "duration_s": 4.9,
-      "returncode": 0,
-      "error": null
-    },
-    {
-      "name": "git",
-      "ok": true,
-      "duration_s": 0,
+      "duration_s": 9.0,
       "returncode": 0,
       "error": null
     }
