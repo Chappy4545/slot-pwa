@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-07-15T16:07:06",
+  "generated_at": "2026-07-17T10:36:03",
   "today_condition": {
-    "target_date": "2026-07-15",
+    "target_date": "2026-07-17",
     "target_category": "通常日",
-    "dow": 2,
-    "dow_name": "水",
-    "score": 62,
-    "level": "標準",
-    "emoji": "🟡",
-    "headline": "通常運転",
+    "dow": 4,
+    "dow_name": "金",
+    "score": 16,
+    "level": "見送り推奨",
+    "emoji": "🔴",
+    "headline": "無理に行かない選択も",
     "reasons": [
       {
-        "label": "水曜",
-        "detail": "過去の台ADV +3.0%（◎ 狙い目曜日）",
-        "adj": 12.1
+        "label": "金曜",
+        "detail": "過去の台ADV -0.4%（△ 弱い曜日）",
+        "adj": -14.4
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日は概ね均衡（直近3日 -3,754枚）",
-        "adj": 0
+        "detail": "直近3日は回収気味 → やや放出に期待（直近3日 -131,411枚）",
+        "adj": 5
       },
       {
         "label": "月内",
@@ -27,8 +27,8 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 2機種（最高score 55）",
-        "adj": 0
+        "detail": "本命・対抗なし、穴のみ（最高score 49）",
+        "adj": -25
       }
     ],
     "disclaimer": "日次の勝敗自体は予測困難です。これは曜日傾向・店サイクル・本命有無から算出した記述的な目安です。"
@@ -53,17 +53,17 @@
     {
       "dow": 2,
       "name": "水",
-      "n": 52,
-      "adv_machine": 2.95,
-      "store_samai_mean": -32826,
+      "n": 53,
+      "adv_machine": 2.88,
+      "store_samai_mean": -33657,
       "store_plus_rate": 25.0
     },
     {
       "dow": 3,
       "name": "木",
-      "n": 52,
-      "adv_machine": 1.66,
-      "store_samai_mean": -40839,
+      "n": 53,
+      "adv_machine": 1.63,
+      "store_samai_mean": -40603,
       "store_plus_rate": 15.0
     },
     {
@@ -108,14 +108,14 @@
       {
         "dow": 2,
         "name": "水",
-        "n": 43,
-        "adv_machine": 3.03
+        "n": 44,
+        "adv_machine": 2.94
       },
       {
         "dow": 3,
         "name": "木",
-        "n": 42,
-        "adv_machine": 1.63
+        "n": 43,
+        "adv_machine": 1.59
       },
       {
         "dow": 4,
@@ -182,10 +182,10 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": -3754,
-    "last7_samai": -84237,
-    "percentile": 85.0,
-    "note": "直近3日は概ね均衡"
+    "last3_samai": -131411,
+    "last7_samai": -150151,
+    "percentile": 39.0,
+    "note": "直近3日は回収気味 → やや放出に期待"
   },
   "monthly_cycle": {
     "thirds": [
@@ -198,10 +198,10 @@
       },
       {
         "label": "中旬",
-        "n": 120,
-        "adv_machine": 1.41,
+        "n": 122,
+        "adv_machine": 1.38,
         "store_plus_rate": 24.0,
-        "store_samai_mean": -31447
+        "store_samai_mean": -31794
       },
       {
         "label": "下旬",
