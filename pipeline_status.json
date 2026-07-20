@@ -1,61 +1,61 @@
 {
-  "last_run": "2026-07-17T10:44:58",
-  "last_run_date": "2026-07-17",
+  "last_run": "2026-07-20T09:44:40",
+  "last_run_date": "2026-07-20",
   "success": true,
-  "db_max_before": "2026-07-14",
-  "db_max_after": "2026-07-16",
-  "target_date": "2026-07-17",
+  "db_max_before": "2026-07-16",
+  "db_max_after": "2026-07-19",
+  "target_date": "2026-07-20",
   "committed": false,
   "note": "",
   "steps": [
     {
       "name": "scraper",
       "ok": true,
-      "duration_s": 412.8,
+      "duration_s": 290.7,
       "returncode": 0,
       "error": null
     },
     {
       "name": "analyzer.build",
       "ok": true,
-      "duration_s": 17.4,
+      "duration_s": 7.3,
       "returncode": 0,
       "error": null
     },
     {
       "name": "backfill",
       "ok": true,
-      "duration_s": 106.2,
+      "duration_s": 30.7,
       "returncode": 0,
       "error": null
     },
     {
       "name": "daily_target",
       "ok": true,
-      "duration_s": 17.4,
+      "duration_s": 9.0,
       "returncode": 0,
       "error": null
     },
     {
       "name": "backtest",
       "ok": true,
-      "duration_s": 20.7,
+      "duration_s": 11.7,
       "returncode": 0,
       "error": null
     },
     {
       "name": "insights",
       "ok": true,
-      "duration_s": 1.2,
+      "duration_s": 1.1,
       "returncode": 0,
       "error": null
     },
     {
       "name": "ptown",
-      "ok": false,
-      "duration_s": 534.7,
-      "returncode": 1,
-      "error": "    )\n    ^\n  File \"C:\\Users\\kcs15\\AppData\\Local\\Python\\pythoncore-3.14-64\\Lib\\site-packages\\playwright\\_impl\\_connection.py\", line 559, in wrap_api_call\n    raise rewrite_error(error, f\"{parsed_st['apiName']}: {error}\") from None\nplaywright._impl._errors.TimeoutError: Page.goto: Timeout 30000ms exceeded.\nCall log:\n  - navigating to \"https://p-town.dmm.com/shops/tokyo/12357\", waiting until \"domcontentloaded\"\n"
+      "ok": true,
+      "duration_s": 7.6,
+      "returncode": 0,
+      "error": null
     }
   ]
 }
