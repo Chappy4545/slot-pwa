@@ -1,59 +1,59 @@
 {
-  "last_run": "2026-07-21T17:43:57",
-  "last_run_date": "2026-07-21",
+  "last_run": "2026-07-22T11:09:40",
+  "last_run_date": "2026-07-22",
   "success": true,
-  "db_max_before": "2026-07-19",
-  "db_max_after": "2026-07-20",
-  "target_date": "2026-07-21",
+  "db_max_before": "2026-07-20",
+  "db_max_after": "2026-07-21",
+  "target_date": "2026-07-22",
   "committed": false,
   "note": "",
   "steps": [
     {
       "name": "scraper",
       "ok": true,
-      "duration_s": 160.0,
+      "duration_s": 213.9,
       "returncode": 0,
       "error": null
     },
     {
       "name": "analyzer.build",
       "ok": true,
-      "duration_s": 12.4,
+      "duration_s": 4.9,
       "returncode": 0,
       "error": null
     },
     {
       "name": "evaluate",
       "ok": true,
-      "duration_s": 2.3,
+      "duration_s": 1.6,
       "returncode": 0,
       "error": null
     },
     {
       "name": "daily_target",
       "ok": true,
-      "duration_s": 7.4,
+      "duration_s": 6.7,
       "returncode": 0,
       "error": null
     },
     {
       "name": "backtest",
       "ok": true,
-      "duration_s": 3.6,
+      "duration_s": 3.3,
       "returncode": 0,
       "error": null
     },
     {
       "name": "insights",
       "ok": true,
-      "duration_s": 0.9,
+      "duration_s": 0.8,
       "returncode": 0,
       "error": null
     },
     {
       "name": "ptown",
       "ok": true,
-      "duration_s": 17.7,
+      "duration_s": 4.8,
       "returncode": 0,
       "error": null
     }
