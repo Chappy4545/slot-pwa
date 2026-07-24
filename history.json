@@ -1,242 +1,6 @@
 {
-  "generated_at": "2026-07-22T11:09:24.278491",
+  "generated_at": "2026-07-24T09:03:37.061502",
   "history": [
-    {
-      "date": "2026-06-22",
-      "category": "通常日",
-      "model_version": "v9.18",
-      "n_actual": 322,
-      "base_avg": 94.49,
-      "base_plus_rate": 0.3447,
-      "top10_kishu_avg": 94.4,
-      "top10_machine_avg": 105.97,
-      "top10_machine_top3_avg": 139.63,
-      "adv_kishu": -0.09,
-      "adv_machine": 11.48,
-      "top10_machine_plus_rate": 0.5,
-      "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.707373",
-      "matched_machines": [
-        {
-          "機種": "スマスロ 攻殻機動隊",
-          "台番": 541,
-          "predicted_score": 94.8,
-          "predicted_rate": 107.6,
-          "actual_rate": 125.2,
-          "差枚": 2396,
-          "G数": 3174,
-          "hit": true
-        },
-        {
-          "機種": "Lパチスロ かぐや様は告らせたい",
-          "台番": 567,
-          "predicted_score": 91.0,
-          "predicted_rate": 107.7,
-          "actual_rate": 173.0,
-          "差枚": 2874,
-          "G数": 1312,
-          "hit": true
-        },
-        {
-          "機種": "スマスロ 攻殻機動隊",
-          "台番": 538,
-          "predicted_score": 87.9,
-          "predicted_rate": 105.9,
-          "actual_rate": 82.5,
-          "差枚": -1248,
-          "G数": 2381,
-          "hit": false
-        },
-        {
-          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
-          "台番": 769,
-          "predicted_score": 76.4,
-          "predicted_rate": 101.7,
-          "actual_rate": 91.5,
-          "差枚": -524,
-          "G数": 2046,
-          "hit": false
-        },
-        {
-          "機種": "Lパチスロ かぐや様は告らせたい",
-          "台番": 565,
-          "predicted_score": 76.0,
-          "predicted_rate": 104.2,
-          "actual_rate": 92.7,
-          "差枚": -281,
-          "G数": 1284,
-          "hit": false
-        },
-        {
-          "機種": "真打 吉宗",
-          "台番": 514,
-          "predicted_score": 72.7,
-          "predicted_rate": 100.5,
-          "actual_rate": 80.7,
-          "差枚": -2778,
-          "G数": 4810,
-          "hit": false
-        },
-        {
-          "機種": "Lパチスロ かぐや様は告らせたい",
-          "台番": 566,
-          "predicted_score": 71.9,
-          "predicted_rate": 103.2,
-          "actual_rate": 81.7,
-          "差枚": -500,
-          "G数": 910,
-          "hit": false
-        },
-        {
-          "機種": "スマスロBIRDIE WING-Golf Girls’ Story-",
-          "台番": 786,
-          "predicted_score": 70.2,
-          "predicted_rate": 100.5,
-          "actual_rate": 108.1,
-          "差枚": 1183,
-          "G数": 4855,
-          "hit": true
-        },
-        {
-          "機種": "真打 吉宗",
-          "台番": 510,
-          "predicted_score": 70.2,
-          "predicted_rate": 100.1,
-          "actual_rate": 103.6,
-          "差枚": 559,
-          "G数": 5143,
-          "hit": true
-        },
-        {
-          "機種": "A-SLOT+ ディスクアップ ULTRAREMIX",
-          "台番": 770,
-          "predicted_score": 69.3,
-          "predicted_rate": 100.7,
-          "actual_rate": 120.7,
-          "差枚": 660,
-          "G数": 1065,
-          "hit": true
-        }
-      ]
-    },
-    {
-      "date": "2026-06-23",
-      "category": "旧イベント日",
-      "model_version": "v9.18",
-      "n_actual": 323,
-      "base_avg": 98.18,
-      "base_plus_rate": 0.4334,
-      "top10_kishu_avg": 99.4,
-      "top10_machine_avg": 94.19,
-      "top10_machine_top3_avg": 103.47,
-      "adv_kishu": 1.22,
-      "adv_machine": -3.99,
-      "top10_machine_plus_rate": 0.2,
-      "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.752738",
-      "matched_machines": [
-        {
-          "機種": "L東京喰種",
-          "台番": 621,
-          "predicted_score": 86.1,
-          "predicted_rate": 110.5,
-          "actual_rate": 87.1,
-          "差枚": -2264,
-          "G数": 5866,
-          "hit": false
-        },
-        {
-          "機種": "Lパチスロ かぐや様は告らせたい",
-          "台番": 567,
-          "predicted_score": 85.3,
-          "predicted_rate": 116.7,
-          "actual_rate": 87.5,
-          "差枚": -3244,
-          "G数": 8655,
-          "hit": false
-        },
-        {
-          "機種": "Lパチスロからくりサーカス",
-          "台番": 580,
-          "predicted_score": 75.4,
-          "predicted_rate": 110.8,
-          "actual_rate": 97.7,
-          "差枚": -445,
-          "G数": 6517,
-          "hit": false
-        },
-        {
-          "機種": "スロット ソードアート・オンラインⅡ",
-          "台番": 463,
-          "predicted_score": 70.0,
-          "predicted_rate": 103.8,
-          "actual_rate": 86.0,
-          "差枚": -4057,
-          "G数": 9677,
-          "hit": false
-        },
-        {
-          "機種": "ネオアイムジャグラーEX",
-          "台番": 676,
-          "predicted_score": 69.5,
-          "predicted_rate": 101.0,
-          "actual_rate": 96.4,
-          "差枚": -763,
-          "G数": 7101,
-          "hit": false
-        },
-        {
-          "機種": "L戦国乙女5 業火を穿つ宿焔の双刃",
-          "台番": 546,
-          "predicted_score": 68.9,
-          "predicted_rate": 105.8,
-          "actual_rate": 86.0,
-          "差枚": -3648,
-          "G数": 8702,
-          "hit": false
-        },
-        {
-          "機種": "ミスタージャグラー",
-          "台番": 673,
-          "predicted_score": 67.6,
-          "predicted_rate": 98.6,
-          "actual_rate": 102.0,
-          "差枚": 380,
-          "G数": 6389,
-          "hit": true
-        },
-        {
-          "機種": "L戦国乙女5 業火を穿つ宿焔の双刃",
-          "台番": 532,
-          "predicted_score": 66.7,
-          "predicted_rate": 105.0,
-          "actual_rate": 97.0,
-          "差枚": -773,
-          "G数": 8456,
-          "hit": false
-        },
-        {
-          "機種": "スロット ソードアート・オンラインⅡ",
-          "台番": 467,
-          "predicted_score": 65.7,
-          "predicted_rate": 103.3,
-          "actual_rate": 110.7,
-          "差枚": 3005,
-          "G数": 9357,
-          "hit": true
-        },
-        {
-          "機種": "ネオアイムジャグラーEX",
-          "台番": 677,
-          "predicted_score": 64.9,
-          "predicted_rate": 99.6,
-          "actual_rate": 91.5,
-          "差枚": -1230,
-          "G数": 4812,
-          "hit": false
-        }
-      ]
-    },
     {
       "date": "2026-06-24",
       "category": "通常日",
@@ -251,7 +15,7 @@
       "adv_machine": 1.25,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.795179",
+      "evaluated_at": "2026-07-24T09:03:35.142601",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -369,7 +133,7 @@
       "adv_machine": 7.78,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.841203",
+      "evaluated_at": "2026-07-24T09:03:35.179994",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -487,7 +251,7 @@
       "adv_machine": -14.21,
       "top10_machine_plus_rate": 0.1,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.893344",
+      "evaluated_at": "2026-07-24T09:03:35.230989",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -605,7 +369,7 @@
       "adv_machine": -7.15,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:08.943928",
+      "evaluated_at": "2026-07-24T09:03:35.272075",
       "matched_machines": [
         {
           "機種": "スマスロ北斗の拳 転生の章2",
@@ -723,7 +487,7 @@
       "adv_machine": 0.26,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.012103",
+      "evaluated_at": "2026-07-24T09:03:35.309684",
       "matched_machines": [
         {
           "機種": "Lパチスロ かぐや様は告らせたい",
@@ -841,7 +605,7 @@
       "adv_machine": -6.02,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.067905",
+      "evaluated_at": "2026-07-24T09:03:35.350659",
       "matched_machines": [
         {
           "機種": "L東京喰種",
@@ -959,7 +723,7 @@
       "adv_machine": 0.95,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.124063",
+      "evaluated_at": "2026-07-24T09:03:35.389925",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -1077,7 +841,7 @@
       "adv_machine": -0.74,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.196928",
+      "evaluated_at": "2026-07-24T09:03:35.432528",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -1195,7 +959,7 @@
       "adv_machine": -6.17,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.252699",
+      "evaluated_at": "2026-07-24T09:03:35.472564",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -1313,7 +1077,7 @@
       "adv_machine": -4.1,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.300321",
+      "evaluated_at": "2026-07-24T09:03:35.522145",
       "matched_machines": [
         {
           "機種": "L東京喰種",
@@ -1431,7 +1195,7 @@
       "adv_machine": 2.2,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.352284",
+      "evaluated_at": "2026-07-24T09:03:35.563767",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -1549,7 +1313,7 @@
       "adv_machine": -13.08,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.414105",
+      "evaluated_at": "2026-07-24T09:03:35.604975",
       "matched_machines": [
         {
           "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
@@ -1667,7 +1431,7 @@
       "adv_machine": -3.91,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 5,
-      "evaluated_at": "2026-07-20T09:44:09.457807",
+      "evaluated_at": "2026-07-24T09:03:35.643549",
       "matched_machines": [
         {
           "機種": "真打 吉宗",
@@ -1735,7 +1499,7 @@
       "adv_machine": -3.23,
       "top10_machine_plus_rate": 0.1,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.514587",
+      "evaluated_at": "2026-07-24T09:03:35.680506",
       "matched_machines": [
         {
           "機種": "スマスロ スーパーリオエース2",
@@ -1853,7 +1617,7 @@
       "adv_machine": -4.71,
       "top10_machine_plus_rate": 0.3333,
       "top10_machine_n_matched": 6,
-      "evaluated_at": "2026-07-20T09:44:09.571904",
+      "evaluated_at": "2026-07-24T09:03:35.714394",
       "matched_machines": [
         {
           "機種": "スマスロ スーパーリオエース2",
@@ -1931,7 +1695,7 @@
       "adv_machine": 2.93,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.611423",
+      "evaluated_at": "2026-07-24T09:03:35.749592",
       "matched_machines": [
         {
           "機種": "マイジャグラーV",
@@ -2049,7 +1813,7 @@
       "adv_machine": null,
       "top10_machine_plus_rate": null,
       "top10_machine_n_matched": 0,
-      "evaluated_at": "2026-07-20T09:44:09.645470",
+      "evaluated_at": "2026-07-24T09:03:35.785472",
       "matched_machines": []
     },
     {
@@ -2066,7 +1830,7 @@
       "adv_machine": 5.98,
       "top10_machine_plus_rate": 0.7,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.699853",
+      "evaluated_at": "2026-07-24T09:03:35.823780",
       "matched_machines": [
         {
           "機種": "スマスロ化物語",
@@ -2184,7 +1948,7 @@
       "adv_machine": 4.65,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.750287",
+      "evaluated_at": "2026-07-24T09:03:35.861342",
       "matched_machines": [
         {
           "機種": "スマスロ スーパーリオエース2",
@@ -2302,7 +2066,7 @@
       "adv_machine": 3.41,
       "top10_machine_plus_rate": 0.4,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.816960",
+      "evaluated_at": "2026-07-24T09:03:35.901519",
       "matched_machines": [
         {
           "機種": "マイジャグラーV",
@@ -2420,7 +2184,7 @@
       "adv_machine": 0.64,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.888238",
+      "evaluated_at": "2026-07-24T09:03:35.943104",
       "matched_machines": [
         {
           "機種": "Lパチスロからくりサーカス2",
@@ -2538,7 +2302,7 @@
       "adv_machine": -0.91,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.929124",
+      "evaluated_at": "2026-07-24T09:03:35.982759",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2656,7 +2420,7 @@
       "adv_machine": 3.2,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:09.979373",
+      "evaluated_at": "2026-07-24T09:03:36.031177",
       "matched_machines": [
         {
           "機種": "沖ドキ！BLACK",
@@ -2774,7 +2538,7 @@
       "adv_machine": 7.18,
       "top10_machine_plus_rate": 0.6,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:10.027849",
+      "evaluated_at": "2026-07-24T09:03:36.075464",
       "matched_machines": [
         {
           "機種": "Lパチスロからくりサーカス2",
@@ -2892,7 +2656,7 @@
       "adv_machine": -6.19,
       "top10_machine_plus_rate": 0.2,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:10.087911",
+      "evaluated_at": "2026-07-24T09:03:36.113481",
       "matched_machines": [
         {
           "機種": "Lパチスロからくりサーカス2",
@@ -3010,7 +2774,7 @@
       "adv_machine": 2.98,
       "top10_machine_plus_rate": 0.7,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-20T09:44:10.125859",
+      "evaluated_at": "2026-07-24T09:03:36.158310",
       "matched_machines": [
         {
           "機種": "L東京喰種",
@@ -3128,7 +2892,7 @@
       "adv_machine": -3.48,
       "top10_machine_plus_rate": 0.5,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-21T17:43:27.047927",
+      "evaluated_at": "2026-07-24T09:03:36.199059",
       "matched_machines": [
         {
           "機種": "Lパチスロからくりサーカス2",
@@ -3246,7 +3010,7 @@
       "adv_machine": -2.0,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10,
-      "evaluated_at": "2026-07-22T11:09:23.969677",
+      "evaluated_at": "2026-07-24T09:03:36.239801",
       "matched_machines": [
         {
           "機種": "Lパチスロからくりサーカス2",
@@ -3347,6 +3111,242 @@
           "差枚": -1479,
           "G数": 4064,
           "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-22",
+      "category": "通常日",
+      "model_version": "v9.18",
+      "n_actual": 322,
+      "base_avg": 95.12,
+      "base_plus_rate": 0.3665,
+      "top10_kishu_avg": 92.37,
+      "top10_machine_avg": 96.01,
+      "top10_machine_top3_avg": 108.67,
+      "adv_kishu": -2.76,
+      "adv_machine": 0.89,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-07-24T09:03:36.280124",
+      "matched_machines": [
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 706,
+          "predicted_score": 93.2,
+          "predicted_rate": 106.0,
+          "actual_rate": 88.8,
+          "差枚": -738,
+          "G数": 2199,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 610,
+          "predicted_score": 92.2,
+          "predicted_rate": 105.1,
+          "actual_rate": 99.0,
+          "差枚": -143,
+          "G数": 4649,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 607,
+          "predicted_score": 88.4,
+          "predicted_rate": 104.0,
+          "actual_rate": 88.9,
+          "差枚": -413,
+          "G数": 1236,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 711,
+          "predicted_score": 87.5,
+          "predicted_rate": 105.6,
+          "actual_rate": 103.2,
+          "差枚": 480,
+          "G数": 5053,
+          "hit": true
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 710,
+          "predicted_score": 84.8,
+          "predicted_rate": 103.7,
+          "actual_rate": 96.5,
+          "差枚": -753,
+          "G数": 7226,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 608,
+          "predicted_score": 84.5,
+          "predicted_rate": 102.9,
+          "actual_rate": 123.8,
+          "差枚": 402,
+          "G数": 564,
+          "hit": true
+        },
+        {
+          "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
+          "台番": 603,
+          "predicted_score": 83.2,
+          "predicted_rate": 104.2,
+          "actual_rate": 97.7,
+          "差枚": -124,
+          "G数": 1805,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 708,
+          "predicted_score": 82.6,
+          "predicted_rate": 103.1,
+          "actual_rate": 78.9,
+          "差枚": -4951,
+          "G数": 7835,
+          "hit": false
+        },
+        {
+          "機種": "沖ドキ！BLACK",
+          "台番": 712,
+          "predicted_score": 80.1,
+          "predicted_rate": 102.4,
+          "actual_rate": 86.1,
+          "差枚": -2538,
+          "G数": 6097,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ ハナビ",
+          "台番": 782,
+          "predicted_score": 79.3,
+          "predicted_rate": 99.7,
+          "actual_rate": 97.2,
+          "差枚": -215,
+          "G数": 2537,
+          "hit": false
+        }
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "category": "旧イベント日",
+      "model_version": "v9.18",
+      "n_actual": 322,
+      "base_avg": 98.35,
+      "base_plus_rate": 0.4472,
+      "top10_kishu_avg": 97.94,
+      "top10_machine_avg": 92.1,
+      "top10_machine_top3_avg": 109.33,
+      "adv_kishu": -0.4,
+      "adv_machine": -6.25,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10,
+      "evaluated_at": "2026-07-24T09:03:36.320490",
+      "matched_machines": [
+        {
+          "機種": "L東京喰種",
+          "台番": 625,
+          "predicted_score": 94.2,
+          "predicted_rate": 112.9,
+          "actual_rate": 78.3,
+          "差枚": -3297,
+          "G数": 5070,
+          "hit": false
+        },
+        {
+          "機種": "スマスロモンキーターンV",
+          "台番": 815,
+          "predicted_score": 84.5,
+          "predicted_rate": 112.2,
+          "actual_rate": 116.4,
+          "差枚": 4404,
+          "G数": 8961,
+          "hit": true
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 664,
+          "predicted_score": 81.7,
+          "predicted_rate": 102.4,
+          "actual_rate": 89.6,
+          "差枚": -1586,
+          "G数": 5084,
+          "hit": false
+        },
+        {
+          "機種": "スマスロ モンスターハンターライズ",
+          "台番": 640,
+          "predicted_score": 79.4,
+          "predicted_rate": 104.6,
+          "actual_rate": 76.7,
+          "差枚": -4234,
+          "G数": 6049,
+          "hit": false
+        },
+        {
+          "機種": "L東京喰種",
+          "台番": 616,
+          "predicted_score": 78.0,
+          "predicted_rate": 105.4,
+          "actual_rate": 72.5,
+          "差枚": -3148,
+          "G数": 3816,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ かぐや様は告らせたい",
+          "台番": 503,
+          "predicted_score": 76.4,
+          "predicted_rate": 105.3,
+          "actual_rate": 83.6,
+          "差枚": -3032,
+          "G数": 6171,
+          "hit": false
+        },
+        {
+          "機種": "Lパチスロ炎炎ノ消防隊2",
+          "台番": 521,
+          "predicted_score": 75.8,
+          "predicted_rate": 106.3,
+          "actual_rate": 105.1,
+          "差枚": 911,
+          "G数": 5992,
+          "hit": true
+        },
+        {
+          "機種": "マイジャグラーV",
+          "台番": 654,
+          "predicted_score": 75.5,
+          "predicted_rate": 101.0,
+          "actual_rate": 89.1,
+          "差枚": -1567,
+          "G数": 4803,
+          "hit": false
+        },
+        {
+          "機種": "ミスタージャグラー",
+          "台番": 674,
+          "predicted_score": 74.1,
+          "predicted_rate": 103.5,
+          "actual_rate": 106.5,
+          "差枚": 1063,
+          "G数": 5473,
+          "hit": true
+        },
+        {
+          "機種": "スマスロモンキーターンV",
+          "台番": 483,
+          "predicted_score": 74.0,
+          "predicted_rate": 105.4,
+          "actual_rate": 103.2,
+          "差枚": 492,
+          "G数": 5195,
+          "hit": true
         }
       ]
     }
@@ -5071,6 +5071,26 @@
       "adv_machine": -2.0,
       "top10_machine_plus_rate": 0.3,
       "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-07-22",
+      "category": "通常日",
+      "model_version": "v9.18",
+      "base_avg": 95.12,
+      "adv_kishu": -2.76,
+      "adv_machine": 0.89,
+      "top10_machine_plus_rate": 0.2,
+      "top10_machine_n_matched": 10
+    },
+    {
+      "date": "2026-07-23",
+      "category": "旧イベント日",
+      "model_version": "v9.18",
+      "base_avg": 98.35,
+      "adv_kishu": -0.4,
+      "adv_machine": -6.25,
+      "top10_machine_plus_rate": 0.4,
+      "top10_machine_n_matched": 10
     }
   ],
   "by_category": {
@@ -5081,60 +5101,49 @@
       "avg_top10_plus_rate": 0.45
     },
     "旧イベント日": {
-      "n_days": 27,
-      "avg_adv_kishu": -0.25,
-      "avg_adv_machine": 0.34,
-      "avg_top10_plus_rate": 0.4465
+      "n_days": 28,
+      "avg_adv_kishu": -0.26,
+      "avg_adv_machine": 0.1,
+      "avg_top10_plus_rate": 0.4448
     },
     "通常日": {
-      "n_days": 139,
-      "avg_adv_kishu": 0.65,
+      "n_days": 140,
+      "avg_adv_kishu": 0.63,
       "avg_adv_machine": 0.64,
-      "avg_top10_plus_rate": 0.3759
+      "avg_top10_plus_rate": 0.3746
     }
   },
   "summary": {
     "rolling_7d": {
       "n_days": 7,
-      "adv_kishu": 0.61,
-      "adv_machine": 0.11,
+      "adv_kishu": 0.35,
+      "adv_machine": -0.98,
       "top10_plus_rate": 0.41
     },
     "rolling_30d": {
       "n_days": 30,
-      "adv_kishu": -0.13,
-      "adv_machine": -0.86,
+      "adv_kishu": -0.28,
+      "adv_machine": -1.31,
       "top10_plus_rate": 0.37
     },
     "all_time": {
-      "n_days": 172,
-      "adv_kishu": 0.42,
-      "adv_machine": 0.56,
+      "n_days": 174,
+      "adv_kishu": 0.39,
+      "adv_machine": 0.53,
       "top10_plus_rate": 0.39
     }
   },
   "weekly_summary": {
-    "period_start": "2026-07-15",
-    "period_end": "2026-07-21",
+    "period_start": "2026-07-17",
+    "period_end": "2026-07-23",
     "n_days": 7,
-    "avg_adv_kishu": 0.61,
-    "avg_adv_machine": 0.11,
+    "avg_adv_kishu": 0.35,
+    "avg_adv_machine": -0.98,
     "avg_hit_rate": 41.4,
-    "total_samai": -26608,
+    "total_samai": -35995,
     "n_hit": 29,
     "n_miss": 41,
     "hit_machines": [
-      {
-        "機種": "Lパチスロからくりサーカス2",
-        "台番": 561,
-        "predicted_score": 62.5,
-        "predicted_rate": 104.0,
-        "actual_rate": 141.6,
-        "差枚": 7767,
-        "G数": 6217,
-        "hit": true,
-        "date": "2026-07-16"
-      },
       {
         "機種": "Lパチスロからくりサーカス2",
         "台番": 580,
@@ -5145,6 +5154,17 @@
         "G数": 8867,
         "hit": true,
         "date": "2026-07-20"
+      },
+      {
+        "機種": "スマスロモンキーターンV",
+        "台番": 815,
+        "predicted_score": 84.5,
+        "predicted_rate": 112.2,
+        "actual_rate": 116.4,
+        "差枚": 4404,
+        "G数": 8961,
+        "hit": true,
+        "date": "2026-07-23"
       },
       {
         "機種": "L ToLOVEるダークネス TRANCE ver.8.7",
@@ -5170,17 +5190,6 @@
       },
       {
         "機種": "Lパチスロからくりサーカス2",
-        "台番": 582,
-        "predicted_score": 68.7,
-        "predicted_rate": 106.3,
-        "actual_rate": 116.0,
-        "差枚": 3516,
-        "G数": 7307,
-        "hit": true,
-        "date": "2026-07-15"
-      },
-      {
-        "機種": "Lパチスロからくりサーカス2",
         "台番": 585,
         "predicted_score": 64.4,
         "predicted_rate": 107.2,
@@ -5200,17 +5209,6 @@
         "G数": 9215,
         "hit": true,
         "date": "2026-07-19"
-      },
-      {
-        "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
-        "台番": 513,
-        "predicted_score": 61.8,
-        "predicted_rate": 115.4,
-        "actual_rate": 135.4,
-        "差枚": 2940,
-        "G数": 2766,
-        "hit": true,
-        "date": "2026-07-16"
       },
       {
         "機種": "Lパチスロ炎炎ノ消防隊2",
@@ -5233,6 +5231,28 @@
         "G数": 4788,
         "hit": true,
         "date": "2026-07-21"
+      },
+      {
+        "機種": "Lパチスロからくりサーカス2",
+        "台番": 561,
+        "predicted_score": 69.1,
+        "predicted_rate": 109.8,
+        "actual_rate": 106.8,
+        "差枚": 1738,
+        "G数": 8461,
+        "hit": true,
+        "date": "2026-07-17"
+      },
+      {
+        "機種": "沖ドキ！BLACK",
+        "台番": 712,
+        "predicted_score": 69.4,
+        "predicted_rate": 103.8,
+        "actual_rate": 107.2,
+        "差枚": 1664,
+        "G数": 7719,
+        "hit": true,
+        "date": "2026-07-20"
       }
     ],
     "miss_machines": [
@@ -5259,37 +5279,26 @@
         "date": "2026-07-20"
       },
       {
-        "機種": "戦国コレクション6",
-        "台番": 631,
-        "predicted_score": 62.5,
-        "predicted_rate": 103.2,
-        "actual_rate": 76.0,
-        "差枚": -4455,
-        "G数": 6181,
-        "hit": false,
-        "date": "2026-07-15"
-      },
-      {
         "機種": "沖ドキ！BLACK",
-        "台番": 707,
-        "predicted_score": 90.3,
-        "predicted_rate": 110.2,
-        "actual_rate": 67.4,
-        "差枚": -4274,
-        "G数": 4366,
+        "台番": 708,
+        "predicted_score": 82.6,
+        "predicted_rate": 103.1,
+        "actual_rate": 78.9,
+        "差枚": -4951,
+        "G数": 7835,
         "hit": false,
-        "date": "2026-07-15"
+        "date": "2026-07-22"
       },
       {
-        "機種": "Lパチスロからくりサーカス2",
-        "台番": 580,
-        "predicted_score": 74.1,
-        "predicted_rate": 108.8,
-        "actual_rate": 82.1,
-        "差枚": -4171,
-        "G数": 7758,
+        "機種": "スマスロ モンスターハンターライズ",
+        "台番": 640,
+        "predicted_score": 79.4,
+        "predicted_rate": 104.6,
+        "actual_rate": 76.7,
+        "差枚": -4234,
+        "G数": 6049,
         "hit": false,
-        "date": "2026-07-15"
+        "date": "2026-07-23"
       },
       {
         "機種": "L東京喰種",
@@ -5303,6 +5312,17 @@
         "date": "2026-07-19"
       },
       {
+        "機種": "L東京喰種",
+        "台番": 625,
+        "predicted_score": 94.2,
+        "predicted_rate": 112.9,
+        "actual_rate": 78.3,
+        "差枚": -3297,
+        "G数": 5070,
+        "hit": false,
+        "date": "2026-07-23"
+      },
+      {
         "機種": "沖ドキ！BLACK",
         "台番": 709,
         "predicted_score": 68.4,
@@ -5314,15 +5334,26 @@
         "date": "2026-07-18"
       },
       {
-        "機種": "Lパチスロからくりサーカス2",
-        "台番": 561,
-        "predicted_score": 70.1,
-        "predicted_rate": 107.0,
-        "actual_rate": 88.6,
-        "差枚": -2921,
-        "G数": 8514,
+        "機種": "L東京喰種",
+        "台番": 616,
+        "predicted_score": 78.0,
+        "predicted_rate": 105.4,
+        "actual_rate": 72.5,
+        "差枚": -3148,
+        "G数": 3816,
         "hit": false,
-        "date": "2026-07-15"
+        "date": "2026-07-23"
+      },
+      {
+        "機種": "Lパチスロ かぐや様は告らせたい",
+        "台番": 503,
+        "predicted_score": 76.4,
+        "predicted_rate": 105.3,
+        "actual_rate": 83.6,
+        "差枚": -3032,
+        "G数": 6171,
+        "hit": false,
+        "date": "2026-07-23"
       },
       {
         "機種": "Lパチスロからくりサーカス2",
@@ -5334,68 +5365,79 @@
         "G数": 6425,
         "hit": false,
         "date": "2026-07-17"
-      },
-      {
-        "機種": "Lパチスロからくりサーカス2",
-        "台番": 585,
-        "predicted_score": 68.7,
-        "predicted_rate": 109.0,
-        "actual_rate": 88.1,
-        "差枚": -2568,
-        "G数": 7218,
-        "hit": false,
-        "date": "2026-07-18"
       }
     ]
   },
   "daily_review": {
-    "date": "2026-07-21",
-    "category": "通常日",
-    "adv_kishu": 0.77,
-    "adv_machine": -2.0,
-    "total_samai": -5191,
-    "hit_rate": 30.0,
-    "kishu_msg": "機種予測はまずまずでした（+0.77%）",
-    "machine_msg": "台選びはマイナスでした（-2.00%）",
+    "date": "2026-07-23",
+    "category": "旧イベント日",
+    "adv_kishu": -0.4,
+    "adv_machine": -6.25,
+    "total_samai": -9994,
+    "hit_rate": 40.0,
+    "kishu_msg": "機種予測はほぼ並でした（-0.40%）",
+    "machine_msg": "台選びはマイナスでした（-6.25%）",
     "samai_msg": "推薦台全体は大きくマイナスでした",
     "best_machine": {
-      "機種": "Lパチスロからくりサーカス2",
-      "台番": 560,
-      "predicted_score": 63.0,
-      "predicted_rate": 102.3,
-      "actual_rate": 115.2,
-      "差枚": 2179,
-      "G数": 4788,
+      "機種": "スマスロモンキーターンV",
+      "台番": 815,
+      "predicted_score": 84.5,
+      "predicted_rate": 112.2,
+      "actual_rate": 116.4,
+      "差枚": 4404,
+      "G数": 8961,
       "hit": true
     },
     "worst_machine": {
-      "機種": "Lパチスロからくりサーカス2",
-      "台番": 561,
-      "predicted_score": 65.2,
-      "predicted_rate": 103.4,
-      "actual_rate": 75.1,
-      "差枚": -2502,
-      "G数": 3353,
+      "機種": "スマスロ モンスターハンターライズ",
+      "台番": 640,
+      "predicted_score": 79.4,
+      "predicted_rate": 104.6,
+      "actual_rate": 76.7,
+      "差枚": -4234,
+      "G数": 6049,
       "hit": false
     },
     "picks_result": [
       {
-        "機種": "スマスロ ビッグドリーム THE GOLDEN PUSHER",
-        "predicted_score": 68.0,
-        "predicted_cls": "本命",
-        "actual_avg_rate": 78.5,
+        "機種": "スマスロ モンスターハンターライズ",
+        "predicted_score": 50.5,
+        "predicted_cls": "見送り",
+        "actual_avg_rate": 96.1,
         "hit": false
+      },
+      {
+        "機種": "Lパチスロ かぐや様は告らせたい",
+        "predicted_score": 49.5,
+        "predicted_cls": "穴",
+        "actual_avg_rate": 102.4,
+        "hit": true
+      },
+      {
+        "機種": "スマスロ マギアレコード 魔法少女まどか☆マギカ外伝",
+        "predicted_score": 46.3,
+        "predicted_cls": "穴",
+        "actual_avg_rate": 99.0,
+        "hit": false
+      },
+      {
+        "機種": "ネオアイムジャグラーEX",
+        "predicted_score": 44.0,
+        "predicted_cls": "穴",
+        "actual_avg_rate": 98.0,
+        "hit": false
+      },
+      {
+        "機種": "ミスタージャグラー",
+        "predicted_score": 43.9,
+        "predicted_cls": "穴",
+        "actual_avg_rate": 104.2,
+        "hit": true
       }
     ]
   },
   "machine_streaks": {
-    "hot": [
-      {
-        "機種": "マイジャグラーV",
-        "n": 7,
-        "hit_rate": 71.4
-      }
-    ],
+    "hot": [],
     "cold": [
       {
         "機種": "ジャグラーガールズSS",
@@ -5403,12 +5445,7 @@
         "hit_rate": 0.0
       },
       {
-        "機種": "スマスロ スーパーリオエース2",
-        "n": 4,
-        "hit_rate": 25.0
-      },
-      {
-        "機種": "スロット ソードアート・オンラインⅡ",
+        "機種": "スマスロ 甲鉄城のカバネリ 海門決戦",
         "n": 4,
         "hit_rate": 25.0
       },
