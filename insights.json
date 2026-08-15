@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-14T11:19:40",
+  "generated_at": "2026-08-15T09:02:14",
   "today_condition": {
-    "target_date": "2026-08-14",
+    "target_date": "2026-08-15",
     "target_category": "通常日",
-    "dow": 4,
-    "dow_name": "金",
-    "score": 33,
-    "level": "見送り推奨",
-    "emoji": "🔴",
-    "headline": "無理に行かない選択も",
+    "dow": 5,
+    "dow_name": "土",
+    "score": 56,
+    "level": "標準",
+    "emoji": "🟡",
+    "headline": "通常運転",
     "reasons": [
       {
-        "label": "金曜",
-        "detail": "過去の台ADV -0.1%（△ 弱い曜日）",
-        "adj": -10.9
+        "label": "土曜",
+        "detail": "過去の台ADV +1.4%（並の曜日）",
+        "adj": 1.4
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日はやや出し気味 → 過度な期待は禁物（直近3日 +60,552枚）",
-        "adj": -6
+        "detail": "直近3日は回収気味 → やや放出に期待（直近3日 -81,214枚）",
+        "adj": 5
       },
       {
         "label": "月内",
@@ -27,7 +27,7 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 1機種（最高score 63）",
+        "detail": "本命なし・対抗 1機種（最高score 59）",
         "adj": 0
       }
     ],
@@ -69,9 +69,9 @@
     {
       "dow": 4,
       "name": "金",
-      "n": 56,
-      "adv_machine": -0.11,
-      "store_samai_mean": -32672,
+      "n": 57,
+      "adv_machine": -0.05,
+      "store_samai_mean": -34493,
       "store_plus_rate": 25.0
     },
     {
@@ -120,8 +120,8 @@
       {
         "dow": 4,
         "name": "金",
-        "n": 42,
-        "adv_machine": 0.14
+        "n": 43,
+        "adv_machine": 0.21
       },
       {
         "dow": 5,
@@ -182,10 +182,10 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": 60552,
-    "last7_samai": -128138,
-    "percentile": 95.0,
-    "note": "直近3日はやや出し気味 → 過度な期待は禁物"
+    "last3_samai": -81214,
+    "last7_samai": -215553,
+    "percentile": 60.0,
+    "note": "直近3日は回収気味 → やや放出に期待"
   },
   "monthly_cycle": {
     "thirds": [
@@ -198,10 +198,10 @@
       },
       {
         "label": "中旬",
-        "n": 129,
-        "adv_machine": 1.32,
-        "store_plus_rate": 26.0,
-        "store_samai_mean": -30543
+        "n": 130,
+        "adv_machine": 1.33,
+        "store_plus_rate": 25.0,
+        "store_samai_mean": -31357
       },
       {
         "label": "下旬",
