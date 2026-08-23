@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-22T09:02:48",
+  "generated_at": "2026-08-23T09:05:16",
   "today_condition": {
-    "target_date": "2026-08-22",
-    "target_category": "通常日",
-    "dow": 5,
-    "dow_name": "土",
-    "score": 61,
-    "level": "標準",
-    "emoji": "🟡",
-    "headline": "通常運転",
+    "target_date": "2026-08-23",
+    "target_category": "旧イベント日",
+    "dow": 6,
+    "dow_name": "日",
+    "score": 33,
+    "level": "見送り推奨",
+    "emoji": "🔴",
+    "headline": "無理に行かない選択も",
     "reasons": [
       {
-        "label": "土曜",
-        "detail": "過去の台ADV +1.6%（並の曜日）",
-        "adj": 2.4
+        "label": "日曜",
+        "detail": "過去の台ADV +1.2%（並の曜日）",
+        "adj": -1.0
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日は回収気味 → やや放出に期待（直近3日 -94,492枚）",
+        "detail": "直近3日は回収気味 → やや放出に期待（直近3日 -193,829枚）",
         "adj": 5
       },
       {
@@ -27,8 +27,8 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 3機種（最高score 56）",
-        "adj": 0
+        "detail": "本命・対抗なし、穴のみ（最高score 66）",
+        "adj": -25
       }
     ],
     "disclaimer": "日次の勝敗自体は予測困難です。これは曜日傾向・店サイクル・本命有無から算出した記述的な目安です。"
@@ -77,9 +77,9 @@
     {
       "dow": 5,
       "name": "土",
-      "n": 57,
-      "adv_machine": 1.58,
-      "store_samai_mean": -43425,
+      "n": 58,
+      "adv_machine": 1.63,
+      "store_samai_mean": -43134,
       "store_plus_rate": 19.0
     },
     {
@@ -126,8 +126,8 @@
       {
         "dow": 5,
         "name": "土",
-        "n": 47,
-        "adv_machine": 1.55
+        "n": 48,
+        "adv_machine": 1.61
       },
       {
         "dow": 6,
@@ -182,9 +182,9 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": -94492,
-    "last7_samai": -357156,
-    "percentile": 55.0,
+    "last3_samai": -193829,
+    "last7_samai": -334218,
+    "percentile": 15.0,
     "note": "直近3日は回収気味 → やや放出に期待"
   },
   "monthly_cycle": {
@@ -205,10 +205,10 @@
       },
       {
         "label": "下旬",
-        "n": 137,
-        "adv_machine": 1.71,
+        "n": 138,
+        "adv_machine": 1.73,
         "store_plus_rate": 23.0,
-        "store_samai_mean": -37666
+        "store_samai_mean": -37585
       }
     ],
     "windows": [
@@ -220,9 +220,9 @@
       },
       {
         "label": "給料前(20-24)",
-        "n": 67,
+        "n": 68,
         "store_plus_rate": 18.0,
-        "store_samai_mean": -49011
+        "store_samai_mean": -48681
       },
       {
         "label": "給料直後(25-28)",
