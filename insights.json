@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-08-26T15:02:20",
+  "generated_at": "2026-08-29T09:26:02",
   "today_condition": {
-    "target_date": "2026-08-26",
+    "target_date": "2026-08-28",
     "target_category": "通常日",
-    "dow": 2,
-    "dow_name": "水",
-    "score": 63,
+    "dow": 4,
+    "dow_name": "金",
+    "score": 51,
     "level": "標準",
     "emoji": "🟡",
     "headline": "通常運転",
     "reasons": [
       {
-        "label": "水曜",
-        "detail": "過去の台ADV +2.7%（◎ 狙い目曜日）",
-        "adj": 11.4
+        "label": "金曜",
+        "detail": "過去の台ADV -0.2%（△ 弱い曜日）",
+        "adj": -11.3
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日は概ね均衡（直近3日 -15,006枚）",
-        "adj": 0
+        "detail": "直近3日で店が大きく回収 → 反発（放出）に期待できる局面（直近3日 -205,224枚）",
+        "adj": 10
       },
       {
         "label": "月内",
@@ -27,7 +27,7 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 2機種（最高score 56）",
+        "detail": "本命なし・対抗 4機種（最高score 61）",
         "adj": 0
       }
     ],
@@ -53,17 +53,17 @@
     {
       "dow": 2,
       "name": "水",
-      "n": 58,
-      "adv_machine": 2.71,
-      "store_samai_mean": -29280,
+      "n": 59,
+      "adv_machine": 2.38,
+      "store_samai_mean": -30532,
       "store_plus_rate": 29.0
     },
     {
       "dow": 3,
       "name": "木",
-      "n": 58,
-      "adv_machine": 1.31,
-      "store_samai_mean": -39496,
+      "n": 59,
+      "adv_machine": 1.42,
+      "store_samai_mean": -39303,
       "store_plus_rate": 19.0
     },
     {
@@ -108,14 +108,14 @@
       {
         "dow": 2,
         "name": "水",
-        "n": 47,
-        "adv_machine": 2.67
+        "n": 48,
+        "adv_machine": 2.27
       },
       {
         "dow": 3,
         "name": "木",
-        "n": 46,
-        "adv_machine": 1.23
+        "n": 47,
+        "adv_machine": 1.37
       },
       {
         "dow": 4,
@@ -182,10 +182,10 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": -15006,
-    "last7_samai": -136024,
-    "percentile": 83.0,
-    "note": "直近3日は概ね均衡"
+    "last3_samai": -205224,
+    "last7_samai": -240976,
+    "percentile": 13.0,
+    "note": "直近3日で店が大きく回収 → 反発（放出）に期待できる局面"
   },
   "monthly_cycle": {
     "thirds": [
@@ -205,10 +205,10 @@
       },
       {
         "label": "下旬",
-        "n": 141,
-        "adv_machine": 1.73,
+        "n": 143,
+        "adv_machine": 1.65,
         "store_plus_rate": 24.0,
-        "store_samai_mean": -36892
+        "store_samai_mean": -37294
       }
     ],
     "windows": [
@@ -226,9 +226,9 @@
       },
       {
         "label": "給料直後(25-28)",
-        "n": 53,
+        "n": 55,
         "store_plus_rate": 11.0,
-        "store_samai_mean": -47784
+        "store_samai_mean": -48433
       },
       {
         "label": "月末(29-31)",
