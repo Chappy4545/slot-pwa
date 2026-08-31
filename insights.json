@@ -1,23 +1,23 @@
 {
-  "generated_at": "2026-08-30T09:19:50",
+  "generated_at": "2026-08-31T09:14:47",
   "today_condition": {
-    "target_date": "2026-08-30",
+    "target_date": "2026-08-31",
     "target_category": "通常日",
-    "dow": 6,
-    "dow_name": "日",
-    "score": 58,
+    "dow": 0,
+    "dow_name": "月",
+    "score": 55,
     "level": "標準",
     "emoji": "🟡",
     "headline": "通常運転",
     "reasons": [
       {
-        "label": "日曜",
-        "detail": "過去の台ADV +1.2%（並の曜日）",
-        "adj": -0.5
+        "label": "月曜",
+        "detail": "過去の台ADV +0.8%（並の曜日）",
+        "adj": -3.3
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日は概ね均衡（直近3日 +20,189枚）",
+        "detail": "直近3日は概ね均衡（直近3日 +43,921枚）",
         "adj": 0
       },
       {
@@ -27,7 +27,7 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 5機種（最高score 61）",
+        "detail": "本命なし・対抗 3機種（最高score 61）",
         "adj": 0
       }
     ],
@@ -85,9 +85,9 @@
     {
       "dow": 6,
       "name": "日",
-      "n": 58,
-      "adv_machine": 1.19,
-      "store_samai_mean": -40689,
+      "n": 59,
+      "adv_machine": 1.2,
+      "store_samai_mean": -40074,
       "store_plus_rate": 24.0
     }
   ],
@@ -132,8 +132,8 @@
       {
         "dow": 6,
         "name": "日",
-        "n": 47,
-        "adv_machine": 1.49
+        "n": 48,
+        "adv_machine": 1.5
       }
     ],
     "旧イベント日": [
@@ -182,9 +182,9 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": 20189,
-    "last7_samai": -97967,
-    "percentile": 90.0,
+    "last3_samai": 43921,
+    "last7_samai": -153289,
+    "percentile": 94.0,
     "note": "直近3日は概ね均衡"
   },
   "monthly_cycle": {
@@ -205,10 +205,10 @@
       },
       {
         "label": "下旬",
-        "n": 145,
-        "adv_machine": 1.62,
+        "n": 146,
+        "adv_machine": 1.63,
         "store_plus_rate": 24.0,
-        "store_samai_mean": -36446
+        "store_samai_mean": -36227
       }
     ],
     "windows": [
@@ -232,9 +232,9 @@
       },
       {
         "label": "月末(29-31)",
-        "n": 33,
-        "store_plus_rate": 52.0,
-        "store_samai_mean": 763
+        "n": 34,
+        "store_plus_rate": 50.0,
+        "store_samai_mean": 612
       }
     ]
   }
