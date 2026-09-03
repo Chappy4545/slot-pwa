@@ -1,14 +1,14 @@
 {
-  "generated_at": "2026-09-02T16:52:15.530076",
-  "date_range": "2025-07-15 ~ 2026-09-01",
-  "n_days": 414,
+  "generated_at": "2026-09-03T14:38:58.743876",
+  "date_range": "2025-07-15 ~ 2026-09-02",
+  "n_days": 415,
   "overall": {
-    "対象日数": 414,
+    "対象日数": 415,
     "平均ベース出率": 96.5,
     "TOP10機種出率": 97.5,
     "TOP10台出率": 97.8,
     "機種ADV": 1.0,
-    "台ADV": 1.2,
+    "台ADV": 1.3,
     "TOP10台的中率": 41.3,
     "ベース的中率": 38.5
   },
@@ -16,7 +16,7 @@
     {
       "label": "機種TOP1",
       "avg_rate": 98.6,
-      "plus_rate": 42.3,
+      "plus_rate": 42.2,
       "adv": 2.1
     },
     {
@@ -28,7 +28,7 @@
     {
       "label": "機種TOP5",
       "avg_rate": 97.8,
-      "plus_rate": 41.1,
+      "plus_rate": 41.2,
       "adv": 1.3
     },
     {
@@ -40,13 +40,13 @@
     {
       "label": "台TOP1",
       "avg_rate": 97.6,
-      "plus_rate": 38.6,
+      "plus_rate": 38.5,
       "adv": 1.1
     },
     {
       "label": "台TOP3",
       "avg_rate": 97.8,
-      "plus_rate": 41.6,
+      "plus_rate": 41.7,
       "adv": 1.3
     },
     {
@@ -95,28 +95,28 @@
     },
     {
       "category": "通常日",
-      "n_days": 333,
+      "n_days": 334,
       "base_avg": 95.82,
       "k10_avg": 96.91,
-      "m10_avg": 97.14,
+      "m10_avg": 97.16,
       "m10_plus": 0.4,
       "adv_kishu": 1.08,
-      "adv_machine": 1.31
+      "adv_machine": 1.32
     }
   ],
   "score_bands": [
     {
       "band": "80+",
-      "n": 1058,
+      "n": 1060,
       "avg_rate": 98.1,
       "plus_rate": 42.0,
       "adv": 1.4
     },
     {
       "band": "75-79",
-      "n": 727,
+      "n": 728,
       "avg_rate": 97.3,
-      "plus_rate": 40.6,
+      "plus_rate": 40.7,
       "adv": 0.3
     },
     {
@@ -128,21 +128,21 @@
     },
     {
       "band": "65-69",
-      "n": 1241,
+      "n": 1244,
       "avg_rate": 98.8,
       "plus_rate": 43.5,
       "adv": 1.7
     },
     {
       "band": "60-64",
-      "n": 1393,
+      "n": 1394,
       "avg_rate": 98.1,
-      "plus_rate": 42.4,
+      "plus_rate": 42.3,
       "adv": 1.0
     },
     {
       "band": "55-59",
-      "n": 1522,
+      "n": 1523,
       "avg_rate": 98.3,
       "plus_rate": 40.9,
       "adv": 1.2
@@ -156,7 +156,7 @@
     },
     {
       "band": "50未満",
-      "n": 5185,
+      "n": 5199,
       "avg_rate": 97.6,
       "plus_rate": 41.2,
       "adv": 0.6
@@ -165,34 +165,41 @@
   "cls_stats": [
     {
       "cls": "本命",
-      "n": 3653,
+      "n": 3659,
       "avg_rate": 98.0,
       "plus_rate": 42.1,
       "adv": 1.3
     },
     {
       "cls": "対抗",
-      "n": 3013,
+      "n": 3015,
       "avg_rate": 97.3,
       "plus_rate": 38.8,
       "adv": 1.3
     },
     {
       "cls": "穴",
-      "n": 2887,
+      "n": 2894,
       "avg_rate": 97.8,
       "plus_rate": 41.7,
       "adv": 0.7
     },
     {
       "cls": "見送り",
-      "n": 4263,
+      "n": 4270,
       "avg_rate": 99.0,
       "plus_rate": 44.0,
       "adv": 0.9
     }
   ],
-  "suggestions": [],
+  "suggestions": [
+    {
+      "level": "positive",
+      "title": "台番スコアが機種スコアより有効",
+      "detail": "台ADV(+1.3%) > 機種ADV(+1.0%)。S6（連敗反発）・S7（ローテ）が有効に機能しています。台番を精密に絞る戦略を継続してください。",
+      "action": "現状維持。TOP1〜3台に集中する立ち回りが有効"
+    }
+  ],
   "daily": [
     {
       "date": "2025-07-15",
@@ -7230,6 +7237,23 @@
       "m10_avg": 99.8,
       "adv_kishu": 1.3,
       "adv_machine": 3.3,
+      "m10_plus": 0.5
+    },
+    {
+      "date": "2026-09-02",
+      "category": "通常日",
+      "baseline_avg": 95.2,
+      "store_samai": -33284,
+      "k1_avg": 87.9,
+      "k3_avg": 93.3,
+      "k5_avg": 96.9,
+      "k10_avg": 96.7,
+      "m1_avg": 81.8,
+      "m3_avg": 98.6,
+      "m5_avg": 97.5,
+      "m10_avg": 100.7,
+      "adv_kishu": 1.5,
+      "adv_machine": 5.5,
       "m10_plus": 0.5
     }
   ]
