@@ -1,24 +1,24 @@
 {
-  "generated_at": "2026-09-03T14:39:01",
+  "generated_at": "2026-09-04T09:55:16",
   "today_condition": {
-    "target_date": "2026-09-03",
-    "target_category": "強化イベント日",
-    "dow": 3,
-    "dow_name": "木",
-    "score": 48,
-    "level": "慎重",
-    "emoji": "🟠",
-    "headline": "慎重に見極めを",
+    "target_date": "2026-09-04",
+    "target_category": "通常日",
+    "dow": 4,
+    "dow_name": "金",
+    "score": 30,
+    "level": "見送り推奨",
+    "emoji": "🔴",
+    "headline": "無理に行かない選択も",
     "reasons": [
       {
-        "label": "木曜",
-        "detail": "過去の台ADV +1.4%（並の曜日）",
-        "adj": 1.3
+        "label": "金曜",
+        "detail": "過去の台ADV -0.1%（△ 弱い曜日）",
+        "adj": -11.1
       },
       {
         "label": "店サイクル",
-        "detail": "直近3日は概ね均衡（直近3日 -60,243枚）",
-        "adj": 0
+        "detail": "直近3日はやや出し気味 → 過度な期待は禁物（直近3日 +124,227枚）",
+        "adj": -6
       },
       {
         "label": "月内",
@@ -27,7 +27,7 @@
       },
       {
         "label": "モデル本命",
-        "detail": "本命なし・対抗 3機種（最高score 54）",
+        "detail": "本命なし・対抗 5機種（最高score 58）",
         "adj": 0
       }
     ],
@@ -61,10 +61,10 @@
     {
       "dow": 3,
       "name": "木",
-      "n": 59,
-      "adv_machine": 1.42,
-      "store_samai_mean": -39303,
-      "store_plus_rate": 19.0
+      "n": 60,
+      "adv_machine": 1.47,
+      "store_samai_mean": -36168,
+      "store_plus_rate": 20.0
     },
     {
       "dow": 4,
@@ -182,19 +182,19 @@
     ]
   },
   "store_cycle": {
-    "last3_samai": -60243,
-    "last7_samai": -44443,
-    "percentile": 67.0,
-    "note": "直近3日は概ね均衡"
+    "last3_samai": 124227,
+    "last7_samai": 132496,
+    "percentile": 99.0,
+    "note": "直近3日はやや出し気味 → 過度な期待は禁物"
   },
   "monthly_cycle": {
     "thirds": [
       {
         "label": "上旬",
-        "n": 132,
-        "adv_machine": 0.71,
-        "store_plus_rate": 25.0,
-        "store_samai_mean": -34514
+        "n": 133,
+        "adv_machine": 0.74,
+        "store_plus_rate": 26.0,
+        "store_samai_mean": -33135
       },
       {
         "label": "中旬",
@@ -214,9 +214,9 @@
     "windows": [
       {
         "label": "月初(1-5)",
-        "n": 67,
-        "store_plus_rate": 21.0,
-        "store_samai_mean": -31617
+        "n": 68,
+        "store_plus_rate": 22.0,
+        "store_samai_mean": -28963
       },
       {
         "label": "給料前(20-24)",
