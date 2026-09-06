@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-05T19:18:32.620771",
-  "date_range": "2025-07-15 ~ 2026-09-04",
-  "n_days": 417,
+  "generated_at": "2026-09-06T09:02:44.639038",
+  "date_range": "2025-07-15 ~ 2026-09-05",
+  "n_days": 418,
   "overall": {
-    "対象日数": 417,
+    "対象日数": 418,
     "平均ベース出率": 96.5,
     "TOP10機種出率": 97.5,
     "TOP10台出率": 97.8,
@@ -28,7 +28,7 @@
     {
       "label": "機種TOP5",
       "avg_rate": 97.8,
-      "plus_rate": 41.2,
+      "plus_rate": 41.1,
       "adv": 1.3
     },
     {
@@ -40,7 +40,7 @@
     {
       "label": "台TOP1",
       "avg_rate": 97.7,
-      "plus_rate": 38.6,
+      "plus_rate": 38.7,
       "adv": 1.2
     },
     {
@@ -95,98 +95,98 @@
     },
     {
       "category": "通常日",
-      "n_days": 335,
-      "base_avg": 95.81,
+      "n_days": 336,
+      "base_avg": 95.82,
       "k10_avg": 96.9,
-      "m10_avg": 97.15,
+      "m10_avg": 97.14,
       "m10_plus": 0.4,
-      "adv_kishu": 1.08,
-      "adv_machine": 1.32
+      "adv_kishu": 1.07,
+      "adv_machine": 1.31
     }
   ],
   "score_bands": [
     {
       "band": "80+",
-      "n": 1074,
+      "n": 1076,
       "avg_rate": 98.1,
       "plus_rate": 41.9,
-      "adv": 1.4
+      "adv": 1.3
     },
     {
       "band": "75-79",
-      "n": 735,
+      "n": 736,
       "avg_rate": 97.4,
       "plus_rate": 40.8,
       "adv": 0.4
     },
     {
       "band": "70-74",
-      "n": 1053,
+      "n": 1055,
       "avg_rate": 98.9,
       "plus_rate": 44.2,
       "adv": 1.8
     },
     {
       "band": "65-69",
-      "n": 1248,
+      "n": 1251,
       "avg_rate": 98.8,
-      "plus_rate": 43.4,
+      "plus_rate": 43.3,
       "adv": 1.6
     },
     {
       "band": "60-64",
-      "n": 1398,
+      "n": 1400,
       "avg_rate": 98.1,
       "plus_rate": 42.2,
       "adv": 1.0
     },
     {
       "band": "55-59",
-      "n": 1526,
+      "n": 1527,
       "avg_rate": 98.3,
-      "plus_rate": 41.0,
+      "plus_rate": 40.9,
       "adv": 1.2
     },
     {
       "band": "50-54",
-      "n": 1645,
+      "n": 1646,
       "avg_rate": 98.9,
-      "plus_rate": 42.6,
+      "plus_rate": 42.5,
       "adv": 1.8
     },
     {
       "band": "50未満",
-      "n": 5213,
+      "n": 5223,
       "avg_rate": 97.6,
-      "plus_rate": 41.2,
+      "plus_rate": 41.3,
       "adv": 0.6
     }
   ],
   "cls_stats": [
     {
       "cls": "本命",
-      "n": 3688,
+      "n": 3696,
       "avg_rate": 98.0,
       "plus_rate": 42.1,
       "adv": 1.3
     },
     {
       "cls": "対抗",
-      "n": 3026,
+      "n": 3030,
       "avg_rate": 97.3,
       "plus_rate": 38.8,
       "adv": 1.3
     },
     {
       "cls": "穴",
-      "n": 2902,
+      "n": 2909,
       "avg_rate": 97.8,
       "plus_rate": 41.7,
       "adv": 0.7
     },
     {
       "cls": "見送り",
-      "n": 4276,
+      "n": 4279,
       "avg_rate": 99.0,
       "plus_rate": 44.1,
       "adv": 0.9
@@ -7288,6 +7288,23 @@
       "m10_avg": 95.2,
       "adv_kishu": 0.2,
       "adv_machine": 1.1,
+      "m10_plus": 0.3
+    },
+    {
+      "date": "2026-09-05",
+      "category": "通常日",
+      "baseline_avg": 98.0,
+      "store_samai": 3875,
+      "k1_avg": 100.4,
+      "k3_avg": 99.4,
+      "k5_avg": 97.5,
+      "k10_avg": 97.5,
+      "m1_avg": 104.7,
+      "m3_avg": 90.5,
+      "m5_avg": 95.2,
+      "m10_avg": 95.5,
+      "adv_kishu": -0.5,
+      "adv_machine": -2.5,
       "m10_plus": 0.3
     }
   ]
